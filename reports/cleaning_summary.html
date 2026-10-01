@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cleaning Summary</title>
+<style>
+  :root {
+    color-scheme: light;
+    --surface: #fcfcfb;
+    --card: #ffffff;
+    --ink: #0b0b0b;
+    --ink-2: #52514e;
+    --grid: #e4e3df;
+    --after: #2a78d6;
+    --before: #eb6834;
+    --good: #008300;
+    --bad: #e34948;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --surface: #1a1a19; --card: #232321; --ink: #ffffff; --ink-2: #c3c2b7;
+      --grid: #3a3a37; --after: #3987e5; --before: #d95926;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--surface); color:var(--ink);
+         font: 15px/1.6 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 32px 16px 64px; }
+  h1 { font-size: 1.6rem; margin: 0 0 4px; letter-spacing: -0.01em; }
+  h2 { font-size: 1.05rem; margin: 32px 0 10px; letter-spacing: -0.005em; }
+  .sub { color: var(--ink-2); margin: 0 0 24px; font-size: 0.9rem; }
+  .verdict { padding: 14px 18px; border-radius: 10px; font-weight: 600;
+              background: color-mix(in srgb, var(--good) 12%, var(--card));
+              border: 1px solid color-mix(in srgb, var(--good) 45%, transparent); }
+  .verdict.fail { background: color-mix(in srgb, var(--bad) 12%, var(--card));
+                   border-color: color-mix(in srgb, var(--bad) 45%, transparent); }
+  table { width:100%; border-collapse: collapse; background: var(--card);
+           border:1px solid var(--grid); border-radius:10px; overflow:hidden; font-size: 0.92rem; }
+  th, td { text-align:left; padding:9px 12px; border-bottom:1px solid var(--grid); }
+  th { color: var(--ink-2); font-weight:600; font-size:0.82rem; text-transform:uppercase; letter-spacing:0.04em; }
+  tr:last-child td { border-bottom:none; }
+  td.num { text-align:right; font-variant-numeric: tabular-nums; font-weight:600; }
+  td.before { color: var(--before); }
+  td.after { color: var(--after); }
+  tr.pass td:first-child { color: var(--good); font-weight:700; }
+  tr.fail td:first-child { color: var(--bad); font-weight:700; }
+  ul { padding-left: 20px; } li { margin: 4px 0; }
+  code { background: color-mix(in srgb, var(--ink) 8%, transparent); padding:1px 5px; border-radius:4px; }
+  .scroll { max-height: 420px; overflow:auto; border-radius:10px; }
+</style></head><body><div class="wrap">
+  <h1>Medical Data Cleaning Summary</h1>
+  <p class="sub">AI-Powered Medical Data Preprocessing Agent &middot; generated 2026-09-30T16:47:04+00:00
+     &middot; seed 2026</p>
+
+  <div class="verdict ">
+    PASSED &mdash; 52
+    of 52 assertions hold. All assertions hold. The cleaned dataset matches every claim made about it.
+  </div>
+
+  <h2>Before and after</h2>
+  <table><thead><tr><th>Metric</th><th style="text-align:right">Before</th><th style="text-align:right">After</th></tr></thead>
+  <tbody><tr><td>Rows</td><td class='num before'>1,000</td><td class='num after'>4,715 hourly (900 events)</td></tr><tr><td>Columns</td><td class='num before'>24</td><td class='num after'>116</td></tr><tr><td>Admissions</td><td class='num before'>100</td><td class='num after'>100</td></tr><tr><td>Duplicate rows</td><td class='num before'>100</td><td class='num after'>0</td></tr><tr><td>Distinct datetime formats</td><td class='num before'>4</td><td class='num after'>1</td></tr><tr><td>Columns with mixed units</td><td class='num before'>4</td><td class='num after'>0</td></tr></tbody></table>
+
+  <h2>What the agent changed</h2>
+  <table><tbody>
+    <tr><td>Duplicate rows removed</td><td class='num before'></td><td class='num after'>100</td></tr>
+    <tr><td>Implausible cells set to missing</td><td class='num before'></td><td class='num after'>328</td></tr>
+    <tr><td>Event rows retained</td><td class='num before'></td><td class='num after'>900</td></tr>
+    <tr><td>Hourly rows generated</td><td class='num before'></td><td class='num after'>4,715</td></tr>
+    <tr><td>Expansion factor</td><td class='num before'></td><td class='num after'>5.24x</td></tr>
+  </tbody></table>
+
+  <h2>Agent plan</h2>
+  <ol><li><strong>remove_duplicates</strong> &mdash; Profile reports 100 exactly duplicated rows (10.0% of the table); each inflates its patient-hour&#x27;s weight in any downstream model.</li><li><strong>standardise_datetimes</strong> &mdash; 4 distinct datetime spellings detected across the timestamp columns; day-first values are ambiguous under default parsing and must be resolved by surface form.</li><li><strong>convert_units</strong> &mdash; Mixed unit tokens found (sbp: &lt;bare number&gt;, mmHg; mbp: &lt;bare number&gt;, mmHg; temperature: C, F; glucose: &lt;bare number&gt;, mmol/L). Range validation cannot run correctly until units agree.</li><li><strong>standardise_categories</strong> &mdash; Categorical fields carry spelling variants (worst: diagnosis with 13 raw values); unmerged variants split cohort statistics.</li><li><strong>validate_ranges</strong> &mdash; 811 cells fall outside physiological bounds or cannot be parsed; these are sensor or transcription faults and must become missing, not outliers.</li><li><strong>build_hourly_timeseries</strong> &mdash; Observations are event-based and irregularly spaced; modelling requires a regular hourly grid spanning each admission window.</li><li><strong>build_value_mask_decay</strong> &mdash; Hourly alignment exposes the true extent of missingness; Value-Mask-Decay preserves which cells were measured and how much confidence a carried-forward value deserves.</li><li><strong>refine_missing_values</strong> &mdash; Imputed cells with long gaps carry little confidence and can be improved using the simultaneous state of physiologically coupled channels.</li></ol>
+  <h2>Concerns raised by the agent</h2><ul><li>Channels missing in more than a quarter of raw rows (wbc_count); any imputation here is weakly constrained and should be flagged to a clinician before modelling.</li></ul>
+  
+        <h2>Imputation benchmark (held-out observations)</h2>
+        <p>Mode: <code>block</code>,
+        757 held-out cells.
+        Standardised MAE: LOCF 0.4835 &rarr;
+        DeepTSE-refined 0.4551
+        (<strong>+5.87%</strong>);
+        5 of 8 channels improved.</p>
+        
+
+  <h2>Assertions</h2>
+  <div class="scroll"><table><thead><tr><th>Result</th><th>Assertion</th><th>Expected</th><th>Observed</th></tr></thead>
+  <tbody><tr class='pass'><td>PASS</td><td>row_count_after_deduplication_matches_audit</td><td>900</td><td>900</td></tr><tr class='pass'><td>PASS</td><td>no_duplicate_rows_remain</td><td>0</td><td>0</td></tr><tr class='pass'><td>PASS</td><td>every_admission_survived_cleaning</td><td>100</td><td>100</td></tr><tr class='pass'><td>PASS</td><td>all_lengths_of_stay_positive</td><td>&gt; 0 hours</td><td>24.0</td></tr><tr class='pass'><td>PASS</td><td>age_within_physiological_range</td><td>0</td><td>0</td></tr><tr class='pass'><td>PASS</td><td>heart_rate_within_physiological_range</td><td>0</td><td>0</td></tr><tr class='pass'><td>PASS</td><td>sbp_within_physiological_range</td><td>0</td><td>0</td></tr><tr class='pass'><td>PASS</td><td>dbp_within_physiological_range</td><td>0</td><td>0</td></tr><tr class='pass'><td>PASS</td><td>mbp_within_physiological_range</td><td>0</td><td>0</td></tr><tr class='pass'><td>PASS</td><td>temperature_within_physiological_range</td><td>0</td><td>0</td></tr><tr class='pass'><td>PASS</td><td>spo2_within_physiological_range</td><td>0</td><td>0</td></tr><tr class='pass'><td>PASS</td><td>resp_rate_within_physiological_range</td><td>0</td><td>0</td></tr><tr class='pass'><td>PASS</td><td>glucose_within_physiological_range</td><td>0</td><td>0</td></tr><tr class='pass'><td>PASS</td><td>creatinine_within_physiological_range</td><td>0</td><td>0</td></tr><tr class='pass'><td>PASS</td><td>wbc_count_within_physiological_range</td><td>0</td><td>0</td></tr><tr class='pass'><td>PASS</td><td>platelet_count_within_physiological_range</td><td>0</td><td>0</td></tr><tr class='pass'><td>PASS</td><td>sofa_score_within_physiological_range</td><td>0</td><td>0</td></tr><tr class='pass'><td>PASS</td><td>one_row_per_admission_hour</td><td>0</td><td>0</td></tr><tr class='pass'><td>PASS</td><td>hourly_grid_contiguous_within_every_admission</td><td>all admissions</td><td>100/100 admissions</td></tr><tr class='pass'><td>PASS</td><td>heart_rate_value_complete</td><td>0</td><td>0</td></tr><tr class='pass'><td>PASS</td><td>heart_rate_mask_binary</td><td>{0, 1}</td><td>[0, 1]</td></tr><tr class='pass'><td>PASS</td><td>heart_rate_decay_in_unit_interval</td><td>[0, 1]</td><td>[3e-06, 1.0]</td></tr><tr class='pass'><td>PASS</td><td>sbp_value_complete</td><td>0</td><td>0</td></tr><tr class='pass'><td>PASS</td><td>sbp_mask_binary</td><td>{0, 1}</td><td>[0, 1]</td></tr><tr class='pass'><td>PASS</td><td>sbp_decay_in_unit_interval</td><td>[0, 1]</td><td>[1e-05, 1.0]</td></tr><tr class='pass'><td>PASS</td><td>dbp_value_complete</td><td>0</td><td>0</td></tr><tr class='pass'><td>PASS</td><td>dbp_mask_binary</td><td>{0, 1}</td><td>[0, 1]</td></tr><tr class='pass'><td>PASS</td><td>dbp_decay_in_unit_interval</td><td>[0, 1]</td><td>[4e-06, 1.0]</td></tr><tr class='pass'><td>PASS</td><td>mbp_value_complete</td><td>0</td><td>0</td></tr><tr class='pass'><td>PASS</td><td>mbp_mask_binary</td><td>{0, 1}</td><td>[0, 1]</td></tr><tr class='pass'><td>PASS</td><td>mbp_decay_in_unit_interval</td><td>[0, 1]</td><td>[3.2e-05, 1.0]</td></tr><tr class='pass'><td>PASS</td><td>temperature_value_complete</td><td>0</td><td>0</td></tr><tr class='pass'><td>PASS</td><td>temperature_mask_binary</td><td>{0, 1}</td><td>[0, 1]</td></tr><tr class='pass'><td>PASS</td><td>temperature_decay_in_unit_interval</td><td>[0, 1]</td><td>[3.2e-05, 1.0]</td></tr><tr class='pass'><td>PASS</td><td>spo2_value_complete</td><td>0</td><td>0</td></tr><tr class='pass'><td>PASS</td><td>spo2_mask_binary</td><td>{0, 1}</td><td>[0, 1]</td></tr><tr class='pass'><td>PASS</td><td>spo2_decay_in_unit_interval</td><td>[0, 1]</td><td>[3.2e-05, 1.0]</td></tr><tr class='pass'><td>PASS</td><td>resp_rate_value_complete</td><td>0</td><td>0</td></tr><tr class='pass'><td>PASS</td><td>resp_rate_mask_binary</td><td>{0, 1}</td><td>[0, 1]</td></tr><tr class='pass'><td>PASS</td><td>resp_rate_decay_in_unit_interval</td><td>[0, 1]</td><td>[2e-06, 1.0]</td></tr><tr class='pass'><td>PASS</td><td>glucose_value_complete</td><td>0</td><td>0</td></tr><tr class='pass'><td>PASS</td><td>glucose_mask_binary</td><td>{0, 1}</td><td>[0, 1]</td></tr><tr class='pass'><td>PASS</td><td>glucose_decay_in_unit_interval</td><td>[0, 1]</td><td>[1e-05, 1.0]</td></tr><tr class='pass'><td>PASS</td><td>heart_rate_observed_values_unmodified_by_refinement</td><td>0 (exact)</td><td>0.0</td></tr><tr class='pass'><td>PASS</td><td>sbp_observed_values_unmodified_by_refinement</td><td>0 (exact)</td><td>0.0</td></tr><tr class='pass'><td>PASS</td><td>dbp_observed_values_unmodified_by_refinement</td><td>0 (exact)</td><td>0.0</td></tr><tr class='pass'><td>PASS</td><td>mbp_observed_values_unmodified_by_refinement</td><td>0 (exact)</td><td>0.0</td></tr><tr class='pass'><td>PASS</td><td>temperature_observed_values_unmodified_by_refinement</td><td>0 (exact)</td><td>0.0</td></tr><tr class='pass'><td>PASS</td><td>spo2_observed_values_unmodified_by_refinement</td><td>0 (exact)</td><td>0.0</td></tr><tr class='pass'><td>PASS</td><td>resp_rate_observed_values_unmodified_by_refinement</td><td>0 (exact)</td><td>0.0</td></tr><tr class='pass'><td>PASS</td><td>glucose_observed_values_unmodified_by_refinement</td><td>0 (exact)</td><td>0.0</td></tr><tr class='pass'><td>PASS</td><td>refiner_reports_zero_observed_modifications</td><td>0</td><td>0</td></tr></tbody></table></div>
+
+  <h2>How to verify this yourself</h2>
+  <p>Open the raw CSV and inspect the 100 row indices listed under
+     <code>records.dropped_row_indices</code> in <code>validation_report.json</code>. Each one should be an exact
+     copy of an earlier row. Every rejected cell is listed under <code>records.rejected_cell_log</code>
+     with its admission, timestamp, channel and original value.</p>
+</div></body></html>

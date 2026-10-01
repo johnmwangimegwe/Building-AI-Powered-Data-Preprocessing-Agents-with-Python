@@ -1,0 +1,21 @@
+# Core data stack -- everything the pipeline itself needs.
+pandas>=2.0
+numpy>=1.24
+matplotlib>=3.7
+
+# Dashboard.
+streamlit>=1.30
+plotly>=5.18
+
+# Notebook.
+jupyter>=1.0
+notebook>=7.0
+ipykernel>=6.25
+
+# Tests.
+pytest>=7.4
+
+# OPTIONAL -- only needed for the live LLM planner and the KodeAgent appendix.
+# The pipeline runs fully without these; it falls back to the deterministic planner.
+# litellm>=1.40
+# kodeagent>=0.1

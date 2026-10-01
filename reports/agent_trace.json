@@ -1,0 +1,2874 @@
+{
+  "planner": "rule_based",
+  "steps_executed": 8,
+  "all_checks_passed": true,
+  "concerns": [
+    "Channels missing in more than a quarter of raw rows (wbc_count); any imputation here is weakly constrained and should be flagged to a clinician before modelling."
+  ],
+  "plan": [
+    {
+      "step": 1,
+      "tool": "remove_duplicates",
+      "reason": "Profile reports 100 exactly duplicated rows (10.0% of the table); each inflates its patient-hour's weight in any downstream model."
+    },
+    {
+      "step": 2,
+      "tool": "standardise_datetimes",
+      "reason": "4 distinct datetime spellings detected across the timestamp columns; day-first values are ambiguous under default parsing and must be resolved by surface form."
+    },
+    {
+      "step": 3,
+      "tool": "convert_units",
+      "reason": "Mixed unit tokens found (sbp: <bare number>, mmHg; mbp: <bare number>, mmHg; temperature: C, F; glucose: <bare number>, mmol/L). Range validation cannot run correctly until units agree."
+    },
+    {
+      "step": 4,
+      "tool": "standardise_categories",
+      "reason": "Categorical fields carry spelling variants (worst: diagnosis with 13 raw values); unmerged variants split cohort statistics."
+    },
+    {
+      "step": 5,
+      "tool": "validate_ranges",
+      "reason": "811 cells fall outside physiological bounds or cannot be parsed; these are sensor or transcription faults and must become missing, not outliers."
+    },
+    {
+      "step": 6,
+      "tool": "build_hourly_timeseries",
+      "reason": "Observations are event-based and irregularly spaced; modelling requires a regular hourly grid spanning each admission window."
+    },
+    {
+      "step": 7,
+      "tool": "build_value_mask_decay",
+      "reason": "Hourly alignment exposes the true extent of missingness; Value-Mask-Decay preserves which cells were measured and how much confidence a carried-forward value deserves."
+    },
+    {
+      "step": 8,
+      "tool": "refine_missing_values",
+      "reason": "Imputed cells with long gaps carry little confidence and can be improved using the simultaneous state of physiologically coupled channels."
+    }
+  ],
+  "trajectory": [
+    {
+      "step": 1,
+      "tool": "remove_duplicates",
+      "reason": "Profile reports 100 exactly duplicated rows (10.0% of the table); each inflates its patient-hour's weight in any downstream model.",
+      "rows_before": 1000,
+      "rows_after": 900,
+      "duration_seconds": 0.125,
+      "checks": [
+        {
+          "name": "no_exact_duplicates_remain",
+          "passed": true,
+          "detail": "0 duplicate rows remain"
+        }
+      ],
+      "passed": true,
+      "repaired": false,
+      "audit": {
+        "strategy": "exact_row_match",
+        "keep": "first",
+        "rows_before": 1000,
+        "rows_after": 900,
+        "duplicates_removed": 100,
+        "duplicates_remaining": 0,
+        "rows_involved_before": 200,
+        "dropped_row_indices": [
+          29,
+          59,
+          160,
+          177,
+          213,
+          246,
+          276,
+          285,
+          287,
+          293,
+          298,
+          302,
+          308,
+          317,
+          353,
+          360,
+          375,
+          388,
+          397,
+          417,
+          423,
+          427,
+          428,
+          433,
+          446,
+          456,
+          458,
+          462,
+          509,
+          531,
+          533,
+          537,
+          545,
+          553,
+          559,
+          569,
+          574,
+          587,
+          592,
+          593,
+          597,
+          601,
+          609,
+          621,
+          642,
+          643,
+          647,
+          648,
+          659,
+          663,
+          685,
+          689,
+          708,
+          720,
+          732,
+          733,
+          741,
+          746,
+          750,
+          751,
+          760,
+          768,
+          770,
+          787,
+          789,
+          792,
+          793,
+          795,
+          807,
+          809,
+          810,
+          813,
+          816,
+          823,
+          831,
+          836,
+          893,
+          895,
+          897,
+          900,
+          910,
+          912,
+          914,
+          918,
+          920,
+          923,
+          925,
+          928,
+          933,
+          938,
+          941,
+          950,
+          957,
+          964,
+          970,
+          976,
+          988,
+          989,
+          996,
+          998
+        ]
+      }
+    },
+    {
+      "step": 2,
+      "tool": "standardise_datetimes",
+      "reason": "4 distinct datetime spellings detected across the timestamp columns; day-first values are ambiguous under default parsing and must be resolved by surface form.",
+      "rows_before": 900,
+      "rows_after": 900,
+      "duration_seconds": 1.091,
+      "checks": [
+        {
+          "name": "intime_is_datetime",
+          "passed": true,
+          "detail": "datetime64[ns]"
+        },
+        {
+          "name": "outtime_is_datetime",
+          "passed": true,
+          "detail": "datetime64[ns]"
+        },
+        {
+          "name": "charttime_is_datetime",
+          "passed": true,
+          "detail": "datetime64[ns]"
+        },
+        {
+          "name": "no_inverted_admission_windows",
+          "passed": true,
+          "detail": "0 admissions discharge before admission"
+        },
+        {
+          "name": "length_of_stay_positive",
+          "passed": true,
+          "detail": "minimum stay 24.0 hours"
+        }
+      ],
+      "passed": true,
+      "repaired": false,
+      "audit": {
+        "intime": {
+          "formats_detected": {
+            "ISO (YYYY-MM-DD HH:MM)": 278,
+            "Slash ISO (YYYY/MM/DD HH:MM)": 154,
+            "Day-first (DD/MM/YYYY HH:MM)": 236,
+            "Month name (Mon DD YYYY HH:MM)": 232
+          },
+          "n_formats": 4,
+          "fallback_parsed": 0,
+          "unparseable": 0,
+          "naive_parse_disagreements": 135
+        },
+        "outtime": {
+          "formats_detected": {
+            "ISO (YYYY-MM-DD HH:MM)": 278,
+            "Slash ISO (YYYY/MM/DD HH:MM)": 154,
+            "Day-first (DD/MM/YYYY HH:MM)": 236,
+            "Month name (Mon DD YYYY HH:MM)": 232
+          },
+          "n_formats": 4,
+          "fallback_parsed": 0,
+          "unparseable": 0,
+          "naive_parse_disagreements": 106
+        },
+        "charttime": {
+          "formats_detected": {
+            "ISO (YYYY-MM-DD HH:MM)": 214,
+            "Slash ISO (YYYY/MM/DD HH:MM)": 257,
+            "Day-first (DD/MM/YYYY HH:MM)": 192,
+            "Month name (Mon DD YYYY HH:MM)": 237
+          },
+          "n_formats": 4,
+          "fallback_parsed": 0,
+          "unparseable": 0,
+          "naive_parse_disagreements": 95
+        },
+        "window_reconciliation": {
+          "admissions": 100,
+          "admissions_with_conflicting_windows": 0,
+          "inverted_windows": 0,
+          "charttime_clamped_to_intime": 0,
+          "charttime_clamped_to_outtime": 0,
+          "length_of_stay_hours": {
+            "min": 24.0,
+            "median": 46.0,
+            "max": 71.0
+          }
+        },
+        "formats_before": 4,
+        "formats_after": 1,
+        "total_naive_parse_disagreements": 336
+      }
+    },
+    {
+      "step": 3,
+      "tool": "convert_units",
+      "reason": "Mixed unit tokens found (sbp: <bare number>, mmHg; mbp: <bare number>, mmHg; temperature: C, F; glucose: <bare number>, mmol/L). Range validation cannot run correctly until units agree.",
+      "rows_before": 900,
+      "rows_after": 900,
+      "duration_seconds": 0.207,
+      "checks": [
+        {
+          "name": "temperature_is_numeric",
+          "passed": true,
+          "detail": "float64"
+        },
+        {
+          "name": "glucose_is_numeric",
+          "passed": true,
+          "detail": "float64"
+        },
+        {
+          "name": "sbp_is_numeric",
+          "passed": true,
+          "detail": "float64"
+        },
+        {
+          "name": "mbp_is_numeric",
+          "passed": true,
+          "detail": "float64"
+        },
+        {
+          "name": "no_temperature_left_in_fahrenheit_band",
+          "passed": true,
+          "detail": "0 values in the 90-115 body-temperature-Fahrenheit band"
+        }
+      ],
+      "passed": true,
+      "repaired": false,
+      "audit": {
+        "temperature": {
+          "canonical_unit": "degrees Celsius",
+          "paths": {
+            "celsius_explicit": 479,
+            "fahrenheit_explicit": 285,
+            "inferred_fahrenheit": 0,
+            "unitless_kept_as_celsius": 0,
+            "unparseable": 0
+          },
+          "before": {
+            "count": 764,
+            "min": 12.0,
+            "mean": 60.99,
+            "max": 101.7
+          },
+          "after": {
+            "count": 764,
+            "min": 12.0,
+            "mean": 37.85,
+            "max": 61.0
+          },
+          "converted_from_fahrenheit": 285
+        },
+        "glucose": {
+          "canonical_unit": "mg/dL",
+          "paths": {
+            "mg_per_dl_explicit": 0,
+            "mmol_per_l_explicit": 94,
+            "inferred_mmol_per_l": 12,
+            "bare_mg_per_dl": 600,
+            "unparseable": 0
+          },
+          "before": {
+            "count": 706,
+            "min": 2.0,
+            "mean": 145.02,
+            "max": 1200.0
+          },
+          "after": {
+            "count": 706,
+            "min": 36.04,
+            "mean": 162.55,
+            "max": 1200.0
+          },
+          "converted_from_mmol_per_l": 106
+        },
+        "sbp": {
+          "canonical_unit": "mmHg",
+          "paths": {
+            "suffix_stripped": 84,
+            "bare_number": 638,
+            "unparseable": 0
+          },
+          "before": {
+            "count": 722,
+            "min": 0.0,
+            "mean": 116.43,
+            "max": 340.0
+          },
+          "after": {
+            "count": 722,
+            "min": 0.0,
+            "mean": 116.43,
+            "max": 340.0
+          }
+        },
+        "dbp": {
+          "canonical_unit": "mmHg",
+          "paths": {
+            "suffix_stripped": 0,
+            "bare_number": 713,
+            "unparseable": 0
+          },
+          "before": {
+            "count": 713,
+            "min": 0.0,
+            "mean": 72.0,
+            "max": 210.0
+          },
+          "after": {
+            "count": 713,
+            "min": 0.0,
+            "mean": 72.0,
+            "max": 210.0
+          }
+        },
+        "mbp": {
+          "canonical_unit": "mmHg",
+          "paths": {
+            "suffix_stripped": 75,
+            "bare_number": 691,
+            "unparseable": 0
+          },
+          "before": {
+            "count": 766,
+            "min": 0.0,
+            "mean": 88.13,
+            "max": 260.0
+          },
+          "after": {
+            "count": 766,
+            "min": 0.0,
+            "mean": 88.13,
+            "max": 260.0
+          }
+        },
+        "heart_rate": {
+          "canonical_unit": "bpm",
+          "paths": {
+            "suffix_stripped": 0,
+            "bare_number": 749,
+            "unparseable": 0
+          },
+          "before": {
+            "count": 749,
+            "min": 0.0,
+            "mean": 103.75,
+            "max": 480.0
+          },
+          "after": {
+            "count": 749,
+            "min": 0.0,
+            "mean": 103.75,
+            "max": 480.0
+          }
+        },
+        "spo2": {
+          "canonical_unit": "%",
+          "paths": {
+            "suffix_stripped": 0,
+            "bare_number": 801,
+            "unparseable": 0
+          },
+          "before": {
+            "count": 801,
+            "min": 12.0,
+            "mean": 94.8,
+            "max": 140.0
+          },
+          "after": {
+            "count": 801,
+            "min": 12.0,
+            "mean": 94.8,
+            "max": 140.0
+          }
+        },
+        "resp_rate": {
+          "canonical_unit": "breaths/min",
+          "paths": {
+            "suffix_stripped": 0,
+            "bare_number": 754,
+            "unparseable": 0
+          },
+          "before": {
+            "count": 754,
+            "min": 0.0,
+            "mean": 20.85,
+            "max": 95.0
+          },
+          "after": {
+            "count": 754,
+            "min": 0.0,
+            "mean": 20.85,
+            "max": 95.0
+          }
+        },
+        "creatinine": {
+          "canonical_unit": "mg/dL",
+          "paths": {
+            "suffix_stripped": 0,
+            "bare_number": 721,
+            "unparseable": 0
+          },
+          "before": {
+            "count": 721,
+            "min": 0.5,
+            "mean": 1.78,
+            "max": 3.46
+          },
+          "after": {
+            "count": 721,
+            "min": 0.5,
+            "mean": 1.78,
+            "max": 3.46
+          }
+        },
+        "wbc_count": {
+          "canonical_unit": "10^9/L",
+          "paths": {
+            "suffix_stripped": 0,
+            "bare_number": 643,
+            "unparseable": 0
+          },
+          "before": {
+            "count": 643,
+            "min": 4.12,
+            "mean": 11.31,
+            "max": 19.35
+          },
+          "after": {
+            "count": 643,
+            "min": 4.12,
+            "mean": 11.31,
+            "max": 19.35
+          }
+        },
+        "platelet_count": {
+          "canonical_unit": "10^9/L",
+          "paths": {
+            "suffix_stripped": 0,
+            "bare_number": 750,
+            "unparseable": 0
+          },
+          "before": {
+            "count": 750,
+            "min": 91.35,
+            "mean": 211.65,
+            "max": 356.89
+          },
+          "after": {
+            "count": 750,
+            "min": 91.35,
+            "mean": 211.65,
+            "max": 356.89
+          }
+        },
+        "age": {
+          "canonical_unit": "years",
+          "paths": {
+            "suffix_stripped": 0,
+            "bare_number": 844,
+            "unparseable": 12
+          },
+          "before": {
+            "count": 844,
+            "min": -5.0,
+            "mean": 57.23,
+            "max": 150.0
+          },
+          "after": {
+            "count": 844,
+            "min": -5.0,
+            "mean": 57.23,
+            "max": 150.0
+          }
+        },
+        "sofa_score": {
+          "canonical_unit": "points",
+          "paths": {
+            "suffix_stripped": 0,
+            "bare_number": 812,
+            "unparseable": 0
+          },
+          "before": {
+            "count": 812,
+            "min": 3.0,
+            "mean": 11.23,
+            "max": 20.0
+          },
+          "after": {
+            "count": 812,
+            "min": 3.0,
+            "mean": 11.23,
+            "max": 20.0
+          }
+        }
+      }
+    },
+    {
+      "step": 4,
+      "tool": "standardise_categories",
+      "reason": "Categorical fields carry spelling variants (worst: diagnosis with 13 raw values); unmerged variants split cohort statistics.",
+      "rows_before": 900,
+      "rows_after": 900,
+      "duration_seconds": 0.107,
+      "checks": [
+        {
+          "name": "all_categories_mapped",
+          "passed": true,
+          "detail": "every value matched the vocabulary"
+        }
+      ],
+      "passed": true,
+      "repaired": false,
+      "audit": {
+        "gender": {
+          "distinct_before": 8,
+          "distinct_after": 2,
+          "values_before": [
+            "F",
+            "FEMALE",
+            "Female",
+            "M",
+            "MALE",
+            "Male",
+            "female",
+            "male"
+          ],
+          "values_after": [
+            "Female",
+            "Male"
+          ],
+          "cells_changed": 266,
+          "unmapped_values": []
+        },
+        "ethnicity": {
+          "distinct_before": 7,
+          "distinct_after": 3,
+          "values_before": [
+            "AA",
+            "African",
+            "African-American",
+            "Other",
+            "african",
+            "african-american",
+            "other"
+          ],
+          "values_after": [
+            "African",
+            "African-American",
+            "Other"
+          ],
+          "cells_changed": 294,
+          "unmapped_values": []
+        },
+        "admission_type": {
+          "distinct_before": 11,
+          "distinct_after": 4,
+          "values_before": [
+            "ER",
+            "Emergency",
+            "Emergency Admission",
+            "ICU",
+            "ICU transfer",
+            "Outpatient",
+            "Ward",
+            "emergency",
+            "icu",
+            "outpatient",
+            "ward"
+          ],
+          "values_after": [
+            "Emergency",
+            "ICU",
+            "Outpatient",
+            "Ward"
+          ],
+          "cells_changed": 268,
+          "unmapped_values": []
+        },
+        "diagnosis": {
+          "distinct_before": 13,
+          "distinct_after": 5,
+          "values_before": [
+            "Cardiac",
+            "Cardiac Failure",
+            "PNEUMONIA",
+            "Pneumonia",
+            "SEPSIS",
+            "Sepsis",
+            "Stroke",
+            "Trauma",
+            "cardiac failure",
+            "pneumonia",
+            "sepsis",
+            "stroke",
+            "trauma"
+          ],
+          "values_after": [
+            "Cardiac Failure",
+            "Pneumonia",
+            "Sepsis",
+            "Stroke",
+            "Trauma"
+          ],
+          "cells_changed": 275,
+          "unmapped_values": []
+        },
+        "medication": {
+          "distinct_before": 13,
+          "distinct_after": 5,
+          "values_before": [
+            "ANTIBIOTIC",
+            "Antibiotic",
+            "INSULIN",
+            "Insulin",
+            "NO MEDICATION",
+            "No Medication",
+            "Sedative",
+            "Vasopressor",
+            "antibiotic",
+            "insulin",
+            "no medication",
+            "sedative",
+            "vasopressor"
+          ],
+          "values_after": [
+            "Antibiotic",
+            "Insulin",
+            "No Medication",
+            "Sedative",
+            "Vasopressor"
+          ],
+          "cells_changed": 266,
+          "unmapped_values": []
+        },
+        "data_source": {
+          "distinct_before": 9,
+          "distinct_after": 3,
+          "values_before": [
+            "Lab",
+            "Laboratory",
+            "MONITOR",
+            "Monitor",
+            "Nurse Entry",
+            "Nurse entry",
+            "laboratory",
+            "monitor",
+            "nurse entry"
+          ],
+          "values_after": [
+            "Laboratory",
+            "Monitor",
+            "Nurse Entry"
+          ],
+          "cells_changed": 259,
+          "unmapped_values": []
+        }
+      }
+    },
+    {
+      "step": 5,
+      "tool": "validate_ranges",
+      "reason": "811 cells fall outside physiological bounds or cannot be parsed; these are sensor or transcription faults and must become missing, not outliers.",
+      "rows_before": 900,
+      "rows_after": 900,
+      "duration_seconds": 0.169,
+      "checks": [
+        {
+          "name": "all_values_within_physiological_range",
+          "passed": true,
+          "detail": "clean"
+        },
+        {
+          "name": "no_channel_lost_the_majority_of_its_observations",
+          "passed": true,
+          "detail": "every channel retained over 50% of its observations"
+        }
+      ],
+      "passed": true,
+      "repaired": false,
+      "audit": {
+        "total_cells_rejected": 328,
+        "by_column": {
+          "age": {
+            "allowed_range": [
+              0.0,
+              120.0
+            ],
+            "rejected": 22,
+            "out_of_range": 22,
+            "unparseable_text": 0,
+            "observed_before": 844,
+            "observed_after": 822
+          },
+          "heart_rate": {
+            "allowed_range": [
+              20.0,
+              250.0
+            ],
+            "rejected": 39,
+            "out_of_range": 39,
+            "unparseable_text": 0,
+            "observed_before": 749,
+            "observed_after": 710
+          },
+          "sbp": {
+            "allowed_range": [
+              50.0,
+              250.0
+            ],
+            "rejected": 48,
+            "out_of_range": 48,
+            "unparseable_text": 0,
+            "observed_before": 722,
+            "observed_after": 674
+          },
+          "dbp": {
+            "allowed_range": [
+              20.0,
+              150.0
+            ],
+            "rejected": 26,
+            "out_of_range": 26,
+            "unparseable_text": 0,
+            "observed_before": 713,
+            "observed_after": 687
+          },
+          "mbp": {
+            "allowed_range": [
+              30.0,
+              180.0
+            ],
+            "rejected": 45,
+            "out_of_range": 45,
+            "unparseable_text": 0,
+            "observed_before": 766,
+            "observed_after": 721
+          },
+          "temperature": {
+            "allowed_range": [
+              30.0,
+              43.0
+            ],
+            "rejected": 40,
+            "out_of_range": 40,
+            "unparseable_text": 0,
+            "observed_before": 764,
+            "observed_after": 724
+          },
+          "spo2": {
+            "allowed_range": [
+              50.0,
+              100.0
+            ],
+            "rejected": 53,
+            "out_of_range": 53,
+            "unparseable_text": 0,
+            "observed_before": 801,
+            "observed_after": 748
+          },
+          "resp_rate": {
+            "allowed_range": [
+              4.0,
+              60.0
+            ],
+            "rejected": 35,
+            "out_of_range": 35,
+            "unparseable_text": 0,
+            "observed_before": 754,
+            "observed_after": 719
+          },
+          "glucose": {
+            "allowed_range": [
+              20.0,
+              600.0
+            ],
+            "rejected": 20,
+            "out_of_range": 20,
+            "unparseable_text": 0,
+            "observed_before": 706,
+            "observed_after": 686
+          },
+          "creatinine": {
+            "allowed_range": [
+              0.1,
+              15.0
+            ],
+            "rejected": 0,
+            "out_of_range": 0,
+            "unparseable_text": 0,
+            "observed_before": 721,
+            "observed_after": 721
+          },
+          "wbc_count": {
+            "allowed_range": [
+              0.5,
+              60.0
+            ],
+            "rejected": 0,
+            "out_of_range": 0,
+            "unparseable_text": 0,
+            "observed_before": 643,
+            "observed_after": 643
+          },
+          "platelet_count": {
+            "allowed_range": [
+              5.0,
+              800.0
+            ],
+            "rejected": 0,
+            "out_of_range": 0,
+            "unparseable_text": 0,
+            "observed_before": 750,
+            "observed_after": 750
+          },
+          "sofa_score": {
+            "allowed_range": [
+              0.0,
+              24.0
+            ],
+            "rejected": 0,
+            "out_of_range": 0,
+            "unparseable_text": 0,
+            "observed_before": 812,
+            "observed_after": 812
+          }
+        },
+        "rejections_logged": 200,
+        "rejections_truncated": true,
+        "rejections": [
+          {
+            "row_index": 6,
+            "admission_id": "ADM0011",
+            "charttime": "2026-01-17 07:27:00",
+            "column": "age",
+            "value": "-5.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 41,
+            "admission_id": "ADM0004",
+            "charttime": "2026-02-13 18:33:00",
+            "column": "age",
+            "value": "-5.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 81,
+            "admission_id": "ADM0072",
+            "charttime": "2026-01-07 20:24:00",
+            "column": "age",
+            "value": "150.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 119,
+            "admission_id": "ADM0077",
+            "charttime": "2026-01-23 13:38:00",
+            "column": "age",
+            "value": "-5.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 287,
+            "admission_id": "ADM0074",
+            "charttime": "2026-01-16 17:27:00",
+            "column": "age",
+            "value": "150.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 330,
+            "admission_id": "ADM0018",
+            "charttime": "2026-02-03 08:30:00",
+            "column": "age",
+            "value": "-5.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 347,
+            "admission_id": "ADM0028",
+            "charttime": "2026-01-14 16:42:00",
+            "column": "age",
+            "value": "150.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 419,
+            "admission_id": "ADM0089",
+            "charttime": "2026-01-21 12:55:00",
+            "column": "age",
+            "value": "150.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 433,
+            "admission_id": "ADM0071",
+            "charttime": "2026-02-01 15:39:00",
+            "column": "age",
+            "value": "150.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 468,
+            "admission_id": "ADM0082",
+            "charttime": "2026-01-26 23:48:00",
+            "column": "age",
+            "value": "-5.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 491,
+            "admission_id": "ADM0024",
+            "charttime": "2026-01-12 13:11:00",
+            "column": "age",
+            "value": "-5.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 492,
+            "admission_id": "ADM0057",
+            "charttime": "2026-02-13 14:05:00",
+            "column": "age",
+            "value": "-5.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 522,
+            "admission_id": "ADM0001",
+            "charttime": "2026-01-10 05:20:00",
+            "column": "age",
+            "value": "150.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 551,
+            "admission_id": "ADM0022",
+            "charttime": "2026-01-26 10:27:00",
+            "column": "age",
+            "value": "150.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 576,
+            "admission_id": "ADM0027",
+            "charttime": "2026-01-29 18:58:00",
+            "column": "age",
+            "value": "150.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 595,
+            "admission_id": "ADM0002",
+            "charttime": "2026-01-18 02:46:00",
+            "column": "age",
+            "value": "150.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 629,
+            "admission_id": "ADM0064",
+            "charttime": "2026-02-01 05:29:00",
+            "column": "age",
+            "value": "150.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 693,
+            "admission_id": "ADM0098",
+            "charttime": "2026-01-11 18:40:00",
+            "column": "age",
+            "value": "-5.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 728,
+            "admission_id": "ADM0092",
+            "charttime": "2026-01-29 10:19:00",
+            "column": "age",
+            "value": "150.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 745,
+            "admission_id": "ADM0062",
+            "charttime": "2026-01-16 22:23:00",
+            "column": "age",
+            "value": "150.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 795,
+            "admission_id": "ADM0067",
+            "charttime": "2026-01-18 04:45:00",
+            "column": "age",
+            "value": "150.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 797,
+            "admission_id": "ADM0072",
+            "charttime": "2026-01-07 18:15:00",
+            "column": "age",
+            "value": "-5.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 8,
+            "admission_id": "ADM0051",
+            "charttime": "2026-01-25 08:58:00",
+            "column": "heart_rate",
+            "value": "480.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 14,
+            "admission_id": "ADM0001",
+            "charttime": "2026-01-10 00:27:00",
+            "column": "heart_rate",
+            "value": "480.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 62,
+            "admission_id": "ADM0045",
+            "charttime": "2026-01-18 01:02:00",
+            "column": "heart_rate",
+            "value": "0.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 64,
+            "admission_id": "ADM0055",
+            "charttime": "2026-01-12 13:08:00",
+            "column": "heart_rate",
+            "value": "320.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 104,
+            "admission_id": "ADM0011",
+            "charttime": "2026-01-17 02:37:00",
+            "column": "heart_rate",
+            "value": "0.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 218,
+            "admission_id": "ADM0087",
+            "charttime": "2026-01-23 03:59:00",
+            "column": "heart_rate",
+            "value": "480.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 256,
+            "admission_id": "ADM0038",
+            "charttime": "2026-02-03 09:21:00",
+            "column": "heart_rate",
+            "value": "320.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 281,
+            "admission_id": "ADM0046",
+            "charttime": "2026-02-02 11:48:00",
+            "column": "heart_rate",
+            "value": "5.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 299,
+            "admission_id": "ADM0100",
+            "charttime": "2026-01-15 07:54:00",
+            "column": "heart_rate",
+            "value": "320.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 307,
+            "admission_id": "ADM0002",
+            "charttime": "2026-01-18 10:52:00",
+            "column": "heart_rate",
+            "value": "480.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 348,
+            "admission_id": "ADM0029",
+            "charttime": "2026-01-09 17:01:00",
+            "column": "heart_rate",
+            "value": "320.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 351,
+            "admission_id": "ADM0042",
+            "charttime": "2026-01-02 21:38:00",
+            "column": "heart_rate",
+            "value": "320.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 374,
+            "admission_id": "ADM0004",
+            "charttime": "2026-02-13 04:09:00",
+            "column": "heart_rate",
+            "value": "5.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 381,
+            "admission_id": "ADM0058",
+            "charttime": "2026-01-11 18:55:00",
+            "column": "heart_rate",
+            "value": "480.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 404,
+            "admission_id": "ADM0075",
+            "charttime": "2026-02-04 16:08:00",
+            "column": "heart_rate",
+            "value": "320.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 410,
+            "admission_id": "ADM0009",
+            "charttime": "2026-01-07 06:15:00",
+            "column": "heart_rate",
+            "value": "480.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 425,
+            "admission_id": "ADM0095",
+            "charttime": "2026-02-09 07:03:00",
+            "column": "heart_rate",
+            "value": "0.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 429,
+            "admission_id": "ADM0059",
+            "charttime": "2026-02-07 11:44:00",
+            "column": "heart_rate",
+            "value": "5.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 443,
+            "admission_id": "ADM0054",
+            "charttime": "2026-01-09 06:45:00",
+            "column": "heart_rate",
+            "value": "0.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 445,
+            "admission_id": "ADM0070",
+            "charttime": "2026-02-04 14:48:00",
+            "column": "heart_rate",
+            "value": "320.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 452,
+            "admission_id": "ADM0073",
+            "charttime": "2026-01-25 08:11:00",
+            "column": "heart_rate",
+            "value": "5.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 461,
+            "admission_id": "ADM0029",
+            "charttime": "2026-01-09 09:22:00",
+            "column": "heart_rate",
+            "value": "480.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 464,
+            "admission_id": "ADM0066",
+            "charttime": "2026-01-03 15:24:00",
+            "column": "heart_rate",
+            "value": "0.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 521,
+            "admission_id": "ADM0006",
+            "charttime": "2026-01-12 04:47:00",
+            "column": "heart_rate",
+            "value": "320.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 536,
+            "admission_id": "ADM0060",
+            "charttime": "2026-01-13 08:24:00",
+            "column": "heart_rate",
+            "value": "320.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 538,
+            "admission_id": "ADM0072",
+            "charttime": "2026-01-07 20:57:00",
+            "column": "heart_rate",
+            "value": "480.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 568,
+            "admission_id": "ADM0005",
+            "charttime": "2026-02-10 20:05:00",
+            "column": "heart_rate",
+            "value": "5.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 597,
+            "admission_id": "ADM0035",
+            "charttime": "2026-02-03 04:40:00",
+            "column": "heart_rate",
+            "value": "320.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 619,
+            "admission_id": "ADM0046",
+            "charttime": "2026-02-01 06:01:00",
+            "column": "heart_rate",
+            "value": "480.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 629,
+            "admission_id": "ADM0064",
+            "charttime": "2026-02-01 05:29:00",
+            "column": "heart_rate",
+            "value": "320.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 689,
+            "admission_id": "ADM0061",
+            "charttime": "2026-02-03 03:32:00",
+            "column": "heart_rate",
+            "value": "480.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 697,
+            "admission_id": "ADM0045",
+            "charttime": "2026-01-17 20:28:00",
+            "column": "heart_rate",
+            "value": "5.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 720,
+            "admission_id": "ADM0008",
+            "charttime": "2026-01-13 09:51:00",
+            "column": "heart_rate",
+            "value": "480.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 788,
+            "admission_id": "ADM0071",
+            "charttime": "2026-02-01 08:12:00",
+            "column": "heart_rate",
+            "value": "0.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 818,
+            "admission_id": "ADM0031",
+            "charttime": "2026-02-01 18:34:00",
+            "column": "heart_rate",
+            "value": "320.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 820,
+            "admission_id": "ADM0067",
+            "charttime": "2026-01-17 15:43:00",
+            "column": "heart_rate",
+            "value": "320.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 834,
+            "admission_id": "ADM0081",
+            "charttime": "2026-01-11 05:54:00",
+            "column": "heart_rate",
+            "value": "0.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 840,
+            "admission_id": "ADM0085",
+            "charttime": "2026-01-30 05:11:00",
+            "column": "heart_rate",
+            "value": "0.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 896,
+            "admission_id": "ADM0038",
+            "charttime": "2026-02-01 22:09:00",
+            "column": "heart_rate",
+            "value": "320.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 5,
+            "admission_id": "ADM0017",
+            "charttime": "2026-01-29 06:30:00",
+            "column": "sbp",
+            "value": "0.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 33,
+            "admission_id": "ADM0033",
+            "charttime": "2026-02-11 05:23:00",
+            "column": "sbp",
+            "value": "0.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 35,
+            "admission_id": "ADM0062",
+            "charttime": "2026-01-15 08:16:00",
+            "column": "sbp",
+            "value": "15.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 71,
+            "admission_id": "ADM0042",
+            "charttime": "2026-01-02 15:55:00",
+            "column": "sbp",
+            "value": "0.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 78,
+            "admission_id": "ADM0080",
+            "charttime": "2026-02-02 17:43:00",
+            "column": "sbp",
+            "value": "15.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 80,
+            "admission_id": "ADM0087",
+            "charttime": "2026-01-23 11:27:00",
+            "column": "sbp",
+            "value": "0.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 96,
+            "admission_id": "ADM0098",
+            "charttime": "2026-01-10 23:52:00",
+            "column": "sbp",
+            "value": "0.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 126,
+            "admission_id": "ADM0092",
+            "charttime": "2026-01-29 19:04:00",
+            "column": "sbp",
+            "value": "340.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 166,
+            "admission_id": "ADM0060",
+            "charttime": "2026-01-13 13:37:00",
+            "column": "sbp",
+            "value": "15.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 169,
+            "admission_id": "ADM0013",
+            "charttime": "2026-01-04 18:00:00",
+            "column": "sbp",
+            "value": "15.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 207,
+            "admission_id": "ADM0097",
+            "charttime": "2026-01-03 15:50:00",
+            "column": "sbp",
+            "value": "15.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 217,
+            "admission_id": "ADM0050",
+            "charttime": "2026-01-17 10:48:00",
+            "column": "sbp",
+            "value": "15.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 242,
+            "admission_id": "ADM0075",
+            "charttime": "2026-02-04 13:16:00",
+            "column": "sbp",
+            "value": "0.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 281,
+            "admission_id": "ADM0046",
+            "charttime": "2026-02-02 11:48:00",
+            "column": "sbp",
+            "value": "15.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 282,
+            "admission_id": "ADM0048",
+            "charttime": "2026-01-03 07:25:00",
+            "column": "sbp",
+            "value": "15.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 312,
+            "admission_id": "ADM0073",
+            "charttime": "2026-01-26 07:52:00",
+            "column": "sbp",
+            "value": "0.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 317,
+            "admission_id": "ADM0088",
+            "charttime": "2026-01-16 06:57:00",
+            "column": "sbp",
+            "value": "0.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 334,
+            "admission_id": "ADM0061",
+            "charttime": "2026-02-03 01:03:00",
+            "column": "sbp",
+            "value": "340.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 350,
+            "admission_id": "ADM0022",
+            "charttime": "2026-01-26 19:58:00",
+            "column": "sbp",
+            "value": "340.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 361,
+            "admission_id": "ADM0055",
+            "charttime": "2026-01-11 22:51:00",
+            "column": "sbp",
+            "value": "340.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 414,
+            "admission_id": "ADM0042",
+            "charttime": "2026-01-04 09:32:00",
+            "column": "sbp",
+            "value": "0.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 421,
+            "admission_id": "ADM0043",
+            "charttime": "2026-02-02 01:42:00",
+            "column": "sbp",
+            "value": "340.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 446,
+            "admission_id": "ADM0065",
+            "charttime": "2026-02-04 12:08:00",
+            "column": "sbp",
+            "value": "15.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 482,
+            "admission_id": "ADM0086",
+            "charttime": "2026-02-15 09:13:00",
+            "column": "sbp",
+            "value": "340.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 493,
+            "admission_id": "ADM0068",
+            "charttime": "2026-01-28 14:30:00",
+            "column": "sbp",
+            "value": "15.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 497,
+            "admission_id": "ADM0070",
+            "charttime": "2026-02-04 19:23:00",
+            "column": "sbp",
+            "value": "0.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 501,
+            "admission_id": "ADM0010",
+            "charttime": "2026-01-08 07:00:00",
+            "column": "sbp",
+            "value": "340.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 554,
+            "admission_id": "ADM0008",
+            "charttime": "2026-01-12 22:21:00",
+            "column": "sbp",
+            "value": "340.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 568,
+            "admission_id": "ADM0005",
+            "charttime": "2026-02-10 20:05:00",
+            "column": "sbp",
+            "value": "0.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 575,
+            "admission_id": "ADM0052",
+            "charttime": "2026-01-25 21:35:00",
+            "column": "sbp",
+            "value": "0.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 585,
+            "admission_id": "ADM0006",
+            "charttime": "2026-01-14 02:19:00",
+            "column": "sbp",
+            "value": "340.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 665,
+            "admission_id": "ADM0021",
+            "charttime": "2026-01-22 18:54:00",
+            "column": "sbp",
+            "value": "15.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 680,
+            "admission_id": "ADM0070",
+            "charttime": "2026-02-06 00:06:00",
+            "column": "sbp",
+            "value": "340.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 693,
+            "admission_id": "ADM0098",
+            "charttime": "2026-01-11 18:40:00",
+            "column": "sbp",
+            "value": "340.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 696,
+            "admission_id": "ADM0017",
+            "charttime": "2026-01-28 20:50:00",
+            "column": "sbp",
+            "value": "340.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 707,
+            "admission_id": "ADM0034",
+            "charttime": "2026-02-14 06:36:00",
+            "column": "sbp",
+            "value": "15.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 717,
+            "admission_id": "ADM0052",
+            "charttime": "2026-01-25 18:00:00",
+            "column": "sbp",
+            "value": "0.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 726,
+            "admission_id": "ADM0074",
+            "charttime": "2026-01-15 03:06:00",
+            "column": "sbp",
+            "value": "340.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 737,
+            "admission_id": "ADM0030",
+            "charttime": "2026-01-22 07:50:00",
+            "column": "sbp",
+            "value": "15.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 748,
+            "admission_id": "ADM0046",
+            "charttime": "2026-02-02 05:55:00",
+            "column": "sbp",
+            "value": "340.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 816,
+            "admission_id": "ADM0025",
+            "charttime": "2026-02-07 06:00:00",
+            "column": "sbp",
+            "value": "15.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 827,
+            "admission_id": "ADM0054",
+            "charttime": "2026-01-09 12:05:00",
+            "column": "sbp",
+            "value": "340.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 830,
+            "admission_id": "ADM0006",
+            "charttime": "2026-01-12 19:18:00",
+            "column": "sbp",
+            "value": "0.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 837,
+            "admission_id": "ADM0079",
+            "charttime": "2026-02-01 22:22:00",
+            "column": "sbp",
+            "value": "15.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 847,
+            "admission_id": "ADM0042",
+            "charttime": "2026-01-02 10:17:00",
+            "column": "sbp",
+            "value": "0.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 852,
+            "admission_id": "ADM0025",
+            "charttime": "2026-02-07 11:49:00",
+            "column": "sbp",
+            "value": "340.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 873,
+            "admission_id": "ADM0085",
+            "charttime": "2026-01-30 03:44:00",
+            "column": "sbp",
+            "value": "15.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 894,
+            "admission_id": "ADM0070",
+            "charttime": "2026-02-05 04:34:00",
+            "column": "sbp",
+            "value": "0.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 17,
+            "admission_id": "ADM0066",
+            "charttime": "2026-01-02 14:37:00",
+            "column": "dbp",
+            "value": "5.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 26,
+            "admission_id": "ADM0007",
+            "charttime": "2026-01-03 17:50:00",
+            "column": "dbp",
+            "value": "5.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 47,
+            "admission_id": "ADM0087",
+            "charttime": "2026-01-24 09:14:00",
+            "column": "dbp",
+            "value": "210.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 62,
+            "admission_id": "ADM0045",
+            "charttime": "2026-01-18 01:02:00",
+            "column": "dbp",
+            "value": "5.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 88,
+            "admission_id": "ADM0064",
+            "charttime": "2026-01-31 22:19:00",
+            "column": "dbp",
+            "value": "5.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 100,
+            "admission_id": "ADM0080",
+            "charttime": "2026-02-03 00:01:00",
+            "column": "dbp",
+            "value": "5.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 109,
+            "admission_id": "ADM0009",
+            "charttime": "2026-01-06 08:32:00",
+            "column": "dbp",
+            "value": "5.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 125,
+            "admission_id": "ADM0057",
+            "charttime": "2026-02-11 23:47:00",
+            "column": "dbp",
+            "value": "0.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 140,
+            "admission_id": "ADM0098",
+            "charttime": "2026-01-11 12:12:00",
+            "column": "dbp",
+            "value": "0.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 159,
+            "admission_id": "ADM0023",
+            "charttime": "2026-01-04 22:43:00",
+            "column": "dbp",
+            "value": "5.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 198,
+            "admission_id": "ADM0039",
+            "charttime": "2026-02-11 23:29:00",
+            "column": "dbp",
+            "value": "5.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 225,
+            "admission_id": "ADM0004",
+            "charttime": "2026-02-14 04:33:00",
+            "column": "dbp",
+            "value": "5.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 258,
+            "admission_id": "ADM0060",
+            "charttime": "2026-01-13 05:14:00",
+            "column": "dbp",
+            "value": "210.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 376,
+            "admission_id": "ADM0081",
+            "charttime": "2026-01-13 05:44:00",
+            "column": "dbp",
+            "value": "5.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 398,
+            "admission_id": "ADM0074",
+            "charttime": "2026-01-15 12:45:00",
+            "column": "dbp",
+            "value": "5.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 402,
+            "admission_id": "ADM0042",
+            "charttime": "2026-01-03 11:35:00",
+            "column": "dbp",
+            "value": "0.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 461,
+            "admission_id": "ADM0029",
+            "charttime": "2026-01-09 09:22:00",
+            "column": "dbp",
+            "value": "210.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 591,
+            "admission_id": "ADM0094",
+            "charttime": "2026-01-10 14:58:00",
+            "column": "dbp",
+            "value": "210.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 639,
+            "admission_id": "ADM0055",
+            "charttime": "2026-01-11 19:18:00",
+            "column": "dbp",
+            "value": "5.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 653,
+            "admission_id": "ADM0094",
+            "charttime": "2026-01-10 21:46:00",
+            "column": "dbp",
+            "value": "210.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 754,
+            "admission_id": "ADM0098",
+            "charttime": "2026-01-11 07:17:00",
+            "column": "dbp",
+            "value": "210.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 785,
+            "admission_id": "ADM0037",
+            "charttime": "2026-02-05 20:03:00",
+            "column": "dbp",
+            "value": "5.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 799,
+            "admission_id": "ADM0040",
+            "charttime": "2026-02-13 23:43:00",
+            "column": "dbp",
+            "value": "210.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 830,
+            "admission_id": "ADM0006",
+            "charttime": "2026-01-12 19:18:00",
+            "column": "dbp",
+            "value": "0.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 837,
+            "admission_id": "ADM0079",
+            "charttime": "2026-02-01 22:22:00",
+            "column": "dbp",
+            "value": "0.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 862,
+            "admission_id": "ADM0028",
+            "charttime": "2026-01-14 08:42:00",
+            "column": "dbp",
+            "value": "210.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 7,
+            "admission_id": "ADM0064",
+            "charttime": "2026-02-01 16:46:00",
+            "column": "mbp",
+            "value": "0.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 20,
+            "admission_id": "ADM0091",
+            "charttime": "2026-02-08 18:41:00",
+            "column": "mbp",
+            "value": "0.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 58,
+            "admission_id": "ADM0035",
+            "charttime": "2026-02-02 18:09:00",
+            "column": "mbp",
+            "value": "260.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 83,
+            "admission_id": "ADM0024",
+            "charttime": "2026-01-13 03:53:00",
+            "column": "mbp",
+            "value": "0.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 96,
+            "admission_id": "ADM0098",
+            "charttime": "2026-01-10 23:52:00",
+            "column": "mbp",
+            "value": "8.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 114,
+            "admission_id": "ADM0024",
+            "charttime": "2026-01-12 15:46:00",
+            "column": "mbp",
+            "value": "8.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 118,
+            "admission_id": "ADM0083",
+            "charttime": "2026-01-14 12:48:00",
+            "column": "mbp",
+            "value": "8.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 163,
+            "admission_id": "ADM0001",
+            "charttime": "2026-01-10 17:38:00",
+            "column": "mbp",
+            "value": "260.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 169,
+            "admission_id": "ADM0013",
+            "charttime": "2026-01-04 18:00:00",
+            "column": "mbp",
+            "value": "0.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 176,
+            "admission_id": "ADM0021",
+            "charttime": "2026-01-22 14:18:00",
+            "column": "mbp",
+            "value": "260.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 191,
+            "admission_id": "ADM0095",
+            "charttime": "2026-02-08 19:41:00",
+            "column": "mbp",
+            "value": "260.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 198,
+            "admission_id": "ADM0039",
+            "charttime": "2026-02-11 23:29:00",
+            "column": "mbp",
+            "value": "8.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 219,
+            "admission_id": "ADM0031",
+            "charttime": "2026-02-02 13:33:00",
+            "column": "mbp",
+            "value": "0.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 225,
+            "admission_id": "ADM0004",
+            "charttime": "2026-02-14 04:33:00",
+            "column": "mbp",
+            "value": "260.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 230,
+            "admission_id": "ADM0032",
+            "charttime": "2026-01-29 18:12:00",
+            "column": "mbp",
+            "value": "8.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 267,
+            "admission_id": "ADM0049",
+            "charttime": "2026-02-10 22:23:00",
+            "column": "mbp",
+            "value": "260.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 328,
+            "admission_id": "ADM0078",
+            "charttime": "2026-01-12 18:25:00",
+            "column": "mbp",
+            "value": "0.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 333,
+            "admission_id": "ADM0012",
+            "charttime": "2026-01-20 03:43:00",
+            "column": "mbp",
+            "value": "8.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 351,
+            "admission_id": "ADM0042",
+            "charttime": "2026-01-02 21:38:00",
+            "column": "mbp",
+            "value": "260.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 360,
+            "admission_id": "ADM0024",
+            "charttime": "2026-01-12 05:28:00",
+            "column": "mbp",
+            "value": "260.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 374,
+            "admission_id": "ADM0004",
+            "charttime": "2026-02-13 04:09:00",
+            "column": "mbp",
+            "value": "260.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 392,
+            "admission_id": "ADM0058",
+            "charttime": "2026-01-12 00:34:00",
+            "column": "mbp",
+            "value": "8.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 407,
+            "admission_id": "ADM0018",
+            "charttime": "2026-02-03 09:12:00",
+            "column": "mbp",
+            "value": "0.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 420,
+            "admission_id": "ADM0021",
+            "charttime": "2026-01-22 09:41:00",
+            "column": "mbp",
+            "value": "0.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 439,
+            "admission_id": "ADM0073",
+            "charttime": "2026-01-25 13:26:00",
+            "column": "mbp",
+            "value": "260.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 460,
+            "admission_id": "ADM0054",
+            "charttime": "2026-01-10 03:33:00",
+            "column": "mbp",
+            "value": "260.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 473,
+            "admission_id": "ADM0010",
+            "charttime": "2026-01-08 20:42:00",
+            "column": "mbp",
+            "value": "8.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 509,
+            "admission_id": "ADM0012",
+            "charttime": "2026-01-20 02:39:00",
+            "column": "mbp",
+            "value": "8.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 513,
+            "admission_id": "ADM0032",
+            "charttime": "2026-01-30 00:44:00",
+            "column": "mbp",
+            "value": "8.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 532,
+            "admission_id": "ADM0031",
+            "charttime": "2026-02-01 19:09:00",
+            "column": "mbp",
+            "value": "0.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 584,
+            "admission_id": "ADM0077",
+            "charttime": "2026-01-24 12:09:00",
+            "column": "mbp",
+            "value": "260.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 611,
+            "admission_id": "ADM0076",
+            "charttime": "2026-01-18 10:31:00",
+            "column": "mbp",
+            "value": "8.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 626,
+            "admission_id": "ADM0069",
+            "charttime": "2026-02-13 05:06:00",
+            "column": "mbp",
+            "value": "0.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 665,
+            "admission_id": "ADM0021",
+            "charttime": "2026-01-22 18:54:00",
+            "column": "mbp",
+            "value": "260.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 711,
+            "admission_id": "ADM0091",
+            "charttime": "2026-02-08 19:26:00",
+            "column": "mbp",
+            "value": "260.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 718,
+            "admission_id": "ADM0053",
+            "charttime": "2026-01-17 23:53:00",
+            "column": "mbp",
+            "value": "8.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 728,
+            "admission_id": "ADM0092",
+            "charttime": "2026-01-29 10:19:00",
+            "column": "mbp",
+            "value": "0.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 730,
+            "admission_id": "ADM0089",
+            "charttime": "2026-01-19 19:16:00",
+            "column": "mbp",
+            "value": "8.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 766,
+            "admission_id": "ADM0063",
+            "charttime": "2026-01-23 19:30:00",
+            "column": "mbp",
+            "value": "260.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 812,
+            "admission_id": "ADM0005",
+            "charttime": "2026-02-09 20:01:00",
+            "column": "mbp",
+            "value": "0.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 824,
+            "admission_id": "ADM0022",
+            "charttime": "2026-01-26 01:18:00",
+            "column": "mbp",
+            "value": "260.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 829,
+            "admission_id": "ADM0038",
+            "charttime": "2026-02-02 06:04:00",
+            "column": "mbp",
+            "value": "0.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 858,
+            "admission_id": "ADM0072",
+            "charttime": "2026-01-08 01:21:00",
+            "column": "mbp",
+            "value": "0.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 871,
+            "admission_id": "ADM0014",
+            "charttime": "2026-01-06 23:30:00",
+            "column": "mbp",
+            "value": "0.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 878,
+            "admission_id": "ADM0033",
+            "charttime": "2026-02-12 11:15:00",
+            "column": "mbp",
+            "value": "0.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 4,
+            "admission_id": "ADM0027",
+            "charttime": "2026-01-30 06:50:00",
+            "column": "temperature",
+            "value": "61.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 13,
+            "admission_id": "ADM0063",
+            "charttime": "2026-01-24 05:36:00",
+            "column": "temperature",
+            "value": "12.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 48,
+            "admission_id": "ADM0050",
+            "charttime": "2026-01-17 03:35:00",
+            "column": "temperature",
+            "value": "61.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 64,
+            "admission_id": "ADM0055",
+            "charttime": "2026-01-12 13:08:00",
+            "column": "temperature",
+            "value": "12.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 85,
+            "admission_id": "ADM0027",
+            "charttime": "2026-01-30 18:30:00",
+            "column": "temperature",
+            "value": "61.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 104,
+            "admission_id": "ADM0011",
+            "charttime": "2026-01-17 02:37:00",
+            "column": "temperature",
+            "value": "61.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 110,
+            "admission_id": "ADM0081",
+            "charttime": "2026-01-13 09:02:00",
+            "column": "temperature",
+            "value": "12.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 167,
+            "admission_id": "ADM0096",
+            "charttime": "2026-02-13 19:33:00",
+            "column": "temperature",
+            "value": "12.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 189,
+            "admission_id": "ADM0058",
+            "charttime": "2026-01-11 07:41:00",
+            "column": "temperature",
+            "value": "61.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 270,
+            "admission_id": "ADM0082",
+            "charttime": "2026-01-26 10:01:00",
+            "column": "temperature",
+            "value": "61.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 308,
+            "admission_id": "ADM0063",
+            "charttime": "2026-01-24 02:15:00",
+            "column": "temperature",
+            "value": "61.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 314,
+            "admission_id": "ADM0019",
+            "charttime": "2026-02-03 20:07:00",
+            "column": "temperature",
+            "value": "61.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 336,
+            "admission_id": "ADM0035",
+            "charttime": "2026-02-01 23:19:00",
+            "column": "temperature",
+            "value": "61.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 340,
+            "admission_id": "ADM0017",
+            "charttime": "2026-01-29 03:14:00",
+            "column": "temperature",
+            "value": "12.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 350,
+            "admission_id": "ADM0022",
+            "charttime": "2026-01-26 19:58:00",
+            "column": "temperature",
+            "value": "12.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 389,
+            "admission_id": "ADM0086",
+            "charttime": "2026-02-14 04:40:00",
+            "column": "temperature",
+            "value": "12.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 390,
+            "admission_id": "ADM0073",
+            "charttime": "2026-01-24 21:12:00",
+            "column": "temperature",
+            "value": "12.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 392,
+            "admission_id": "ADM0058",
+            "charttime": "2026-01-12 00:34:00",
+            "column": "temperature",
+            "value": "61.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 422,
+            "admission_id": "ADM0004",
+            "charttime": "2026-02-14 06:07:00",
+            "column": "temperature",
+            "value": "61.0",
+            "reason": "out_of_physiological_range"
+          },
+          {
+            "row_index": 455,
+            "admission_id": "ADM0088",
+            "charttime": "2026-01-16 12:14:00",
+            "column": "temperature",
+            "value": "61.0",
+            "reason": "out_of_physiological_range"
+          }
+        ],
+        "policy": "cell_set_to_missing__row_retained"
+      }
+    },
+    {
+      "step": 6,
+      "tool": "build_hourly_timeseries",
+      "reason": "Observations are event-based and irregularly spaced; modelling requires a regular hourly grid spanning each admission window.",
+      "rows_before": 900,
+      "rows_after": 4715,
+      "duration_seconds": 2.129,
+      "checks": [
+        {
+          "name": "hourly_grid_is_contiguous",
+          "passed": true,
+          "detail": "0 admissions with a broken grid"
+        },
+        {
+          "name": "one_row_per_admission_hour",
+          "passed": true,
+          "detail": "0 duplicated keys"
+        },
+        {
+          "name": "expansion_increased_row_count",
+          "passed": true,
+          "detail": "900 -> 4715 rows"
+        }
+      ],
+      "passed": true,
+      "repaired": false,
+      "audit": {
+        "freq": "1h",
+        "rows_before": 900,
+        "rows_after": 4715,
+        "expansion_factor": 5.24,
+        "admissions": 100,
+        "observations_merged_into_shared_hour": 89,
+        "admissions_truncated_at_max_hours": 0,
+        "hours_per_admission": {
+          "min": 25,
+          "median": 47.5,
+          "max": 72
+        },
+        "missing_pct_before": {
+          "heart_rate": 21.11,
+          "sbp": 25.11,
+          "dbp": 23.67,
+          "mbp": 19.89,
+          "temperature": 19.56,
+          "spo2": 16.89,
+          "resp_rate": 20.11,
+          "glucose": 23.78
+        },
+        "missing_pct_after": {
+          "heart_rate": 86.15,
+          "sbp": 86.87,
+          "dbp": 86.55,
+          "mbp": 86.11,
+          "temperature": 85.85,
+          "spo2": 85.34,
+          "resp_rate": 86.11,
+          "glucose": 86.64
+        }
+      }
+    },
+    {
+      "step": 7,
+      "tool": "build_value_mask_decay",
+      "reason": "Hourly alignment exposes the true extent of missingness; Value-Mask-Decay preserves which cells were measured and how much confidence a carried-forward value deserves.",
+      "rows_before": 4715,
+      "rows_after": 4715,
+      "duration_seconds": 1.154,
+      "checks": [
+        {
+          "name": "no_missing_values_remain",
+          "passed": true,
+          "detail": "all channels complete"
+        },
+        {
+          "name": "mask_is_binary",
+          "passed": true,
+          "detail": "all masks in {0, 1}"
+        },
+        {
+          "name": "decay_within_unit_interval",
+          "passed": true,
+          "detail": "all decays in [0, 1]"
+        },
+        {
+          "name": "neutral_fill_standardises_to_zero",
+          "passed": true,
+          "detail": "largest absolute z among neutral-filled cells: 0.0001"
+        }
+      ],
+      "passed": true,
+      "repaired": false,
+      "audit": {
+        "decay_base": 0.75,
+        "rows": 4715,
+        "channels": {
+          "heart_rate": {
+            "population_mean_used": 95.699,
+            "observed": 653,
+            "locf_filled": 3481,
+            "neutral_filled": 581,
+            "observed_pct": 13.85,
+            "max_gap_hours": 44,
+            "mean_decay_on_imputed": 0.3253
+          },
+          "sbp": {
+            "population_mean_used": 116.386,
+            "observed": 619,
+            "locf_filled": 3473,
+            "neutral_filled": 623,
+            "observed_pct": 13.13,
+            "max_gap_hours": 40,
+            "mean_decay_on_imputed": 0.3204
+          },
+          "dbp": {
+            "population_mean_used": 72.242,
+            "observed": 634,
+            "locf_filled": 3509,
+            "neutral_filled": 572,
+            "observed_pct": 13.45,
+            "max_gap_hours": 43,
+            "mean_decay_on_imputed": 0.3239
+          },
+          "mbp": {
+            "population_mean_used": 87.785,
+            "observed": 655,
+            "locf_filled": 3500,
+            "neutral_filled": 560,
+            "observed_pct": 13.89,
+            "max_gap_hours": 36,
+            "mean_decay_on_imputed": 0.3296
+          },
+          "temperature": {
+            "population_mean_used": 37.519,
+            "observed": 667,
+            "locf_filled": 3536,
+            "neutral_filled": 512,
+            "observed_pct": 14.15,
+            "max_gap_hours": 36,
+            "mean_decay_on_imputed": 0.3312
+          },
+          "spo2": {
+            "population_mean_used": 94.724,
+            "observed": 691,
+            "locf_filled": 3526,
+            "neutral_filled": 498,
+            "observed_pct": 14.66,
+            "max_gap_hours": 36,
+            "mean_decay_on_imputed": 0.3415
+          },
+          "resp_rate": {
+            "population_mean_used": 20.695,
+            "observed": 655,
+            "locf_filled": 3474,
+            "neutral_filled": 586,
+            "observed_pct": 13.89,
+            "max_gap_hours": 45,
+            "mean_decay_on_imputed": 0.3289
+          },
+          "glucose": {
+            "population_mean_used": 132.268,
+            "observed": 630,
+            "locf_filled": 3557,
+            "neutral_filled": 528,
+            "observed_pct": 13.36,
+            "max_gap_hours": 40,
+            "mean_decay_on_imputed": 0.3261
+          }
+        },
+        "standardisation": {
+          "heart_rate": {
+            "mean": 95.6991,
+            "std": 9.9384
+          },
+          "sbp": {
+            "mean": 116.3858,
+            "std": 11.2263
+          },
+          "dbp": {
+            "mean": 72.2421,
+            "std": 8.2258
+          },
+          "mbp": {
+            "mean": 87.7852,
+            "std": 8.5647
+          },
+          "temperature": {
+            "mean": 37.5189,
+            "std": 0.4307
+          },
+          "spo2": {
+            "mean": 94.7241,
+            "std": 1.6809
+          },
+          "resp_rate": {
+            "mean": 20.6951,
+            "std": 3.2553
+          },
+          "glucose": {
+            "mean": 132.2676,
+            "std": 21.5325
+          }
+        },
+        "neutral_fill_zero_check": {
+          "heart_rate": 0.0,
+          "sbp": 0.0,
+          "dbp": 0.0,
+          "mbp": 0.0,
+          "temperature": 0.0001,
+          "spo2": 0.0001,
+          "resp_rate": 0.0,
+          "glucose": 0.0
+        },
+        "neutral_fill_zero_check_note": "Largest absolute z-score among neutral-filled cells. A value of 0.0 confirms that a population-mean fill standardises exactly to the no-information point."
+      }
+    },
+    {
+      "step": 8,
+      "tool": "refine_missing_values",
+      "reason": "Imputed cells with long gaps carry little confidence and can be improved using the simultaneous state of physiologically coupled channels.",
+      "rows_before": 4715,
+      "rows_after": 4715,
+      "duration_seconds": 1.528,
+      "checks": [
+        {
+          "name": "observed_cells_never_modified",
+          "passed": true,
+          "detail": "0 observed cells were altered (must be 0)"
+        },
+        {
+          "name": "refinement_columns_created",
+          "passed": true,
+          "detail": "refined columns present"
+        }
+      ],
+      "passed": true,
+      "repaired": false,
+      "audit": {
+        "method": "decay_gated_ridge_refinement",
+        "blend_formula": "x_hat = decay * locf + (1 - decay) * cross_channel_prediction",
+        "decay_base": 0.75,
+        "cells_refined": 32516,
+        "cells_protected_observed": 5204,
+        "observed_cells_modified": 0,
+        "by_channel": {
+          "heart_rate": {
+            "cells_refined": 4062,
+            "cells_protected_observed": 653,
+            "mean_absolute_adjustment_z": 0.122,
+            "max_absolute_adjustment_z": 0.7533,
+            "r2_in_sample": 0.8537
+          },
+          "sbp": {
+            "cells_refined": 4096,
+            "cells_protected_observed": 619,
+            "mean_absolute_adjustment_z": 0.2172,
+            "max_absolute_adjustment_z": 1.3531,
+            "r2_in_sample": 0.8208
+          },
+          "dbp": {
+            "cells_refined": 4081,
+            "cells_protected_observed": 634,
+            "mean_absolute_adjustment_z": 0.1988,
+            "max_absolute_adjustment_z": 1.1689,
+            "r2_in_sample": 0.8806
+          },
+          "mbp": {
+            "cells_refined": 4060,
+            "cells_protected_observed": 655,
+            "mean_absolute_adjustment_z": 0.2321,
+            "max_absolute_adjustment_z": 1.1722,
+            "r2_in_sample": 0.8353
+          },
+          "temperature": {
+            "cells_refined": 4048,
+            "cells_protected_observed": 667,
+            "mean_absolute_adjustment_z": 0.2438,
+            "max_absolute_adjustment_z": 1.8307,
+            "r2_in_sample": 0.7502
+          },
+          "spo2": {
+            "cells_refined": 4024,
+            "cells_protected_observed": 691,
+            "mean_absolute_adjustment_z": 0.2281,
+            "max_absolute_adjustment_z": 2.1568,
+            "r2_in_sample": 0.8279
+          },
+          "resp_rate": {
+            "cells_refined": 4060,
+            "cells_protected_observed": 655,
+            "mean_absolute_adjustment_z": 0.1684,
+            "max_absolute_adjustment_z": 0.9425,
+            "r2_in_sample": 0.82
+          },
+          "glucose": {
+            "cells_refined": 4085,
+            "cells_protected_observed": 630,
+            "mean_absolute_adjustment_z": 0.2715,
+            "max_absolute_adjustment_z": 3.109,
+            "r2_in_sample": 0.5299
+          }
+        },
+        "training_report": {
+          "heart_rate": {
+            "training_rows": 163,
+            "n_features": 43,
+            "r2_in_sample": 0.8537,
+            "training_scheme": "self_supervised_artificial_masking",
+            "mask_fraction": 0.25
+          },
+          "sbp": {
+            "training_rows": 155,
+            "n_features": 43,
+            "r2_in_sample": 0.8208,
+            "training_scheme": "self_supervised_artificial_masking",
+            "mask_fraction": 0.25
+          },
+          "dbp": {
+            "training_rows": 158,
+            "n_features": 43,
+            "r2_in_sample": 0.8806,
+            "training_scheme": "self_supervised_artificial_masking",
+            "mask_fraction": 0.25
+          },
+          "mbp": {
+            "training_rows": 164,
+            "n_features": 43,
+            "r2_in_sample": 0.8353,
+            "training_scheme": "self_supervised_artificial_masking",
+            "mask_fraction": 0.25
+          },
+          "temperature": {
+            "training_rows": 167,
+            "n_features": 43,
+            "r2_in_sample": 0.7502,
+            "training_scheme": "self_supervised_artificial_masking",
+            "mask_fraction": 0.25
+          },
+          "spo2": {
+            "training_rows": 173,
+            "n_features": 43,
+            "r2_in_sample": 0.8279,
+            "training_scheme": "self_supervised_artificial_masking",
+            "mask_fraction": 0.25
+          },
+          "resp_rate": {
+            "training_rows": 164,
+            "n_features": 43,
+            "r2_in_sample": 0.82,
+            "training_scheme": "self_supervised_artificial_masking",
+            "mask_fraction": 0.25
+          },
+          "glucose": {
+            "training_rows": 158,
+            "n_features": 43,
+            "r2_in_sample": 0.5299,
+            "training_scheme": "self_supervised_artificial_masking",
+            "mask_fraction": 0.25
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,1001 @@
+admission_id,patient_id,intime,outtime,charttime,age,gender,ethnicity,heart_rate,sbp,dbp,mbp,temperature,spo2,resp_rate,glucose,creatinine,wbc_count,platelet_count,admission_type,diagnosis,medication,sofa_score,data_source
+ADM0001,P001,2026-02-10 00:00,2026-02-12 14:00,2026-02-10 03:05,45.0,male,African,300.0,133.0,,86.5,,120.0,,143.0,0.55,,,ICU,Pneumonia,Vasopressor,3.0,monitor
+ADM0001,P001,Feb 10 2026 00:00,Feb 12 2026 14:00,2026-02-10 13:06,150.0,Male,Other,98.1,,,85 mmHg,,120.0,,103.1,2.03,,120.0,Emergency,Trauma,Vasopressor,,Nurse Entry
+ADM0001,P001,Feb 10 2026 00:00,2026-02-12 14:00,10/02/2026 17:23,150.0,Female,African-American,,,,85 mmHg,,120.0,,123.3,2.02,5.56,,Ward,Sepsis,Antibiotic,10.0,monitor
+ADM0001,P001,2026/02/10 00:00,12/02/2026 14:00,Feb 11 2026 04:25,35.0,female,AA,300.0,,,,36.5 C,94.9,,83.4,1.28,10.8,158.0,Emergency Admission,Trauma,antibiotic,,monitor
+ADM0001,P001,Feb 10 2026 00:00,2026-02-12 14:00,2026-02-11 07:38,,female,AA,93.0,,,,,96.4,,,2.57,8.35,,Emergency Admission,Stroke,antibiotic,6.0,Laboratory
+ADM0001,P001,2026-02-10 00:00,Feb 12 2026 14:00,2026/02/11 11:48,20.0,M,AA,63.6,126.5,70.4,,99.1 F,98.2,,147.9,2.43,4.11,,ER,Pneumonia,Vasopressor,13.0,Nurse entry
+ADM0001,P001,10/02/2026 00:00,Feb 12 2026 14:00,2026/02/12 21:48,,male,Other,85.4,126.6,,82.8,,96.6,,,2.32,12.56,116.0,ICU,Sepsis,None,10.0,Nurse entry
+ADM0001,P001,2026/02/10 00:00,12/02/2026 14:00,13/02/2026 14:15,150.0,F,African-American,,,67.3,95.4,98.4 F,120.0,,6.6 mmol/L,,,319.0,Emergency Admission,Sepsis,None,,Monitor
+ADM0001,P001,2026/02/10 00:00,12/02/2026 14:00,2026/02/13 22:15,,F,African-American,85.5,,51.1,86.7,98.8 F,97.7,25.4,104.5,,,326.0,Outpatient,Sepsis,Antibiotic,12.0,monitor
+ADM0001,P001,2026/02/10 00:00,Feb 12 2026 14:00,2026/02/14 18:16,150.0,female,Other,82.5,138.3,,82.1,36.4 C,120.0,18.5,,,16.44,,ER,Stroke,Antibiotic,1.0,Nurse Entry
+ADM0002,P002,2026/01/05 00:00,Jan 07 2026 08:00,Jan 05 2026 15:02,150.0,female,AA,85.1,,,94.4,,,,113.0,1.54,,398.0,Emergency,Stroke,Antibiotic,8.0,Laboratory
+ADM0002,P002,05/01/2026 00:00,Jan 07 2026 08:00,Jan 06 2026 06:56,,male,AA,300.0,116.8,,,98.1 F,97.3,,117.8,2.91,6.78,,ER,Pneumonia,INSULIN,10.0,Laboratory
+ADM0002,P002,2026-01-05 00:00,2026-01-07 08:00,2026/01/06 07:32,53.0,Male,AA,,,,85 mmHg,,120.0,,,2.96,6.63,118.0,ER,Sepsis,Vasopressor,,Nurse Entry
+ADM0002,P002,2026-01-05 00:00,Jan 07 2026 08:00,07/01/2026 03:02,150.0,Male,AA,300.0,,64.1,111.0,100.2 F,94.2,,185.7,0.73,,290.0,Ward,Pneumonia,INSULIN,,Monitor
+ADM0002,P002,05/01/2026 00:00,2026/01/07 08:00,Jan 08 2026 00:54,57.0,Female,African,300.0,122.0,,,,,,6.6 mmol/L,,,94.0,Ward,Pneumonia,antibiotic,8.0,Monitor
+ADM0002,P002,Jan 05 2026 00:00,2026/01/07 08:00,2026-01-08 02:38,150.0,Female,AA,85.2,,,85 mmHg,36.4 C,,,125.5,,,419.0,Emergency Admission,Cardiac Failure,antibiotic,,Laboratory
+ADM0002,P002,05/01/2026 00:00,07/01/2026 08:00,2026/01/08 04:25,150.0,female,African-American,300.0,,,85 mmHg,37.2 C,,,130.4,,,,Outpatient,Pneumonia,antibiotic,15.0,Monitor
+ADM0002,P002,Jan 05 2026 00:00,2026-01-07 08:00,08/01/2026 14:18,57.0,Female,African-American,79.3,157.3,80.7,,37.2 C,,,,1.31,,,ICU,Pneumonia,INSULIN,0.0,monitor
+ADM0002,P002,2026/01/05 00:00,2026-01-07 08:00,09/01/2026 14:14,,Female,Other,300.0,,,85 mmHg,,,,95.5,,,212.0,Emergency Admission,Cardiac Failure,antibiotic,15.0,Laboratory
+ADM0002,P002,Jan 05 2026 00:00,07/01/2026 08:00,Jan 09 2026 17:28,,male,African,102.4,120.3,92.4,,,,,94.3,,,,Outpatient,Sepsis,Antibiotic,,Nurse entry
+ADM0003,P003,02/01/2026 00:00,2026/01/06 00:00,02/01/2026 00:34,,F,African,,,,85 mmHg,36.1 C,,,,2.63,,383.0,Emergency,Trauma,Antibiotic,14.0,Monitor
+ADM0003,P003,02/01/2026 00:00,2026/01/06 00:00,Jan 03 2026 14:16,,M,Other,,,,76.7,,,,,2.69,14.11,95.0,ICU,Sepsis,antibiotic,4.0,Nurse Entry
+ADM0003,P003,02/01/2026 00:00,2026/01/06 00:00,Jan 03 2026 21:30,65.0,male,African,,,63.7,85 mmHg,37.9 C,,,6.6 mmol/L,2.5,12.75,383.0,Emergency,Cardiac Failure,INSULIN,3.0,Laboratory
+ADM0003,P003,Jan 02 2026 00:00,2026-01-06 00:00,Jan 04 2026 01:34,,F,African,,,,85 mmHg,37.8 C,,15.6,,,,,Emergency Admission,Stroke,Vasopressor,10.0,Monitor
+ADM0003,P003,02/01/2026 00:00,2026/01/06 00:00,2026/01/04 05:17,61.0,F,AA,65.8,,88.1,,,,,,,4.28,344.0,Emergency,Pneumonia,INSULIN,,Nurse entry
+ADM0003,P003,2026/01/02 00:00,2026/01/06 00:00,2026/01/04 13:48,20.0,M,African-American,,162.9,,,,,,6.6 mmol/L,,,,Ward,Cardiac Failure,Vasopressor,7.0,Nurse Entry
+ADM0003,P003,02/01/2026 00:00,06/01/2026 00:00,06/01/2026 00:20,,female,AA,103.0,,,82.9,,,,132.1,2.15,,103.0,ER,Cardiac Failure,INSULIN,,Monitor
+ADM0003,P003,Jan 02 2026 00:00,2026/01/06 00:00,2026/01/06 10:55,,Female,African,,,69.2,109.0,,,20.2,,1.69,4.47,,Emergency,Pneumonia,None,13.0,Nurse entry
+ADM0003,P003,2026/01/02 00:00,Jan 06 2026 00:00,2026/01/06 13:24,150.0,male,African,300.0,,60.0,85 mmHg,34.4 C,,15.8,123.9,1.44,12.39,362.0,ICU,Sepsis,Insulin,,Laboratory
+ADM0003,P003,Jan 02 2026 00:00,2026/01/06 00:00,2026-01-06 18:02,,female,African-American,,100.4,80.5,85 mmHg,100.2 F,,18.3,108.4,2.85,11.63,,Outpatient,Sepsis,Insulin,,Laboratory
+ADM0004,P004,02/02/2026 00:00,2026-02-06 21:00,Feb 02 2026 05:16,91.0,Female,Other,300.0,,,87.7,,120.0,,101.3,,,,Ward,Sepsis,Antibiotic,,monitor
+ADM0004,P004,2026/02/02 00:00,2026-02-06 21:00,2026/02/02 10:18,,M,AA,102.7,,,85 mmHg,,,22.1,138.9,,,,Emergency,Pneumonia,Vasopressor,,monitor
+ADM0004,P004,2026-02-02 00:00,2026-02-06 21:00,03/02/2026 17:56,,male,African,300.0,,76.4,109.2,37.6 C,,,,2.65,,,ER,Cardiac Failure,Insulin,,Nurse Entry
+ADM0004,P004,2026/02/02 00:00,06/02/2026 21:00,04/02/2026 07:29,,F,AA,300.0,,,,,120.0,,116.1,,,,ER,Stroke,Insulin,,Nurse Entry
+ADM0004,P004,2026/02/02 00:00,06/02/2026 21:00,2026/02/04 08:44,,female,Other,300.0,,,85 mmHg,97.3 F,,21.1,138.9,,10.42,305.0,ER,Trauma,None,,Nurse Entry
+ADM0004,P004,Feb 02 2026 00:00,Feb 06 2026 21:00,2026/02/04 15:04,,female,Other,,,,,37.1 C,96.4,,103.1,2.05,,130.0,Outpatient,Pneumonia,INSULIN,9.0,Monitor
+ADM0004,P004,Feb 02 2026 00:00,Feb 06 2026 21:00,Feb 05 2026 04:20,73.0,Female,Other,,110.6,,68.3,,120.0,,,2.44,,378.0,ICU,Trauma,INSULIN,,Laboratory
+ADM0004,P004,2026/02/02 00:00,Feb 06 2026 21:00,05/02/2026 05:42,,M,AA,300.0,,,,,96.4,,6.6 mmol/L,2.37,11.75,,ER,Cardiac Failure,INSULIN,9.0,monitor
+ADM0004,P004,2026-02-02 00:00,2026/02/06 21:00,Feb 05 2026 22:17,150.0,M,African-American,300.0,133.8,,85 mmHg,,120.0,18.5,,2.92,,305.0,ER,Cardiac Failure,INSULIN,4.0,Laboratory
+ADM0004,P004,02/02/2026 00:00,06/02/2026 21:00,06/02/2026 17:20,,male,AA,,,,,,97.4,,95.8,1.19,5.82,,ER,Cardiac Failure,None,12.0,Laboratory
+ADM0005,P005,2026-02-04 00:00,Feb 06 2026 15:00,04/02/2026 13:43,150.0,F,AA,300.0,,76.8,,95.5 F,100.8,,6.6 mmol/L,2.21,5.44,200.0,Outpatient,Trauma,Vasopressor,13.0,monitor
+ADM0005,P005,2026/02/04 00:00,2026/02/06 15:00,Feb 05 2026 09:41,150.0,M,African-American,,,69.4,,96.6 F,120.0,,,,7.1,,ICU,Sepsis,Insulin,2.0,Nurse entry
+ADM0005,P005,Feb 04 2026 00:00,06/02/2026 15:00,05/02/2026 23:01,90.0,Male,African-American,300.0,,82.5,,98.6 F,120.0,18.6,6.6 mmol/L,1.07,13.08,,ICU,Sepsis,INSULIN,0.0,Monitor
+ADM0005,P005,04/02/2026 00:00,Feb 06 2026 15:00,2026-02-06 00:22,,Male,African-American,,,,85 mmHg,35.8 C,,,6.6 mmol/L,1.88,,337.0,ER,Sepsis,INSULIN,,Monitor
+ADM0005,P005,2026/02/04 00:00,2026/02/06 15:00,2026-02-06 10:03,150.0,F,African,104.6,,91.4,,,,,6.6 mmol/L,,,,Emergency,Sepsis,INSULIN,,monitor
+ADM0005,P005,Feb 04 2026 00:00,2026/02/06 15:00,2026/02/07 02:56,150.0,Male,AA,,,,,98.2 F,120.0,,118.3,1.65,17.7,,Emergency,Cardiac Failure,Antibiotic,,Monitor
+ADM0005,P005,2026/02/04 00:00,2026-02-06 15:00,Feb 07 2026 09:26,,M,African,300.0,93.9,83.0,85 mmHg,,95.1,15.4,6.6 mmol/L,,10.11,222.0,Outpatient,Stroke,antibiotic,,Monitor
+ADM0005,P005,Feb 04 2026 00:00,Feb 06 2026 15:00,Feb 07 2026 14:11,18.0,Female,Other,97.6,,65.5,88.4,97.2 F,,,6.6 mmol/L,,13.36,,Emergency Admission,Cardiac Failure,antibiotic,2.0,Nurse Entry
+ADM0005,P005,2026-02-04 00:00,2026-02-06 15:00,Feb 07 2026 23:10,150.0,F,Other,300.0,,,,36.4 C,120.0,15.3,6.6 mmol/L,,10.27,,ER,Cardiac Failure,None,,Nurse entry
+ADM0005,P005,Feb 04 2026 00:00,06/02/2026 15:00,08/02/2026 09:03,,M,African,110.5,,,98.6,96.4 F,,33.4,,,9.71,283.0,Outpatient,Sepsis,Insulin,,Nurse entry
+ADM0006,P006,Jan 28 2026 00:00,2026-02-01 03:00,2026/01/28 02:39,31.0,F,Other,300.0,104.9,,,,94.8,,146.4,2.47,10.48,351.0,Ward,Cardiac Failure,INSULIN,4.0,Monitor
+ADM0006,P006,28/01/2026 00:00,01/02/2026 03:00,2026-01-28 14:09,150.0,F,Other,300.0,,,85 mmHg,,96.6,,78.5,,,,Ward,Stroke,None,11.0,Laboratory
+ADM0006,P006,2026-01-28 00:00,Feb 01 2026 03:00,Jan 28 2026 21:29,150.0,Male,Other,,107.0,,85 mmHg,35.9 C,,,,1.53,17.74,310.0,Ward,Sepsis,antibiotic,5.0,Nurse Entry
+ADM0006,P006,2026/01/28 00:00,01/02/2026 03:00,Jan 29 2026 13:45,,F,Other,,,,97.5,,95.0,,6.6 mmol/L,,7.2,250.0,ER,Pneumonia,Vasopressor,,Nurse Entry
+ADM0006,P006,2026-01-28 00:00,Feb 01 2026 03:00,2026/01/29 17:38,60.0,female,African,300.0,,,,,,19.3,92.9,,,178.0,ICU,Pneumonia,None,9.0,Nurse entry
+ADM0006,P006,2026-01-28 00:00,Feb 01 2026 03:00,30/01/2026 03:49,,Female,African-American,,107.0,,77.1,,,23.0,6.6 mmol/L,,,199.0,Ward,Trauma,Antibiotic,,monitor
+ADM0006,P006,2026/01/28 00:00,2026/02/01 03:00,30/01/2026 05:49,150.0,Female,AA,111.6,,,,99.3 F,120.0,19.9,6.6 mmol/L,2.85,5.72,,ER,Pneumonia,Insulin,2.0,monitor
+ADM0006,P006,2026-01-28 00:00,2026/02/01 03:00,2026-01-31 09:56,150.0,M,African-American,,,,,98.8 F,,15.6,,,15.22,150.0,Ward,Trauma,INSULIN,,monitor
+ADM0006,P006,2026-01-28 00:00,2026-02-01 03:00,Jan 31 2026 18:39,45.0,male,Other,121.1,,71.1,,99.0 F,,7.8,6.6 mmol/L,,7.52,,ER,Stroke,None,7.0,Laboratory
+ADM0006,P006,Jan 28 2026 00:00,01/02/2026 03:00,2026/02/01 06:27,150.0,female,African,300.0,,72.4,85 mmHg,,,,143.1,,,209.0,Ward,Sepsis,Vasopressor,7.0,Nurse entry
+ADM0007,P007,2026/01/22 00:00,24/01/2026 17:00,22/01/2026 05:29,150.0,F,African,,,70.0,99.5,,,,,,,209.0,Emergency Admission,Pneumonia,Vasopressor,11.0,Laboratory
+ADM0007,P007,Jan 22 2026 00:00,2026/01/24 17:00,2026/01/22 22:17,,M,African-American,,,,85 mmHg,,97.7,,104.7,,15.7,,Ward,Sepsis,None,,Laboratory
+ADM0007,P007,2026/01/22 00:00,24/01/2026 17:00,2026/01/23 19:28,,Male,AA,300.0,,,85 mmHg,36.8 C,95.2,,6.6 mmol/L,2.23,11.14,,Emergency,Pneumonia,None,,Laboratory
+ADM0007,P007,2026-01-22 00:00,24/01/2026 17:00,2026/01/23 21:24,,F,African,300.0,84.4,,,,120.0,,86.2,1.76,12.17,,ER,Trauma,antibiotic,,Laboratory
+ADM0007,P007,Jan 22 2026 00:00,2026/01/24 17:00,24/01/2026 21:45,33.0,Male,Other,100.9,,77.7,85 mmHg,,120.0,,,1.56,,233.0,Emergency Admission,Pneumonia,Vasopressor,7.0,Nurse Entry
+ADM0007,P007,2026/01/22 00:00,2026-01-24 17:00,Jan 25 2026 10:50,150.0,M,Other,300.0,121.1,88.1,64.6,,,,,,,374.0,ICU,Cardiac Failure,INSULIN,,monitor
+ADM0007,P007,22/01/2026 00:00,24/01/2026 17:00,25/01/2026 15:43,150.0,Male,African,300.0,136.5,,70.7,36.2 C,,,6.6 mmol/L,,9.79,208.0,Emergency Admission,Stroke,Vasopressor,,Nurse entry
+ADM0007,P007,22/01/2026 00:00,24/01/2026 17:00,26/01/2026 03:34,,male,African,85.9,66.1,74.3,85 mmHg,,120.0,27.2,,,12.95,,Emergency Admission,Cardiac Failure,Insulin,,Laboratory
+ADM0007,P007,2026-01-22 00:00,24/01/2026 17:00,2026/01/26 08:29,,F,African-American,,171.5,,85 mmHg,,120.0,,6.6 mmol/L,1.01,,343.0,Ward,Pneumonia,Insulin,,monitor
+ADM0007,P007,2026-01-22 00:00,Jan 24 2026 17:00,2026/01/26 10:15,71.0,Female,AA,300.0,,76.3,,,120.0,,6.6 mmol/L,,,91.0,Outpatient,Stroke,Insulin,7.0,Nurse entry
+ADM0008,P008,2026/01/23 00:00,25/01/2026 06:00,Jan 23 2026 06:00,,M,African,,,65.7,,,100.5,,,,,399.0,ICU,Sepsis,Insulin,,Nurse entry
+ADM0008,P008,23/01/2026 00:00,2026/01/25 06:00,2026-01-24 12:23,23.0,Female,AA,,,,85 mmHg,37.6 C,,,108.8,,,,ER,Stroke,antibiotic,,monitor
+ADM0008,P008,Jan 23 2026 00:00,2026-01-25 06:00,2026/01/25 12:52,,female,African,300.0,,,85 mmHg,98.1 F,120.0,,,,16.39,,ICU,Pneumonia,None,3.0,Monitor
+ADM0008,P008,23/01/2026 00:00,2026/01/25 06:00,25/01/2026 15:28,150.0,male,Other,300.0,105.9,58.1,85 mmHg,97.9 F,120.0,,,,,240.0,Outpatient,Stroke,Vasopressor,,Nurse entry
+ADM0008,P008,23/01/2026 00:00,Jan 25 2026 06:00,Jan 25 2026 20:30,,M,African-American,300.0,,,,,120.0,,6.6 mmol/L,1.56,,,ICU,Cardiac Failure,None,9.0,Laboratory
+ADM0008,P008,Jan 23 2026 00:00,2026/01/25 06:00,26/01/2026 04:59,150.0,M,AA,,93.0,,92.6,37.2 C,120.0,18.1,,0.93,7.08,,Ward,Trauma,None,4.0,Nurse entry
+ADM0008,P008,2026/01/23 00:00,2026/01/25 06:00,26/01/2026 11:59,,M,African,75.3,128.2,54.6,105.4,,97.9,19.3,6.6 mmol/L,,12.98,228.0,Emergency,Cardiac Failure,antibiotic,,Laboratory
+ADM0008,P008,2026/01/23 00:00,25/01/2026 06:00,2026/01/26 14:29,52.0,Male,AA,70.8,,,85 mmHg,35.5 C,95.5,,6.6 mmol/L,1.11,8.84,,Outpatient,Stroke,Vasopressor,,Monitor
+ADM0008,P008,2026/01/23 00:00,Jan 25 2026 06:00,27/01/2026 11:11,,F,African-American,,,,,36.3 C,,,,2.33,6.22,421.0,Outpatient,Cardiac Failure,Antibiotic,,Monitor
+ADM0008,P008,Jan 23 2026 00:00,Jan 25 2026 06:00,27/01/2026 16:40,46.0,F,African-American,,,,85 mmHg,,120.0,17.8,173.1,2.22,,,Emergency,Stroke,None,1.0,Nurse entry
+ADM0009,P009,2026/02/04 00:00,2026-02-06 19:00,2026/02/04 14:31,150.0,F,Other,300.0,132.6,,85 mmHg,,120.0,14.4,6.6 mmol/L,,5.05,191.0,Emergency,Trauma,Vasopressor,2.0,Monitor
+ADM0009,P009,Feb 04 2026 00:00,2026/02/06 19:00,04/02/2026 21:59,150.0,female,Other,,,,,,98.2,20.8,,,15.74,,ER,Pneumonia,INSULIN,7.0,Monitor
+ADM0009,P009,2026/02/04 00:00,2026/02/06 19:00,05/02/2026 02:19,,M,African-American,,128.6,77.5,94.1,,120.0,12.6,151.6,2.81,17.57,131.0,Outpatient,Stroke,INSULIN,1.0,Monitor
+ADM0009,P009,04/02/2026 00:00,2026-02-06 19:00,05/02/2026 17:25,,Female,AA,300.0,,75.4,,37.0 C,120.0,18.5,6.6 mmol/L,,,111.0,Emergency Admission,Trauma,antibiotic,15.0,Laboratory
+ADM0009,P009,Feb 04 2026 00:00,2026/02/06 19:00,2026/02/06 08:41,,F,African-American,300.0,,64.3,87.2,,120.0,25.2,6.6 mmol/L,1.3,,293.0,Outpatient,Pneumonia,Vasopressor,,Monitor
+ADM0009,P009,Feb 04 2026 00:00,2026-02-06 19:00,06/02/2026 18:59,,F,African,103.3,121.6,87.8,,37.2 C,,,109.1,2.68,17.76,,ICU,Stroke,INSULIN,,Nurse Entry
+ADM0009,P009,Feb 04 2026 00:00,2026/02/06 19:00,2026/02/07 02:35,150.0,M,AA,,,,,97.9 F,120.0,,6.6 mmol/L,1.24,,,Emergency,Stroke,Antibiotic,4.0,Laboratory
+ADM0009,P009,2026/02/04 00:00,Feb 06 2026 19:00,07/02/2026 15:35,,Female,Other,300.0,151.0,,85 mmHg,,,,,,,,ICU,Pneumonia,INSULIN,15.0,Nurse entry
+ADM0009,P009,2026-02-04 00:00,2026-02-06 19:00,2026-02-07 19:41,,Female,African-American,97.4,125.8,104.5,80.4,,,14.9,,,,88.0,ER,Stroke,Insulin,0.0,Nurse entry
+ADM0009,P009,Feb 04 2026 00:00,2026-02-06 19:00,2026/02/08 13:46,40.0,Male,African-American,81.4,103.4,,,,,19.0,6.6 mmol/L,,,369.0,Emergency Admission,Pneumonia,Vasopressor,2.0,Monitor
+ADM0010,P010,Jan 26 2026 00:00,2026-01-30 00:00,2026-01-26 01:54,47.0,female,Other,,,79.0,,,120.0,17.1,96.1,,6.9,186.0,Emergency Admission,Trauma,None,9.0,Nurse entry
+ADM0010,P010,2026/01/26 00:00,Jan 30 2026 00:00,2026/01/26 07:15,150.0,female,African,,,77.7,89.8,,99.4,30.6,6.6 mmol/L,,,,Outpatient,Trauma,Antibiotic,,monitor
+ADM0010,P010,2026/01/26 00:00,2026-01-30 00:00,Jan 26 2026 10:11,150.0,Male,African,,,,85 mmHg,37.5 C,120.0,,6.6 mmol/L,,13.2,126.0,Ward,Trauma,Vasopressor,8.0,Nurse Entry
+ADM0010,P010,2026/01/26 00:00,2026/01/30 00:00,2026-01-26 21:05,21.0,M,African,300.0,,,108.1,,,,108.2,2.58,10.61,,ICU,Pneumonia,Vasopressor,,monitor
+ADM0010,P010,2026/01/26 00:00,Jan 30 2026 00:00,2026/01/28 00:09,,Male,AA,,,,85 mmHg,99.0 F,,16.5,126.6,,11.12,,ER,Trauma,Vasopressor,,monitor
+ADM0010,P010,26/01/2026 00:00,Jan 30 2026 00:00,Jan 28 2026 12:52,150.0,Female,Other,,132.2,,,,120.0,,,0.67,,,Outpatient,Cardiac Failure,None,6.0,Nurse entry
+ADM0010,P010,2026/01/26 00:00,30/01/2026 00:00,2026/01/28 15:01,150.0,Male,Other,300.0,,79.5,85 mmHg,,,,,1.18,,273.0,Outpatient,Stroke,Insulin,,Nurse entry
+ADM0010,P010,Jan 26 2026 00:00,2026-01-30 00:00,2026-01-28 22:02,150.0,female,AA,,128.8,,,,98.4,19.2,103.1,,7.1,341.0,Outpatient,Cardiac Failure,Insulin,14.0,Laboratory
+ADM0010,P010,Jan 26 2026 00:00,2026/01/30 00:00,2026-01-29 09:01,150.0,Female,AA,,,,67.1,,,,127.3,,,243.0,Ward,Sepsis,INSULIN,3.0,Laboratory
+ADM0010,P010,26/01/2026 00:00,30/01/2026 00:00,29/01/2026 17:41,88.0,M,Other,,,,,,,,6.6 mmol/L,2.4,12.39,,Outpatient,Sepsis,INSULIN,6.0,Laboratory
+ADM0011,P011,Jan 05 2026 00:00,2026/01/07 13:00,2026/01/05 14:42,93.0,M,AA,,,,85 mmHg,,120.0,17.8,6.6 mmol/L,0.66,11.73,236.0,ICU,Cardiac Failure,INSULIN,,monitor
+ADM0011,P011,2026/01/05 00:00,2026/01/07 13:00,05/01/2026 23:38,150.0,male,African-American,,111.1,,,99.9 F,92.2,,6.6 mmol/L,2.24,,,ICU,Pneumonia,Insulin,,monitor
+ADM0011,P011,2026/01/05 00:00,2026/01/07 13:00,06/01/2026 01:26,150.0,Male,African-American,,119.9,,112.6,,98.8,,,,10.77,373.0,Ward,Stroke,Vasopressor,,Nurse entry
+ADM0011,P011,2026-01-05 00:00,07/01/2026 13:00,Jan 06 2026 09:13,,M,AA,79.8,,71.6,117.0,36.8 C,120.0,,,,4.57,395.0,ICU,Pneumonia,None,,Nurse entry
+ADM0011,P011,Jan 05 2026 00:00,Jan 07 2026 13:00,Jan 06 2026 17:34,150.0,Male,African-American,,,,85 mmHg,,120.0,22.5,139.1,1.35,,,Outpatient,Pneumonia,antibiotic,,monitor
+ADM0011,P011,2026-01-05 00:00,2026/01/07 13:00,Jan 06 2026 22:28,,F,AA,300.0,161.5,66.7,,,120.0,,105.5,,6.29,299.0,Outpatient,Cardiac Failure,Vasopressor,,Nurse entry
+ADM0011,P011,2026/01/05 00:00,Jan 07 2026 13:00,2026-01-07 10:36,23.0,female,Other,81.4,119.5,100.7,,,,,123.6,1.0,,,Emergency,Cardiac Failure,Vasopressor,,Nurse Entry
+ADM0011,P011,Jan 05 2026 00:00,07/01/2026 13:00,2026/01/07 20:03,150.0,Male,African,,,82.8,82.8,98.2 F,120.0,,76.1,2.97,,,Emergency Admission,Pneumonia,Insulin,2.0,monitor
+ADM0011,P011,2026-01-05 00:00,2026-01-07 13:00,Jan 09 2026 06:05,,Female,Other,105.7,,69.5,85 mmHg,37.2 C,120.0,17.1,6.6 mmol/L,,11.89,401.0,Outpatient,Stroke,INSULIN,14.0,Monitor
+ADM0011,P011,2026-01-05 00:00,2026/01/07 13:00,Jan 09 2026 15:57,,Female,African-American,,107.5,,85 mmHg,,120.0,15.2,,,5.71,345.0,Emergency Admission,Trauma,Vasopressor,1.0,monitor
+ADM0012,P012,2026/01/25 00:00,Jan 27 2026 14:00,25/01/2026 01:20,78.0,Male,African,107.6,,70.6,,98.6 F,,,,,,,Emergency,Stroke,antibiotic,,Monitor
+ADM0012,P012,25/01/2026 00:00,27/01/2026 14:00,Jan 25 2026 09:19,150.0,female,African,,,79.2,89.3,96.8 F,98.0,,81.5,,15.43,238.0,Emergency,Sepsis,INSULIN,4.0,Nurse Entry
+ADM0012,P012,Jan 25 2026 00:00,27/01/2026 14:00,Jan 26 2026 06:31,150.0,M,African,83.6,,,,35.8 C,,16.4,6.6 mmol/L,,,,ER,Pneumonia,Vasopressor,,Monitor
+ADM0012,P012,2026-01-25 00:00,27/01/2026 14:00,2026-01-26 22:57,23.0,Female,African,,,,88.9,37.8 C,96.9,,121.6,,4.83,,Ward,Sepsis,antibiotic,11.0,Nurse entry
+ADM0012,P012,25/01/2026 00:00,27/01/2026 14:00,2026-01-27 15:43,69.0,F,AA,,,,85 mmHg,,97.7,,33.1,,,398.0,Outpatient,Cardiac Failure,antibiotic,15.0,Nurse entry
+ADM0012,P012,25/01/2026 00:00,2026-01-27 14:00,2026/01/27 19:48,21.0,male,AA,,132.3,,80.6,,120.0,,126.5,2.23,15.57,,Emergency,Pneumonia,INSULIN,8.0,Monitor
+ADM0012,P012,2026/01/25 00:00,Jan 27 2026 14:00,2026/01/28 04:58,150.0,Male,African-American,300.0,,,85 mmHg,98.8 F,,23.5,155.6,,,,Emergency Admission,Cardiac Failure,Vasopressor,,Nurse Entry
+ADM0012,P012,25/01/2026 00:00,2026-01-27 14:00,28/01/2026 09:04,31.0,F,Other,,,65.9,85 mmHg,,,,6.6 mmol/L,,,141.0,ICU,Cardiac Failure,INSULIN,1.0,Laboratory
+ADM0012,P012,25/01/2026 00:00,Jan 27 2026 14:00,2026/01/29 17:09,83.0,female,AA,,143.8,,,,120.0,,161.3,,4.8,151.0,Emergency,Sepsis,Antibiotic,4.0,monitor
+ADM0012,P012,2026-01-25 00:00,Jan 27 2026 14:00,2026-01-29 23:23,20.0,Female,Other,90.2,98.1,,113.9,36.9 C,,13.0,55.4,,,334.0,Outpatient,Trauma,Antibiotic,11.0,Nurse Entry
+ADM0013,P013,2026/01/18 00:00,2026-01-21 11:00,2026-01-18 04:26,,Female,Other,105.1,106.2,102.0,,,,,6.6 mmol/L,,,218.0,Emergency,Cardiac Failure,antibiotic,7.0,Laboratory
+ADM0013,P013,2026/01/18 00:00,Jan 21 2026 11:00,18/01/2026 19:03,38.0,Female,African-American,,140.5,104.3,,,,21.0,145.6,2.89,,,ER,Sepsis,INSULIN,11.0,Nurse entry
+ADM0013,P013,2026/01/18 00:00,Jan 21 2026 11:00,19/01/2026 07:12,80.0,Male,African,94.2,122.1,74.2,85 mmHg,,96.4,,,1.21,7.61,254.0,Ward,Sepsis,None,4.0,Monitor
+ADM0013,P013,Jan 18 2026 00:00,2026-01-21 11:00,Jan 19 2026 13:54,150.0,Male,AA,,,56.2,75.2,,120.0,,,,13.22,,ICU,Stroke,Antibiotic,,Laboratory
+ADM0013,P013,2026-01-18 00:00,2026/01/21 11:00,2026-01-20 09:08,150.0,M,African-American,300.0,108.0,,66.1,,120.0,17.9,136.6,,,165.0,Emergency Admission,Cardiac Failure,Insulin,,Nurse Entry
+ADM0013,P013,Jan 18 2026 00:00,Jan 21 2026 11:00,2026-01-20 15:15,18.0,F,Other,300.0,,81.5,,,,,,,9.17,325.0,ICU,Trauma,None,,Monitor
+ADM0013,P013,2026-01-18 00:00,2026-01-21 11:00,Jan 21 2026 06:20,,Female,African,300.0,105.6,,85 mmHg,,,14.6,6.6 mmol/L,2.06,,160.0,Emergency,Cardiac Failure,Antibiotic,,Nurse entry
+ADM0013,P013,Jan 18 2026 00:00,Jan 21 2026 11:00,Jan 21 2026 07:46,48.0,Male,Other,300.0,,80.0,87.2,,96.7,,115.6,,,182.0,Emergency,Pneumonia,Antibiotic,9.0,monitor
+ADM0013,P013,2026/01/18 00:00,2026/01/21 11:00,2026/01/21 10:54,51.0,female,Other,69.5,,,,97.9 F,,26.4,6.6 mmol/L,,,214.0,Ward,Stroke,None,4.0,Monitor
+ADM0013,P013,2026/01/18 00:00,21/01/2026 11:00,2026-01-22 17:42,150.0,F,Other,300.0,112.4,,,,,14.8,,0.67,10.79,309.0,ICU,Pneumonia,Antibiotic,4.0,monitor
+ADM0014,P014,2026-01-06 00:00,2026/01/10 07:00,2026/01/06 18:58,,M,Other,66.7,,85.0,,37.2 C,97.7,24.1,83.7,2.99,,,Outpatient,Cardiac Failure,Insulin,,Monitor
+ADM0014,P014,06/01/2026 00:00,2026/01/10 07:00,2026-01-07 01:11,,female,African-American,,,,,100.9 F,,,6.6 mmol/L,,,436.0,ICU,Pneumonia,Vasopressor,,Laboratory
+ADM0014,P014,2026-01-06 00:00,10/01/2026 07:00,2026/01/07 09:46,,female,Other,300.0,,89.8,85 mmHg,36.9 C,98.2,,,,16.91,348.0,ICU,Pneumonia,Antibiotic,1.0,Monitor
+ADM0014,P014,Jan 06 2026 00:00,10/01/2026 07:00,Jan 07 2026 16:29,,male,Other,300.0,166.4,79.7,92.9,,,,115.4,,,256.0,Ward,Sepsis,Vasopressor,,Monitor
+ADM0014,P014,06/01/2026 00:00,10/01/2026 07:00,09/01/2026 04:10,,female,Other,300.0,83.3,81.1,,36.4 C,120.0,,,2.8,10.45,,Emergency Admission,Cardiac Failure,Insulin,,monitor
+ADM0014,P014,Jan 06 2026 00:00,2026/01/10 07:00,2026-01-09 08:16,150.0,female,AA,300.0,,,85 mmHg,98.8 F,,14.7,6.6 mmol/L,,,,Emergency Admission,Cardiac Failure,Antibiotic,4.0,Monitor
+ADM0014,P014,2026/01/06 00:00,Jan 10 2026 07:00,09/01/2026 21:51,150.0,F,AA,,,,,37.4 C,120.0,17.9,6.6 mmol/L,2.02,,,ER,Cardiac Failure,Antibiotic,,Monitor
+ADM0014,P014,Jan 06 2026 00:00,10/01/2026 07:00,Jan 10 2026 09:30,29.0,M,African-American,300.0,,,,,,,6.6 mmol/L,2.91,,107.0,Outpatient,Pneumonia,antibiotic,,Nurse entry
+ADM0014,P014,06/01/2026 00:00,10/01/2026 07:00,10/01/2026 10:19,,male,Other,60.4,,73.3,71.9,,,25.7,6.6 mmol/L,0.88,3.92,,ICU,Pneumonia,antibiotic,,Monitor
+ADM0014,P014,2026/01/06 00:00,2026/01/10 07:00,2026/01/10 20:08,,Male,African,,123.0,,80.8,,120.0,16.1,125.1,1.77,17.95,,Ward,Pneumonia,None,,Nurse Entry
+ADM0015,P015,Jan 05 2026 00:00,2026/01/07 05:00,Jan 06 2026 13:43,42.0,F,African,107.9,139.0,57.2,51.7,37.3 C,,11.2,113.3,,9.21,,ER,Stroke,None,1.0,Monitor
+ADM0015,P015,2026/01/05 00:00,2026/01/07 05:00,2026/01/06 14:03,150.0,M,Other,300.0,108.5,,85 mmHg,37.4 C,,,,0.53,,398.0,Outpatient,Sepsis,antibiotic,,Monitor
+ADM0015,P015,05/01/2026 00:00,07/01/2026 05:00,Jan 06 2026 19:50,84.0,M,Other,,122.4,63.3,85 mmHg,,96.7,,6.6 mmol/L,0.88,7.87,86.0,Emergency,Stroke,INSULIN,15.0,Monitor
+ADM0015,P015,2026-01-05 00:00,Jan 07 2026 05:00,07/01/2026 07:49,,M,Other,,,55.6,,,,,6.6 mmol/L,2.22,9.56,103.0,ICU,Pneumonia,Vasopressor,,Nurse entry
+ADM0015,P015,2026-01-05 00:00,Jan 07 2026 05:00,Jan 07 2026 10:17,41.0,F,Other,,,,85 mmHg,,,24.5,166.8,0.67,10.78,161.0,Outpatient,Stroke,Insulin,14.0,Nurse entry
+ADM0015,P015,2026-01-05 00:00,07/01/2026 05:00,2026/01/07 18:24,80.0,F,Other,79.8,160.3,,85 mmHg,,97.4,11.3,,,14.62,301.0,Outpatient,Cardiac Failure,INSULIN,12.0,Nurse entry
+ADM0015,P015,2026-01-05 00:00,2026-01-07 05:00,07/01/2026 19:57,,F,African-American,98.0,,,,,,,,1.01,,286.0,Emergency,Trauma,Insulin,14.0,monitor
+ADM0015,P015,2026/01/05 00:00,2026-01-07 05:00,2026-01-08 04:28,,Male,African,98.3,,,85 mmHg,,,,128.1,1.96,,,Emergency Admission,Cardiac Failure,INSULIN,14.0,Monitor
+ADM0015,P015,2026-01-05 00:00,Jan 07 2026 05:00,Jan 08 2026 21:48,150.0,male,AA,,,64.9,,,93.1,,86.9,,6.61,176.0,Outpatient,Pneumonia,Insulin,,Monitor
+ADM0015,P015,2026-01-05 00:00,2026/01/07 05:00,2026/01/09 17:48,150.0,Female,Other,85.8,,,85 mmHg,,120.0,17.2,,2.39,9.91,,Emergency Admission,Stroke,antibiotic,,monitor
+ADM0016,P016,Feb 08 2026 00:00,Feb 11 2026 07:00,08/02/2026 17:56,43.0,male,AA,,,,,37.4 C,120.0,,,2.54,,,ER,Stroke,INSULIN,,monitor
+ADM0016,P016,2026-02-08 00:00,2026-02-11 07:00,2026/02/09 11:51,36.0,female,African,90.3,,,,,102.2,20.8,,,16.1,357.0,Ward,Trauma,None,,Nurse Entry
+ADM0016,P016,Feb 08 2026 00:00,2026-02-11 07:00,2026/02/09 13:32,,female,AA,300.0,117.2,60.3,85 mmHg,,95.3,,137.7,,14.0,,Outpatient,Pneumonia,INSULIN,2.0,Nurse Entry
+ADM0016,P016,2026/02/08 00:00,2026-02-11 07:00,2026/02/09 19:47,150.0,M,African-American,96.7,,67.7,,,120.0,14.1,139.4,2.9,,385.0,Emergency Admission,Stroke,INSULIN,,Nurse entry
+ADM0016,P016,Feb 08 2026 00:00,11/02/2026 07:00,10/02/2026 02:35,84.0,male,African-American,,,70.5,,97.3 F,96.2,,6.6 mmol/L,,,,ER,Sepsis,None,,Nurse Entry
+ADM0016,P016,08/02/2026 00:00,2026-02-11 07:00,Feb 10 2026 04:57,66.0,F,AA,300.0,,105.7,85 mmHg,,,,6.6 mmol/L,1.9,,413.0,Ward,Stroke,None,3.0,Nurse entry
+ADM0016,P016,2026-02-08 00:00,11/02/2026 07:00,10/02/2026 09:34,72.0,Female,Other,300.0,135.6,68.4,77.7,,120.0,,106.4,2.46,13.62,107.0,Ward,Stroke,None,,monitor
+ADM0016,P016,2026/02/08 00:00,2026/02/11 07:00,Feb 11 2026 05:24,,female,African,300.0,97.2,72.7,85 mmHg,37.1 C,120.0,17.6,6.6 mmol/L,2.0,,,ER,Sepsis,Vasopressor,,monitor
+ADM0016,P016,2026/02/08 00:00,11/02/2026 07:00,11/02/2026 17:52,150.0,F,AA,300.0,144.4,,85 mmHg,,95.1,16.1,152.7,1.93,11.82,,ER,Stroke,None,9.0,Laboratory
+ADM0016,P016,08/02/2026 00:00,11/02/2026 07:00,12/02/2026 07:13,150.0,M,African-American,73.2,,53.8,85 mmHg,,120.0,15.7,6.6 mmol/L,2.68,,130.0,Emergency Admission,Stroke,Insulin,,Nurse Entry
+ADM0017,P017,16/01/2026 00:00,Jan 18 2026 12:00,Jan 16 2026 08:42,72.0,Male,AA,82.0,96.6,,,,,,6.6 mmol/L,,,,Outpatient,Stroke,None,5.0,Laboratory
+ADM0017,P017,16/01/2026 00:00,Jan 18 2026 12:00,2026-01-17 00:54,27.0,male,African,300.0,,89.7,88.5,,120.0,,,2.77,,280.0,ER,Cardiac Failure,Antibiotic,14.0,monitor
+ADM0017,P017,16/01/2026 00:00,18/01/2026 12:00,17/01/2026 12:23,75.0,Female,African-American,300.0,,,89.7,37.7 C,,5.9,146.5,,,199.0,Emergency Admission,Pneumonia,antibiotic,,monitor
+ADM0017,P017,2026-01-16 00:00,2026-01-18 12:00,Jan 17 2026 16:58,150.0,male,AA,300.0,,68.7,,,,,,,,,Ward,Cardiac Failure,Insulin,15.0,Nurse entry
+ADM0017,P017,16/01/2026 00:00,18/01/2026 12:00,2026-01-17 18:56,150.0,M,African-American,107.5,,65.3,,96.3 F,120.0,12.9,6.6 mmol/L,,13.84,,Outpatient,Pneumonia,antibiotic,,Monitor
+ADM0017,P017,16/01/2026 00:00,18/01/2026 12:00,2026-01-18 09:15,91.0,Male,African-American,,103.4,,,98.8 F,120.0,,147.1,1.66,,,Outpatient,Pneumonia,Antibiotic,13.0,Nurse entry
+ADM0017,P017,Jan 16 2026 00:00,18/01/2026 12:00,Jan 18 2026 14:52,150.0,male,African,120.9,,,87.3,,99.7,14.8,,,7.95,390.0,ICU,Trauma,antibiotic,1.0,Monitor
+ADM0017,P017,2026-01-16 00:00,2026/01/18 12:00,2026/01/19 06:30,65.0,female,Other,114.4,,,,37.1 C,,22.4,6.6 mmol/L,,10.47,,ER,Stroke,Insulin,8.0,Monitor
+ADM0017,P017,2026-01-16 00:00,2026-01-18 12:00,2026-01-19 07:45,150.0,Female,AA,,,88.8,91.7,,120.0,,6.6 mmol/L,,,,Emergency Admission,Trauma,Antibiotic,,Nurse Entry
+ADM0017,P017,2026/01/16 00:00,Jan 18 2026 12:00,Jan 20 2026 19:23,,female,Other,300.0,121.4,85.2,85 mmHg,36.6 C,,14.8,150.9,2.64,,253.0,ICU,Trauma,INSULIN,0.0,Nurse Entry
+ADM0018,P018,Jan 31 2026 00:00,2026-02-04 07:00,31/01/2026 04:59,,Male,African-American,300.0,,80.1,120.9,,,18.1,,2.92,,202.0,ICU,Sepsis,Vasopressor,,monitor
+ADM0018,P018,2026-01-31 00:00,2026-02-04 07:00,2026-01-31 08:25,,female,AA,,,86.8,85 mmHg,,,,,0.7,,,ER,Sepsis,antibiotic,,Laboratory
+ADM0018,P018,Jan 31 2026 00:00,Feb 04 2026 07:00,2026/01/31 10:07,150.0,F,African-American,,,,85 mmHg,37.3 C,,24.6,6.6 mmol/L,1.65,,404.0,Emergency Admission,Pneumonia,Vasopressor,,Nurse entry
+ADM0018,P018,Jan 31 2026 00:00,04/02/2026 07:00,Jan 31 2026 11:34,,female,AA,,100.0,,,,98.1,,109.0,0.85,,182.0,Emergency Admission,Pneumonia,Vasopressor,6.0,Nurse Entry
+ADM0018,P018,Jan 31 2026 00:00,04/02/2026 07:00,2026-02-01 04:53,33.0,female,Other,300.0,144.3,,,,,,6.6 mmol/L,,,,Outpatient,Pneumonia,antibiotic,4.0,Nurse entry
+ADM0018,P018,2026-01-31 00:00,Feb 04 2026 07:00,2026/02/01 09:51,,Male,Other,,110.7,77.4,85 mmHg,36.1 C,,20.9,6.6 mmol/L,,,,ICU,Cardiac Failure,Insulin,,Nurse Entry
+ADM0018,P018,2026/01/31 00:00,Feb 04 2026 07:00,Feb 01 2026 23:31,,F,African-American,,100.0,,97.7,,97.4,,6.6 mmol/L,2.47,12.97,,Emergency,Pneumonia,Insulin,15.0,Nurse entry
+ADM0018,P018,2026/01/31 00:00,Feb 04 2026 07:00,Feb 02 2026 01:34,150.0,Male,Other,86.4,133.5,97.8,,,,23.5,6.6 mmol/L,,,,ER,Stroke,Vasopressor,11.0,monitor
+ADM0018,P018,31/01/2026 00:00,04/02/2026 07:00,Feb 03 2026 05:07,,female,Other,300.0,,77.3,,,,,112.2,,,,Emergency,Sepsis,Antibiotic,10.0,Laboratory
+ADM0018,P018,Jan 31 2026 00:00,2026/02/04 07:00,Feb 03 2026 20:20,,female,Other,,109.3,,95.5,36.3 C,120.0,16.9,,,10.03,187.0,Outpatient,Sepsis,None,,Nurse entry
+ADM0019,P019,Jan 04 2026 00:00,06/01/2026 03:00,04/01/2026 10:59,,female,African-American,65.8,98.9,62.2,104.3,,,,6.6 mmol/L,,,149.0,ER,Stroke,Insulin,,Laboratory
+ADM0019,P019,2026-01-04 00:00,2026/01/06 03:00,Jan 04 2026 13:30,,M,African-American,,,77.9,85 mmHg,37.1 C,,,6.6 mmol/L,1.79,,,Emergency,Trauma,Vasopressor,7.0,Nurse entry
+ADM0019,P019,2026/01/04 00:00,2026/01/06 03:00,04/01/2026 19:23,150.0,female,Other,,,,,,120.0,,,,,,Outpatient,Pneumonia,None,5.0,Laboratory
+ADM0019,P019,2026/01/04 00:00,Jan 06 2026 03:00,2026/01/05 09:07,,Male,African-American,66.0,115.1,64.9,122.6,,,18.6,,,10.59,199.0,ICU,Sepsis,Insulin,,monitor
+ADM0019,P019,2026/01/04 00:00,Jan 06 2026 03:00,2026/01/06 02:19,,Male,African-American,92.9,,,80.8,,96.9,15.9,6.6 mmol/L,,7.97,142.0,Outpatient,Trauma,Antibiotic,1.0,monitor
+ADM0019,P019,04/01/2026 00:00,2026/01/06 03:00,2026/01/06 19:47,,Female,African,300.0,89.9,,,,94.1,,97.4,2.51,11.58,,Ward,Sepsis,Antibiotic,8.0,monitor
+ADM0019,P019,2026-01-04 00:00,2026/01/06 03:00,07/01/2026 07:50,65.0,Female,African-American,,,,85 mmHg,,95.5,,,1.77,16.11,,ICU,Cardiac Failure,antibiotic,,Nurse Entry
+ADM0019,P019,Jan 04 2026 00:00,06/01/2026 03:00,Jan 07 2026 11:01,,female,Other,300.0,,,63.0,38.5 C,120.0,,6.6 mmol/L,,,386.0,Emergency,Stroke,Antibiotic,,Laboratory
+ADM0019,P019,2026-01-04 00:00,2026/01/06 03:00,08/01/2026 01:34,150.0,M,African-American,,152.2,,86.0,,120.0,7.2,,,,,Emergency,Sepsis,antibiotic,2.0,Nurse Entry
+ADM0019,P019,04/01/2026 00:00,2026-01-06 03:00,2026/01/08 02:11,42.0,Male,Other,300.0,,,92.5,,,,162.3,1.98,,,Emergency Admission,Sepsis,Vasopressor,,Monitor
+ADM0020,P020,09/02/2026 00:00,12/02/2026 10:00,09/02/2026 05:14,150.0,Female,Other,300.0,139.1,,85 mmHg,,120.0,,123.3,0.53,9.33,,ER,Cardiac Failure,INSULIN,,Laboratory
+ADM0020,P020,Feb 09 2026 00:00,Feb 12 2026 10:00,2026/02/09 09:57,150.0,M,African-American,300.0,109.0,,,,,,6.6 mmol/L,,15.68,,ER,Sepsis,antibiotic,,Monitor
+ADM0020,P020,09/02/2026 00:00,Feb 12 2026 10:00,2026-02-09 12:19,150.0,male,African-American,,96.1,,,36.5 C,95.7,,6.6 mmol/L,2.56,15.86,,Emergency,Stroke,Insulin,6.0,Laboratory
+ADM0020,P020,2026/02/09 00:00,2026-02-12 10:00,Feb 10 2026 03:50,150.0,male,Other,,135.9,,,,,,153.8,1.44,,,ER,Sepsis,Vasopressor,,Nurse entry
+ADM0020,P020,2026-02-09 00:00,2026/02/12 10:00,2026/02/10 14:44,150.0,male,African,86.8,,,,97.0 F,99.8,,113.7,,7.67,,Ward,Sepsis,Insulin,13.0,Nurse Entry
+ADM0020,P020,2026/02/09 00:00,2026/02/12 10:00,11/02/2026 18:30,150.0,female,African-American,114.2,,,,,120.0,14.0,132.7,,,,ICU,Cardiac Failure,Vasopressor,,Nurse Entry
+ADM0020,P020,2026/02/09 00:00,12/02/2026 10:00,2026/02/11 19:22,23.0,Female,AA,90.1,111.3,73.7,85 mmHg,37.4 C,96.3,16.7,6.6 mmol/L,1.22,,435.0,Ward,Trauma,Insulin,,Nurse Entry
+ADM0020,P020,09/02/2026 00:00,Feb 12 2026 10:00,2026/02/12 20:47,150.0,female,African,,143.5,,,37.6 C,,10.1,,,5.31,318.0,Emergency,Trauma,INSULIN,,Monitor
+ADM0020,P020,2026/02/09 00:00,12/02/2026 10:00,2026/02/12 21:01,150.0,Male,AA,,132.8,81.0,63.0,,120.0,14.1,101.4,0.64,,,Outpatient,Pneumonia,None,,Laboratory
+ADM0020,P020,Feb 09 2026 00:00,2026-02-12 10:00,Feb 13 2026 10:40,67.0,male,AA,,98.5,,,95.7 F,95.2,,,2.98,,203.0,Outpatient,Cardiac Failure,antibiotic,,Nurse entry
+ADM0021,P021,09/01/2026 00:00,2026/01/12 02:00,09/01/2026 17:45,90.0,M,African,300.0,95.4,81.0,,37.9 C,120.0,31.2,6.6 mmol/L,,,,Emergency Admission,Cardiac Failure,Antibiotic,6.0,Nurse Entry
+ADM0021,P021,Jan 09 2026 00:00,12/01/2026 02:00,10/01/2026 01:11,150.0,Male,AA,97.0,,76.2,85 mmHg,,120.0,,109.7,,,322.0,ICU,Pneumonia,Antibiotic,,Monitor
+ADM0021,P021,2026/01/09 00:00,12/01/2026 02:00,10/01/2026 15:59,44.0,Female,Other,,,,,99.1 F,,,100.4,,,281.0,ER,Sepsis,Insulin,14.0,Nurse Entry
+ADM0021,P021,2026-01-09 00:00,2026/01/12 02:00,2026-01-11 21:33,,F,Other,,,,89.2,,,20.6,,1.93,,,Emergency,Stroke,None,5.0,monitor
+ADM0021,P021,2026-01-09 00:00,12/01/2026 02:00,2026/01/12 02:26,150.0,Female,Other,,,,85 mmHg,98.2 F,120.0,21.3,125.8,0.55,,,Emergency,Stroke,INSULIN,12.0,monitor
+ADM0021,P021,09/01/2026 00:00,Jan 12 2026 02:00,12/01/2026 11:35,38.0,Female,African,,,,85 mmHg,,,14.9,145.9,1.03,17.36,,Emergency,Trauma,Insulin,15.0,Nurse entry
+ADM0021,P021,09/01/2026 00:00,2026/01/12 02:00,2026/01/12 15:56,,Male,African,97.7,,,80.4,37.8 C,97.9,22.0,,,14.49,154.0,Emergency Admission,Stroke,antibiotic,,Monitor
+ADM0021,P021,09/01/2026 00:00,12/01/2026 02:00,Jan 12 2026 16:03,150.0,male,African-American,,,,,,,,6.6 mmol/L,1.37,,361.0,Ward,Trauma,Antibiotic,,Laboratory
+ADM0021,P021,09/01/2026 00:00,12/01/2026 02:00,2026-01-13 06:33,150.0,female,African,,,,,,,,97.1,,,332.0,ER,Pneumonia,INSULIN,9.0,Monitor
+ADM0021,P021,2026-01-09 00:00,12/01/2026 02:00,2026/01/13 14:07,70.0,M,AA,,,,85 mmHg,,120.0,,6.6 mmol/L,1.39,,,Emergency,Sepsis,INSULIN,,monitor
+ADM0022,P022,06/02/2026 00:00,2026/02/08 03:00,06/02/2026 22:51,150.0,M,Other,,156.0,,85 mmHg,,120.0,22.0,90.8,,,113.0,Ward,Sepsis,Vasopressor,12.0,Nurse entry
+ADM0022,P022,2026-02-06 00:00,Feb 08 2026 03:00,Feb 07 2026 00:38,,F,African,,127.8,,,,93.5,,107.7,2.07,,99.0,Emergency,Trauma,antibiotic,,Nurse entry
+ADM0022,P022,2026/02/06 00:00,Feb 08 2026 03:00,Feb 07 2026 18:09,36.0,male,African-American,106.8,120.0,,,97.3 F,97.3,,94.0,1.29,,319.0,Emergency,Stroke,INSULIN,9.0,Nurse entry
+ADM0022,P022,06/02/2026 00:00,Feb 08 2026 03:00,07/02/2026 19:48,,M,AA,,,,93.9,96.6 F,,22.3,115.9,1.44,17.46,,ER,Cardiac Failure,Vasopressor,,Nurse entry
+ADM0022,P022,Feb 06 2026 00:00,Feb 08 2026 03:00,2026/02/08 12:15,24.0,Male,Other,300.0,71.2,73.4,,,98.9,,6.6 mmol/L,2.92,,,Ward,Cardiac Failure,Antibiotic,,Nurse entry
+ADM0022,P022,2026/02/06 00:00,2026-02-08 03:00,2026/02/08 13:08,150.0,female,Other,,107.6,71.2,99.2,,,,106.5,,,,Emergency,Sepsis,Insulin,,monitor
+ADM0022,P022,Feb 06 2026 00:00,Feb 08 2026 03:00,09/02/2026 14:29,83.0,F,African,,,,85 mmHg,,,,163.6,2.56,15.76,,Emergency,Cardiac Failure,Antibiotic,,Nurse entry
+ADM0022,P022,06/02/2026 00:00,08/02/2026 03:00,2026-02-10 10:50,,Male,Other,,140.8,,100.1,,,10.2,,0.84,,,Emergency Admission,Sepsis,None,6.0,Nurse entry
+ADM0022,P022,2026-02-06 00:00,08/02/2026 03:00,10/02/2026 21:57,150.0,M,Other,300.0,,,76.5,,,,6.6 mmol/L,,3.87,378.0,ER,Stroke,Insulin,,Monitor
+ADM0022,P022,2026-02-06 00:00,2026-02-08 03:00,Feb 10 2026 22:23,,Male,African-American,,,,85 mmHg,,,,6.6 mmol/L,1.83,11.93,323.0,ICU,Stroke,Insulin,,Nurse Entry
+ADM0023,P023,19/01/2026 00:00,2026-01-21 16:00,19/01/2026 01:27,,female,Other,300.0,120.4,,,,120.0,,6.6 mmol/L,,17.64,,ER,Sepsis,antibiotic,15.0,Nurse entry
+ADM0023,P023,Jan 19 2026 00:00,2026-01-21 16:00,2026-01-19 02:17,,female,AA,98.9,,68.1,91.5,,,,,0.5,7.5,321.0,Emergency Admission,Stroke,antibiotic,9.0,Laboratory
+ADM0023,P023,2026/01/19 00:00,2026/01/21 16:00,2026/01/19 09:34,150.0,M,Other,,,,86.7,37.1 C,120.0,,,,6.42,,ER,Pneumonia,antibiotic,,Nurse entry
+ADM0023,P023,2026-01-19 00:00,21/01/2026 16:00,2026-01-19 17:01,,Female,AA,,,,85 mmHg,98.4 F,120.0,,,0.99,,269.0,Ward,Pneumonia,Insulin,5.0,Laboratory
+ADM0023,P023,19/01/2026 00:00,2026/01/21 16:00,2026/01/19 18:05,67.0,female,Other,,97.8,78.0,85 mmHg,,99.3,,89.5,1.15,8.18,,Outpatient,Cardiac Failure,Insulin,,monitor
+ADM0023,P023,2026/01/19 00:00,2026-01-21 16:00,Jan 21 2026 14:30,,female,AA,300.0,139.7,74.1,85 mmHg,,,,6.6 mmol/L,,,,Emergency Admission,Stroke,Insulin,14.0,Nurse entry
+ADM0023,P023,Jan 19 2026 00:00,21/01/2026 16:00,Jan 22 2026 10:49,88.0,female,African,92.8,,,87.1,96.3 F,120.0,,6.6 mmol/L,1.87,,208.0,Emergency,Sepsis,antibiotic,2.0,Nurse entry
+ADM0023,P023,19/01/2026 00:00,2026-01-21 16:00,2026-01-22 12:42,150.0,Female,Other,300.0,111.4,,85 mmHg,35.9 C,,,6.6 mmol/L,0.68,,,Emergency Admission,Cardiac Failure,Vasopressor,5.0,Laboratory
+ADM0023,P023,2026/01/19 00:00,Jan 21 2026 16:00,2026-01-22 20:49,,Female,Other,90.3,,80.9,85 mmHg,,96.6,,81.2,2.17,,191.0,Outpatient,Cardiac Failure,None,1.0,Monitor
+ADM0023,P023,2026/01/19 00:00,2026-01-21 16:00,2026/01/23 17:36,150.0,female,African,95.3,,,,,,22.4,,,,,Emergency Admission,Sepsis,antibiotic,7.0,monitor
+ADM0024,P024,Jan 31 2026 00:00,2026-02-02 15:00,2026/01/31 07:41,150.0,Female,African-American,300.0,162.0,,85 mmHg,98.1 F,,,114.6,,,,Emergency Admission,Pneumonia,Antibiotic,1.0,Monitor
+ADM0024,P024,31/01/2026 00:00,2026/02/02 15:00,2026/02/01 14:46,150.0,female,AA,,,67.8,62.0,,99.0,,,1.91,,140.0,Emergency Admission,Stroke,Insulin,4.0,Monitor
+ADM0024,P024,2026/01/31 00:00,2026-02-02 15:00,2026/02/01 18:02,23.0,female,African-American,,120.3,63.6,,36.0 C,,18.5,,1.59,11.7,,ER,Stroke,Antibiotic,2.0,monitor
+ADM0024,P024,2026/01/31 00:00,Feb 02 2026 15:00,2026-02-01 21:21,150.0,Female,AA,,102.0,59.0,,,98.8,,165.3,,6.07,,ER,Pneumonia,Insulin,7.0,Nurse Entry
+ADM0024,P024,2026/01/31 00:00,02/02/2026 15:00,2026-02-02 03:06,80.0,Male,African,,137.7,,,,120.0,20.2,132.1,1.33,,,Outpatient,Pneumonia,Antibiotic,1.0,monitor
+ADM0024,P024,Jan 31 2026 00:00,Feb 02 2026 15:00,2026/02/02 20:39,150.0,Female,African-American,107.9,84.4,,,,,,6.6 mmol/L,0.5,9.25,137.0,Emergency Admission,Trauma,Insulin,5.0,Monitor
+ADM0024,P024,Jan 31 2026 00:00,02/02/2026 15:00,2026/02/03 00:03,,male,Other,,98.3,62.0,85 mmHg,36.5 C,94.7,21.3,6.6 mmol/L,1.56,7.54,,ER,Stroke,Vasopressor,13.0,Laboratory
+ADM0024,P024,Jan 31 2026 00:00,02/02/2026 15:00,2026-02-03 08:14,150.0,F,African-American,,110.7,80.5,,,96.5,,162.7,1.98,,,Ward,Pneumonia,Insulin,,Laboratory
+ADM0024,P024,2026-01-31 00:00,2026-02-02 15:00,Feb 03 2026 15:12,35.0,F,Other,,,,96.3,,120.0,,,1.24,13.72,,ER,Trauma,Antibiotic,,Laboratory
+ADM0024,P024,31/01/2026 00:00,02/02/2026 15:00,Feb 04 2026 23:00,150.0,Female,African-American,300.0,,,99.1,36.7 C,,20.7,6.6 mmol/L,,,436.0,Outpatient,Trauma,Antibiotic,2.0,monitor
+ADM0025,P025,2026-01-14 00:00,2026/01/16 16:00,2026/01/14 02:45,150.0,F,African-American,,,80.1,85 mmHg,37.2 C,,,,1.34,,,Emergency Admission,Stroke,antibiotic,6.0,Nurse entry
+ADM0025,P025,2026-01-14 00:00,Jan 16 2026 16:00,2026-01-14 11:56,,M,Other,300.0,129.2,,,99.3 F,,12.5,,2.47,14.02,251.0,ER,Sepsis,INSULIN,15.0,Nurse Entry
+ADM0025,P025,Jan 14 2026 00:00,2026/01/16 16:00,Jan 14 2026 20:20,24.0,M,AA,,,70.7,,,,,,0.63,10.57,314.0,Emergency,Trauma,Antibiotic,9.0,Monitor
+ADM0025,P025,14/01/2026 00:00,2026/01/16 16:00,15/01/2026 06:10,150.0,female,African,,,,,,,,,1.23,,176.0,Emergency,Pneumonia,antibiotic,,Nurse entry
+ADM0025,P025,Jan 14 2026 00:00,2026/01/16 16:00,2026/01/15 13:21,,male,African-American,,133.7,,108.2,,,,124.3,1.87,,,ICU,Stroke,Antibiotic,9.0,Nurse Entry
+ADM0025,P025,14/01/2026 00:00,16/01/2026 16:00,15/01/2026 15:53,32.0,M,African-American,,,,80.6,36.2 C,120.0,15.3,,,,,Outpatient,Stroke,Antibiotic,9.0,Monitor
+ADM0025,P025,14/01/2026 00:00,2026/01/16 16:00,Jan 15 2026 21:25,37.0,female,AA,300.0,,,,36.9 C,120.0,,6.6 mmol/L,2.38,,100.0,Emergency Admission,Stroke,None,9.0,monitor
+ADM0025,P025,2026/01/14 00:00,Jan 16 2026 16:00,2026-01-16 13:39,59.0,male,African-American,300.0,126.9,,90.5,36.2 C,,,,2.34,,,Ward,Stroke,antibiotic,,monitor
+ADM0025,P025,2026/01/14 00:00,Jan 16 2026 16:00,2026/01/17 10:09,65.0,M,AA,,,,85 mmHg,35.5 C,94.1,,,,,227.0,Emergency Admission,Trauma,INSULIN,13.0,Nurse entry
+ADM0025,P025,14/01/2026 00:00,Jan 16 2026 16:00,2026/01/17 13:38,,Male,Other,92.7,109.1,,85 mmHg,,,11.5,,,17.48,182.0,Outpatient,Cardiac Failure,antibiotic,15.0,Laboratory
+ADM0026,P026,2026/02/07 00:00,2026-02-10 14:00,Feb 07 2026 00:19,71.0,F,African-American,72.8,136.4,,,37.6 C,120.0,,,,,,Emergency Admission,Sepsis,Vasopressor,,Nurse Entry
+ADM0026,P026,Feb 07 2026 00:00,2026/02/10 14:00,07/02/2026 03:37,63.0,Male,AA,,,,105.7,,,16.9,,1.96,6.8,128.0,ER,Cardiac Failure,Vasopressor,,Laboratory
+ADM0026,P026,Feb 07 2026 00:00,10/02/2026 14:00,2026-02-07 19:06,150.0,M,AA,,,,98.5,,95.0,17.9,,0.73,14.23,366.0,Outpatient,Trauma,None,3.0,Monitor
+ADM0026,P026,Feb 07 2026 00:00,10/02/2026 14:00,2026/02/08 04:30,150.0,M,African-American,300.0,,55.7,85 mmHg,98.4 F,99.8,11.5,,2.29,4.37,237.0,ICU,Pneumonia,None,13.0,Monitor
+ADM0026,P026,2026/02/07 00:00,2026-02-10 14:00,08/02/2026 09:01,31.0,female,African,,,,76.3,37.2 C,,17.7,98.5,2.33,12.1,380.0,ICU,Cardiac Failure,None,2.0,Laboratory
+ADM0026,P026,07/02/2026 00:00,10/02/2026 14:00,2026-02-09 11:37,150.0,Male,African-American,,130.0,,91.1,97.7 F,120.0,20.4,82.9,,,437.0,Outpatient,Sepsis,Antibiotic,,monitor
+ADM0026,P026,2026/02/07 00:00,2026-02-10 14:00,Feb 09 2026 15:13,,Male,African-American,,,,85 mmHg,36.4 C,101.7,,6.6 mmol/L,2.74,,,ER,Cardiac Failure,INSULIN,14.0,Nurse entry
+ADM0026,P026,2026/02/07 00:00,10/02/2026 14:00,2026-02-09 23:26,150.0,M,African-American,111.8,,83.3,,,120.0,28.0,97.0,2.84,,285.0,Emergency Admission,Pneumonia,None,11.0,Laboratory
+ADM0026,P026,2026/02/07 00:00,2026-02-10 14:00,10/02/2026 22:12,150.0,F,AA,300.0,,,,,120.0,,6.6 mmol/L,,4.58,312.0,Emergency,Cardiac Failure,Insulin,15.0,Nurse Entry
+ADM0026,P026,2026-02-07 00:00,2026-02-10 14:00,2026/02/11 05:01,21.0,F,AA,111.7,,,,,,,6.6 mmol/L,,,,ER,Cardiac Failure,antibiotic,0.0,monitor
+ADM0027,P027,08/01/2026 00:00,2026/01/12 01:00,2026/01/08 04:55,,female,Other,,98.3,,85 mmHg,,,11.2,,2.57,,,ER,Trauma,antibiotic,,Laboratory
+ADM0027,P027,2026-01-08 00:00,12/01/2026 01:00,Jan 08 2026 22:03,150.0,male,African,300.0,,,91.3,,,,6.6 mmol/L,,10.55,418.0,ICU,Pneumonia,INSULIN,9.0,Monitor
+ADM0027,P027,Jan 08 2026 00:00,12/01/2026 01:00,2026-01-09 16:55,,Male,Other,300.0,,,,,120.0,,,0.9,,,Ward,Stroke,None,15.0,Nurse Entry
+ADM0027,P027,Jan 08 2026 00:00,12/01/2026 01:00,Jan 10 2026 00:21,,Female,Other,300.0,111.7,71.5,,,98.8,,,,3.29,399.0,Emergency Admission,Stroke,None,,Monitor
+ADM0027,P027,2026/01/08 00:00,2026/01/12 01:00,10/01/2026 08:36,62.0,female,AA,300.0,,,85 mmHg,,,,6.6 mmol/L,,,423.0,Emergency,Stroke,Antibiotic,15.0,monitor
+ADM0027,P027,2026/01/08 00:00,2026-01-12 01:00,10/01/2026 09:17,,Female,African-American,121.3,,,,,97.8,13.7,6.6 mmol/L,,,410.0,Ward,Stroke,Antibiotic,12.0,Monitor
+ADM0027,P027,08/01/2026 00:00,Jan 12 2026 01:00,2026/01/10 10:09,150.0,F,Other,300.0,99.7,76.0,76.1,,,13.5,6.6 mmol/L,,6.09,409.0,Emergency Admission,Trauma,None,1.0,Laboratory
+ADM0027,P027,2026-01-08 00:00,2026/01/12 01:00,Jan 10 2026 23:38,,female,African-American,,120.8,57.6,85 mmHg,,,31.1,86.6,2.07,,,Emergency Admission,Pneumonia,Insulin,6.0,Monitor
+ADM0027,P027,Jan 08 2026 00:00,2026/01/12 01:00,2026/01/11 12:11,150.0,Male,Other,300.0,,79.7,,,,23.5,6.6 mmol/L,1.63,,,Ward,Sepsis,INSULIN,1.0,Nurse Entry
+ADM0027,P027,Jan 08 2026 00:00,Jan 12 2026 01:00,2026-01-12 13:16,86.0,F,Other,89.0,,,,36.4 C,97.1,,52.6,2.92,,,Emergency Admission,Trauma,None,8.0,monitor
+ADM0028,P028,2026-01-31 00:00,Feb 04 2026 04:00,2026/01/31 12:10,150.0,male,AA,,144.0,69.1,85 mmHg,,120.0,,,1.43,4.03,285.0,Emergency Admission,Cardiac Failure,Vasopressor,2.0,Nurse Entry
+ADM0028,P028,31/01/2026 00:00,2026/02/04 04:00,Feb 01 2026 18:15,,female,African-American,,137.9,,,36.5 C,94.7,,6.6 mmol/L,2.51,,273.0,Emergency,Sepsis,antibiotic,7.0,monitor
+ADM0028,P028,31/01/2026 00:00,2026-02-04 04:00,2026/02/02 06:12,150.0,M,African-American,91.2,,92.5,,97.5 F,98.6,,6.6 mmol/L,,13.07,194.0,ICU,Cardiac Failure,Vasopressor,,Nurse Entry
+ADM0028,P028,31/01/2026 00:00,Feb 04 2026 04:00,03/02/2026 19:27,71.0,F,African-American,100.5,,,94.4,,97.9,,,,12.81,,ICU,Cardiac Failure,INSULIN,12.0,monitor
+ADM0028,P028,Jan 31 2026 00:00,2026-02-04 04:00,2026-02-04 08:45,89.0,Male,AA,104.1,,,85 mmHg,37.2 C,96.6,,,,,,ICU,Stroke,None,,Nurse Entry
+ADM0028,P028,Jan 31 2026 00:00,2026/02/04 04:00,04/02/2026 09:32,,female,Other,68.9,,85.8,,36.7 C,100.0,,6.6 mmol/L,,,,ER,Cardiac Failure,antibiotic,,Nurse Entry
+ADM0028,P028,2026/01/31 00:00,04/02/2026 04:00,2026/02/04 11:20,24.0,Female,African,103.4,123.4,81.6,,,95.2,,6.6 mmol/L,1.05,,,Ward,Stroke,Insulin,,Monitor
+ADM0028,P028,31/01/2026 00:00,2026-02-04 04:00,Feb 04 2026 16:54,29.0,M,African-American,71.5,,82.5,85 mmHg,37.7 C,120.0,19.3,6.6 mmol/L,1.42,9.49,335.0,Ward,Sepsis,Vasopressor,,Laboratory
+ADM0028,P028,2026-01-31 00:00,Feb 04 2026 04:00,04/02/2026 21:37,21.0,F,Other,,,71.8,,,120.0,,6.6 mmol/L,2.75,17.94,,Ward,Sepsis,INSULIN,,Monitor
+ADM0028,P028,31/01/2026 00:00,2026/02/04 04:00,2026-02-04 22:25,20.0,Female,Other,,,,101.4,,,,,,8.41,263.0,Ward,Stroke,Antibiotic,,monitor
+ADM0029,P029,2026-01-31 00:00,Feb 03 2026 10:00,2026/01/31 11:40,150.0,female,African-American,,141.6,,,,99.7,,6.6 mmol/L,1.91,12.37,,ICU,Stroke,Insulin,9.0,Nurse entry
+ADM0029,P029,2026-01-31 00:00,2026/02/03 10:00,2026/01/31 23:04,,female,AA,,,,85 mmHg,37.2 C,100.1,,166.0,1.07,,103.0,Outpatient,Cardiac Failure,Vasopressor,,Nurse entry
+ADM0029,P029,31/01/2026 00:00,03/02/2026 10:00,01/02/2026 23:51,150.0,male,AA,300.0,,,,99.1 F,97.2,,104.8,2.19,8.6,,Outpatient,Trauma,INSULIN,,Nurse entry
+ADM0029,P029,Jan 31 2026 00:00,2026/02/03 10:00,Feb 02 2026 06:52,29.0,Female,African,,,91.1,,38.6 C,96.0,24.2,6.6 mmol/L,0.95,13.58,303.0,Emergency,Cardiac Failure,Insulin,,monitor
+ADM0029,P029,31/01/2026 00:00,2026/02/03 10:00,2026/02/02 07:01,78.0,F,African-American,82.0,,,113.3,,98.7,20.1,,,,,Emergency,Trauma,Insulin,,Nurse Entry
+ADM0029,P029,2026-01-31 00:00,2026/02/03 10:00,Feb 03 2026 00:45,88.0,M,Other,,124.8,,85 mmHg,,,,167.2,1.39,,,Ward,Trauma,Antibiotic,,Nurse entry
+ADM0029,P029,2026/01/31 00:00,03/02/2026 10:00,Feb 03 2026 04:54,,female,AA,,123.9,65.9,,,120.0,,95.9,1.22,15.04,,Emergency,Trauma,Insulin,9.0,Nurse Entry
+ADM0029,P029,2026-01-31 00:00,Feb 03 2026 10:00,Feb 03 2026 06:35,150.0,Female,African-American,300.0,,80.5,,,96.6,17.0,97.6,0.68,,,Ward,Sepsis,antibiotic,8.0,Nurse entry
+ADM0029,P029,2026-01-31 00:00,2026/02/03 10:00,2026/02/04 00:38,32.0,male,African,,,71.6,,36.9 C,96.5,,134.4,,,,Emergency Admission,Sepsis,Antibiotic,,Nurse Entry
+ADM0029,P029,2026/01/31 00:00,2026/02/03 10:00,2026-02-04 07:07,,M,AA,300.0,110.3,70.8,,,120.0,,6.6 mmol/L,1.03,15.14,,ICU,Pneumonia,Insulin,,monitor
+ADM0030,P030,03/02/2026 00:00,2026/02/06 22:00,2026-02-03 01:21,68.0,female,African-American,300.0,119.4,,,,120.0,,,,,,ER,Stroke,Antibiotic,,Nurse Entry
+ADM0030,P030,2026/02/03 00:00,Feb 06 2026 22:00,2026/02/03 03:56,,Male,African,300.0,,,85 mmHg,37.3 C,120.0,,103.5,0.64,,,Emergency Admission,Pneumonia,None,,Nurse Entry
+ADM0030,P030,2026/02/03 00:00,2026-02-06 22:00,2026-02-03 08:53,,female,AA,85.2,156.7,84.8,,,120.0,20.0,6.6 mmol/L,,17.84,377.0,Ward,Cardiac Failure,Vasopressor,,Nurse entry
+ADM0030,P030,Feb 03 2026 00:00,06/02/2026 22:00,Feb 03 2026 10:47,76.0,Female,Other,,119.0,58.1,89.2,,100.4,,118.1,,15.9,,ER,Stroke,antibiotic,,Nurse entry
+ADM0030,P030,2026/02/03 00:00,2026/02/06 22:00,2026/02/03 18:31,38.0,male,African-American,,,71.7,85 mmHg,35.6 C,120.0,27.5,6.6 mmol/L,,12.67,,Emergency,Stroke,Insulin,3.0,Laboratory
+ADM0030,P030,03/02/2026 00:00,2026-02-06 22:00,Feb 05 2026 08:36,,M,AA,,,61.0,93.3,,94.8,,6.6 mmol/L,1.05,5.74,330.0,Emergency,Stroke,Vasopressor,2.0,monitor
+ADM0030,P030,2026/02/03 00:00,Feb 06 2026 22:00,2026/02/05 18:30,150.0,male,African-American,102.5,,,85 mmHg,,96.0,,113.1,,,,Ward,Stroke,None,,Monitor
+ADM0030,P030,2026-02-03 00:00,Feb 06 2026 22:00,2026-02-06 19:55,89.0,Female,African,300.0,98.0,,85 mmHg,97.9 F,96.4,13.8,93.4,,16.06,,Emergency,Stroke,antibiotic,,Nurse entry
+ADM0030,P030,2026-02-03 00:00,Feb 06 2026 22:00,2026/02/07 02:02,,Male,AA,,,,58.7,37.4 C,120.0,17.8,6.6 mmol/L,2.8,3.6,210.0,ICU,Cardiac Failure,Insulin,5.0,Nurse entry
+ADM0030,P030,2026-02-03 00:00,Feb 06 2026 22:00,2026/02/07 07:20,,Female,Other,,,,56.4,97.3 F,92.8,15.0,,1.72,,,Emergency,Cardiac Failure,None,,Nurse entry
+ADM0031,P031,27/01/2026 00:00,29/01/2026 08:00,Jan 27 2026 02:37,,F,African,300.0,112.3,79.6,,36.6 C,92.7,,,,10.52,,ER,Cardiac Failure,INSULIN,5.0,Monitor
+ADM0031,P031,Jan 27 2026 00:00,Jan 29 2026 08:00,2026/01/27 03:59,150.0,Female,AA,115.9,114.3,78.4,,35.3 C,,15.2,129.9,,,,Emergency Admission,Cardiac Failure,INSULIN,,Laboratory
+ADM0031,P031,Jan 27 2026 00:00,Jan 29 2026 08:00,28/01/2026 05:15,150.0,M,African,300.0,111.0,90.1,85 mmHg,,97.7,14.3,,2.19,,,Outpatient,Stroke,None,2.0,monitor
+ADM0031,P031,2026/01/27 00:00,Jan 29 2026 08:00,2026/01/28 10:43,150.0,Male,African,,,90.6,,98.4 F,98.5,17.0,6.6 mmol/L,,13.02,,Emergency Admission,Pneumonia,Antibiotic,,Monitor
+ADM0031,P031,27/01/2026 00:00,2026-01-29 08:00,29/01/2026 04:17,68.0,M,Other,93.2,151.6,86.8,,36.9 C,120.0,,148.7,,17.45,,ICU,Sepsis,INSULIN,,Monitor
+ADM0031,P031,2026-01-27 00:00,Jan 29 2026 08:00,2026/01/29 13:27,,Male,Other,,,,85 mmHg,37.7 C,,,6.6 mmol/L,,,,ICU,Cardiac Failure,None,0.0,monitor
+ADM0031,P031,27/01/2026 00:00,29/01/2026 08:00,Jan 29 2026 22:04,57.0,female,African,87.1,,,91.3,,,17.1,71.1,,14.27,254.0,Ward,Stroke,Antibiotic,,Monitor
+ADM0031,P031,2026-01-27 00:00,2026-01-29 08:00,2026-01-30 09:40,,M,African,112.8,101.0,,104.0,,120.0,,86.8,1.18,5.86,366.0,Ward,Trauma,Insulin,,Nurse Entry
+ADM0031,P031,2026-01-27 00:00,2026/01/29 08:00,2026/01/31 17:55,,male,African,,144.5,,85 mmHg,,120.0,8.9,128.1,1.73,7.5,384.0,ER,Pneumonia,antibiotic,,Laboratory
+ADM0031,P031,2026/01/27 00:00,29/01/2026 08:00,31/01/2026 20:26,35.0,Male,African-American,,,,,,95.3,,6.6 mmol/L,,,268.0,ER,Stroke,INSULIN,4.0,Nurse Entry
+ADM0032,P032,2026/02/02 00:00,Feb 06 2026 23:00,Feb 02 2026 06:12,,M,African-American,,,,,37.6 C,97.2,,,0.8,,399.0,ICU,Trauma,INSULIN,,Nurse Entry
+ADM0032,P032,2026-02-02 00:00,Feb 06 2026 23:00,2026-02-02 08:25,,Male,African,,,,75.7,,97.2,19.3,82.7,1.24,,169.0,Ward,Pneumonia,Vasopressor,7.0,Nurse Entry
+ADM0032,P032,Feb 02 2026 00:00,2026-02-06 23:00,2026-02-03 01:01,,female,African,,111.7,,,95.9 F,,,,1.4,,444.0,Emergency,Pneumonia,Antibiotic,6.0,Nurse entry
+ADM0032,P032,Feb 02 2026 00:00,2026/02/06 23:00,03/02/2026 19:24,150.0,male,African-American,,,,,36.9 C,,,35.0,,6.32,,Emergency Admission,Stroke,None,,Nurse entry
+ADM0032,P032,2026/02/02 00:00,06/02/2026 23:00,Feb 03 2026 20:23,150.0,female,Other,300.0,,,,,120.0,19.0,133.5,1.83,3.49,311.0,Outpatient,Pneumonia,Vasopressor,,Nurse entry
+ADM0032,P032,Feb 02 2026 00:00,Feb 06 2026 23:00,2026-02-04 06:10,35.0,M,Other,300.0,,63.2,85 mmHg,35.0 C,,,6.6 mmol/L,,,,Ward,Trauma,Vasopressor,,Monitor
+ADM0032,P032,Feb 02 2026 00:00,2026-02-06 23:00,Feb 05 2026 09:11,,male,African,,,77.7,100.7,37.5 C,,23.8,,2.54,,,Ward,Cardiac Failure,INSULIN,8.0,Nurse entry
+ADM0032,P032,Feb 02 2026 00:00,2026-02-06 23:00,Feb 06 2026 04:08,,F,Other,,114.2,,85 mmHg,35.9 C,,15.2,126.1,1.49,,,Emergency Admission,Trauma,Vasopressor,,Nurse Entry
+ADM0032,P032,2026/02/02 00:00,06/02/2026 23:00,2026/02/06 13:27,150.0,Male,AA,85.0,,,85 mmHg,37.3 C,,,6.6 mmol/L,2.9,,,Emergency Admission,Stroke,Vasopressor,10.0,Nurse entry
+ADM0032,P032,02/02/2026 00:00,06/02/2026 23:00,Feb 06 2026 20:50,150.0,male,Other,,94.6,,93.0,,100.3,,174.5,,,,Emergency,Pneumonia,None,5.0,Nurse entry
+ADM0033,P033,2026-02-01 00:00,Feb 03 2026 03:00,2026-02-01 08:33,,F,Other,86.3,144.0,76.7,85 mmHg,,,17.1,6.6 mmol/L,2.61,10.26,,Outpatient,Trauma,Antibiotic,9.0,Nurse entry
+ADM0033,P033,Feb 01 2026 00:00,03/02/2026 03:00,2026-02-01 23:45,,Male,Other,300.0,,,85 mmHg,,,,,2.18,15.08,,Ward,Cardiac Failure,Insulin,,Nurse Entry
+ADM0033,P033,2026/02/01 00:00,2026/02/03 03:00,2026/02/02 01:11,150.0,male,African,,,85.3,114.7,,120.0,,,2.85,5.72,,ER,Sepsis,Vasopressor,2.0,Nurse entry
+ADM0033,P033,2026/02/01 00:00,2026/02/03 03:00,02/02/2026 02:49,50.0,male,African,,129.0,52.6,85 mmHg,,,,,,16.47,283.0,Emergency,Cardiac Failure,None,,monitor
+ADM0033,P033,2026-02-01 00:00,03/02/2026 03:00,2026/02/02 05:31,,M,African-American,78.7,,,82.7,,95.8,,109.3,2.82,9.29,,ICU,Trauma,Vasopressor,5.0,Monitor
+ADM0033,P033,01/02/2026 00:00,2026/02/03 03:00,2026-02-02 12:57,150.0,female,African,,,,,35.5 C,96.9,,164.8,2.93,,202.0,Emergency,Sepsis,Insulin,0.0,Laboratory
+ADM0033,P033,2026-02-01 00:00,03/02/2026 03:00,2026-02-02 13:52,150.0,Female,African,,129.5,,,100.0 F,120.0,17.5,,,,141.0,ICU,Sepsis,Vasopressor,10.0,Monitor
+ADM0033,P033,2026-02-01 00:00,2026/02/03 03:00,03/02/2026 01:25,76.0,Male,AA,300.0,,,102.6,36.4 C,,,,,8.92,444.0,Ward,Sepsis,antibiotic,,Nurse Entry
+ADM0033,P033,Feb 01 2026 00:00,2026/02/03 03:00,2026-02-04 12:21,60.0,male,Other,,146.6,,80.9,96.8 F,120.0,15.7,6.6 mmol/L,1.4,,204.0,Emergency,Pneumonia,Vasopressor,,Nurse Entry
+ADM0033,P033,2026-02-01 00:00,03/02/2026 03:00,2026/02/05 20:09,60.0,M,AA,300.0,118.1,,85 mmHg,,98.2,11.4,,,,204.0,ER,Sepsis,INSULIN,7.0,Nurse entry
+ADM0034,P034,25/01/2026 00:00,29/01/2026 18:00,2026-01-25 00:40,150.0,male,African-American,78.7,90.7,,85 mmHg,,,22.9,,1.49,5.34,297.0,ER,Pneumonia,Vasopressor,,Nurse Entry
+ADM0034,P034,2026/01/25 00:00,2026-01-29 18:00,Jan 25 2026 06:17,,Female,Other,,,,103.4,,100.7,,6.6 mmol/L,1.67,,384.0,ER,Pneumonia,Vasopressor,,Laboratory
+ADM0034,P034,2026/01/25 00:00,2026-01-29 18:00,Jan 25 2026 08:29,150.0,F,African-American,61.8,134.3,,84.4,,,,6.6 mmol/L,,,,Ward,Stroke,None,13.0,Monitor
+ADM0034,P034,25/01/2026 00:00,29/01/2026 18:00,2026/01/25 23:24,150.0,M,Other,300.0,,85.0,85 mmHg,,,,84.7,,12.05,265.0,Emergency Admission,Pneumonia,Vasopressor,14.0,Laboratory
+ADM0034,P034,25/01/2026 00:00,2026-01-29 18:00,2026-01-26 00:15,150.0,female,Other,,,68.7,,37.6 C,,,,,,,Emergency Admission,Trauma,INSULIN,2.0,Nurse entry
+ADM0034,P034,25/01/2026 00:00,Jan 29 2026 18:00,26/01/2026 17:49,150.0,M,African,75.2,,90.0,101.7,37.2 C,120.0,,,,,300.0,ICU,Cardiac Failure,Antibiotic,4.0,monitor
+ADM0034,P034,2026-01-25 00:00,2026/01/29 18:00,27/01/2026 08:11,41.0,Male,African-American,118.7,,,,36.1 C,120.0,18.9,148.1,,10.5,273.0,Ward,Sepsis,Vasopressor,0.0,monitor
+ADM0034,P034,2026-01-25 00:00,2026-01-29 18:00,2026-01-27 14:31,52.0,female,African,105.9,116.5,84.3,,,,,6.6 mmol/L,,,,Ward,Pneumonia,Vasopressor,,Nurse entry
+ADM0034,P034,Jan 25 2026 00:00,2026-01-29 18:00,2026-01-28 08:03,150.0,F,African-American,105.9,127.4,,85 mmHg,37.5 C,,,,,,418.0,Emergency,Cardiac Failure,None,11.0,Laboratory
+ADM0034,P034,2026/01/25 00:00,2026/01/29 18:00,2026-01-29 15:43,,F,African,300.0,,,85 mmHg,36.3 C,120.0,19.2,,0.76,9.03,334.0,Ward,Stroke,Insulin,,Monitor
+ADM0035,P035,Jan 31 2026 00:00,2026/02/04 21:00,Jan 31 2026 11:45,150.0,M,Other,300.0,101.7,,85 mmHg,,97.3,,136.6,1.79,,,Emergency Admission,Stroke,Insulin,7.0,Laboratory
+ADM0035,P035,2026-01-31 00:00,2026-02-04 21:00,Jan 31 2026 13:07,93.0,female,African,300.0,,,,,120.0,14.9,6.6 mmol/L,0.94,17.81,,Ward,Cardiac Failure,INSULIN,4.0,Monitor
+ADM0035,P035,2026/01/31 00:00,Feb 04 2026 21:00,31/01/2026 21:25,55.0,F,Other,52.7,,79.1,85 mmHg,100.6 F,120.0,,6.6 mmol/L,2.21,,,Emergency Admission,Pneumonia,Insulin,,Monitor
+ADM0035,P035,31/01/2026 00:00,04/02/2026 21:00,2026-02-01 03:51,,female,Other,,124.3,62.7,85 mmHg,,,,,,,,Emergency,Stroke,INSULIN,,Nurse Entry
+ADM0035,P035,2026/01/31 00:00,2026-02-04 21:00,01/02/2026 06:44,150.0,Male,AA,,161.7,62.8,,,,17.7,90.5,1.96,11.12,413.0,Ward,Stroke,None,,monitor
+ADM0035,P035,2026-01-31 00:00,2026-02-04 21:00,Feb 01 2026 07:43,78.0,Male,African,,,,106.6,,98.0,18.0,102.3,2.22,,,Emergency Admission,Stroke,Antibiotic,12.0,monitor
+ADM0035,P035,2026/01/31 00:00,Feb 04 2026 21:00,2026/02/02 07:55,65.0,Male,African,66.8,151.8,,,37.7 C,94.3,,6.6 mmol/L,2.25,11.35,,Emergency Admission,Trauma,Vasopressor,4.0,Laboratory
+ADM0035,P035,31/01/2026 00:00,2026/02/04 21:00,2026-02-03 12:04,150.0,male,Other,86.4,99.5,89.8,85 mmHg,37.6 C,,16.6,167.7,,,142.0,ICU,Stroke,Antibiotic,5.0,Nurse entry
+ADM0035,P035,2026-01-31 00:00,2026-02-04 21:00,2026-02-03 17:16,,M,African-American,,128.6,,,36.6 C,120.0,,,,12.87,,Emergency Admission,Cardiac Failure,antibiotic,11.0,Monitor
+ADM0035,P035,31/01/2026 00:00,2026-02-04 21:00,04/02/2026 00:42,,Female,African-American,300.0,84.1,,,36.1 C,120.0,,125.3,,,275.0,Outpatient,Trauma,None,,Nurse Entry
+ADM0036,P036,04/02/2026 00:00,2026/02/07 02:00,04/02/2026 09:36,,F,African,300.0,,60.7,,,120.0,9.6,,,8.88,248.0,Ward,Cardiac Failure,Vasopressor,4.0,Laboratory
+ADM0036,P036,04/02/2026 00:00,2026/02/07 02:00,2026-02-05 00:00,33.0,male,AA,300.0,,89.3,,,120.0,,,,4.19,104.0,Ward,Trauma,Antibiotic,,monitor
+ADM0036,P036,2026-02-04 00:00,07/02/2026 02:00,05/02/2026 10:37,,male,AA,92.1,,65.4,,,120.0,,78.4,,,,Ward,Trauma,antibiotic,,Monitor
+ADM0036,P036,Feb 04 2026 00:00,2026-02-07 02:00,2026-02-05 23:19,150.0,Female,African,,165.4,70.1,85 mmHg,,120.0,,117.0,,16.13,,ER,Stroke,INSULIN,,Monitor
+ADM0036,P036,2026-02-04 00:00,2026/02/07 02:00,Feb 07 2026 08:39,150.0,female,African,,,76.5,,99.1 F,101.1,14.6,6.6 mmol/L,1.6,,,Outpatient,Trauma,Antibiotic,11.0,Laboratory
+ADM0036,P036,2026-02-04 00:00,Feb 07 2026 02:00,Feb 07 2026 09:58,,M,African-American,87.8,,77.5,,36.6 C,,,117.7,,15.4,,Ward,Cardiac Failure,Vasopressor,3.0,Laboratory
+ADM0036,P036,2026/02/04 00:00,Feb 07 2026 02:00,2026-02-07 10:56,,F,African-American,106.0,125.1,,96.7,,99.2,20.3,,,17.37,,Ward,Cardiac Failure,Vasopressor,13.0,Nurse entry
+ADM0036,P036,2026/02/04 00:00,2026/02/07 02:00,07/02/2026 17:51,,female,Other,103.3,,59.7,70.7,101.8 F,,18.7,101.6,,,249.0,ICU,Pneumonia,Insulin,8.0,monitor
+ADM0036,P036,04/02/2026 00:00,Feb 07 2026 02:00,2026/02/07 19:31,150.0,female,Other,72.9,117.8,65.3,84.2,37.6 C,96.2,,,0.63,8.97,,Outpatient,Stroke,INSULIN,,monitor
+ADM0036,P036,2026-02-04 00:00,2026/02/07 02:00,07/02/2026 21:18,150.0,male,African-American,120.8,,70.5,,94.5 F,120.0,,176.9,,11.37,438.0,ICU,Stroke,INSULIN,4.0,Monitor
+ADM0037,P037,2026/01/09 00:00,Jan 13 2026 03:00,09/01/2026 02:55,,F,Other,69.9,,76.6,,98.8 F,,,6.6 mmol/L,,,,Emergency,Pneumonia,None,0.0,Laboratory
+ADM0037,P037,Jan 09 2026 00:00,2026-01-13 03:00,2026/01/09 04:13,,F,AA,,,49.7,107.3,97.5 F,120.0,16.5,6.6 mmol/L,,,,ICU,Cardiac Failure,Antibiotic,12.0,Monitor
+ADM0037,P037,2026-01-09 00:00,2026-01-13 03:00,09/01/2026 11:08,150.0,F,African,,,,85 mmHg,,93.8,16.4,113.6,0.95,14.96,,ER,Cardiac Failure,Vasopressor,14.0,monitor
+ADM0037,P037,2026-01-09 00:00,13/01/2026 03:00,Jan 09 2026 18:04,,Male,African,300.0,136.3,,,37.4 C,96.3,,,,,,ICU,Pneumonia,None,5.0,Nurse entry
+ADM0037,P037,2026/01/09 00:00,Jan 13 2026 03:00,Jan 10 2026 00:44,,female,AA,300.0,110.0,58.5,94.8,98.6 F,120.0,,6.6 mmol/L,1.34,13.96,222.0,Ward,Sepsis,INSULIN,7.0,Nurse entry
+ADM0037,P037,Jan 09 2026 00:00,Jan 13 2026 03:00,Jan 10 2026 01:07,150.0,male,AA,300.0,128.7,,85 mmHg,,,24.4,,1.51,,,ICU,Cardiac Failure,None,,Laboratory
+ADM0037,P037,09/01/2026 00:00,2026/01/13 03:00,10/01/2026 11:55,,Female,Other,114.4,,60.9,85 mmHg,,,8.8,6.6 mmol/L,1.98,,,ICU,Pneumonia,Antibiotic,15.0,Laboratory
+ADM0037,P037,09/01/2026 00:00,2026/01/13 03:00,11/01/2026 06:01,26.0,Male,Other,71.4,,,100.2,98.4 F,120.0,17.8,,2.45,,276.0,Emergency,Sepsis,INSULIN,1.0,Nurse Entry
+ADM0037,P037,09/01/2026 00:00,2026-01-13 03:00,2026-01-12 06:49,150.0,female,AA,300.0,147.5,78.8,,,,,118.9,,,325.0,ICU,Sepsis,antibiotic,8.0,Monitor
+ADM0037,P037,Jan 09 2026 00:00,2026-01-13 03:00,2026/01/13 22:52,36.0,Female,African,127.7,,,99.6,,120.0,,81.0,,12.39,331.0,Emergency,Pneumonia,None,,Monitor
+ADM0038,P038,09/02/2026 00:00,2026/02/12 18:00,09/02/2026 05:27,150.0,M,AA,107.9,,,85 mmHg,,,19.1,147.1,2.53,9.45,243.0,Outpatient,Trauma,INSULIN,15.0,Monitor
+ADM0038,P038,Feb 09 2026 00:00,12/02/2026 18:00,2026-02-09 10:36,59.0,Female,Other,,,,,,120.0,,,,11.82,414.0,Outpatient,Trauma,antibiotic,,Nurse entry
+ADM0038,P038,2026/02/09 00:00,2026-02-12 18:00,2026/02/09 15:34,150.0,female,African-American,300.0,,59.5,,38.5 C,95.2,,6.6 mmol/L,,12.74,136.0,Ward,Cardiac Failure,Antibiotic,,Nurse Entry
+ADM0038,P038,2026/02/09 00:00,12/02/2026 18:00,09/02/2026 19:53,46.0,female,African-American,,166.1,,85 mmHg,,120.0,,6.6 mmol/L,2.7,3.74,419.0,Outpatient,Stroke,Antibiotic,0.0,Laboratory
+ADM0038,P038,2026-02-09 00:00,2026-02-12 18:00,2026/02/09 22:09,37.0,F,African-American,300.0,,,,,,21.9,6.6 mmol/L,2.4,7.69,110.0,ER,Pneumonia,antibiotic,5.0,monitor
+ADM0038,P038,2026/02/09 00:00,Feb 12 2026 18:00,Feb 10 2026 22:53,,Female,AA,83.8,,76.3,,35.9 C,,21.5,142.0,,17.48,366.0,Emergency Admission,Trauma,Insulin,,monitor
+ADM0038,P038,Feb 09 2026 00:00,2026/02/12 18:00,12/02/2026 05:10,52.0,Male,African,,,85.7,69.4,,97.7,8.1,121.4,1.57,12.68,238.0,ER,Pneumonia,INSULIN,1.0,Laboratory
+ADM0038,P038,2026-02-09 00:00,2026/02/12 18:00,2026-02-13 18:05,,Male,AA,101.5,,,,,,,,,16.45,439.0,Ward,Trauma,INSULIN,3.0,Monitor
+ADM0038,P038,2026/02/09 00:00,2026-02-12 18:00,Feb 13 2026 21:37,38.0,female,Other,95.6,,80.5,82.5,36.7 C,120.0,13.1,,,,,Ward,Cardiac Failure,antibiotic,13.0,monitor
+ADM0038,P038,2026-02-09 00:00,12/02/2026 18:00,2026/02/13 22:15,30.0,Female,AA,300.0,135.7,,96.1,,,20.2,6.6 mmol/L,2.86,13.24,,Ward,Sepsis,None,,Laboratory
+ADM0039,P039,2026/01/31 00:00,2026/02/03 08:00,31/01/2026 05:23,,male,AA,,123.2,,85 mmHg,,,19.9,,0.84,17.29,438.0,ICU,Sepsis,Vasopressor,12.0,Nurse entry
+ADM0039,P039,31/01/2026 00:00,2026/02/03 08:00,2026/01/31 15:25,,F,Other,300.0,,82.1,87.9,38.0 C,120.0,23.1,6.6 mmol/L,,6.78,,Emergency,Cardiac Failure,Vasopressor,15.0,monitor
+ADM0039,P039,2026-01-31 00:00,03/02/2026 08:00,2026/01/31 17:07,150.0,Female,AA,300.0,121.5,,107.9,,,,108.2,2.59,11.23,,Ward,Cardiac Failure,INSULIN,5.0,Nurse Entry
+ADM0039,P039,2026-01-31 00:00,Feb 03 2026 08:00,2026/02/02 08:04,150.0,Female,AA,77.2,169.7,78.2,,,,20.7,145.2,,,,ER,Pneumonia,INSULIN,,Nurse entry
+ADM0039,P039,31/01/2026 00:00,2026-02-03 08:00,02/02/2026 14:24,150.0,female,AA,105.9,,,81.4,,,22.7,,,,346.0,Outpatient,Pneumonia,INSULIN,14.0,Monitor
+ADM0039,P039,31/01/2026 00:00,2026/02/03 08:00,03/02/2026 00:13,,Female,AA,111.8,101.7,,,,97.6,,6.6 mmol/L,0.85,,,Outpatient,Trauma,Vasopressor,,Nurse entry
+ADM0039,P039,31/01/2026 00:00,2026/02/03 08:00,2026/02/03 11:48,65.0,male,African-American,300.0,,,,,120.0,,,1.76,10.62,133.0,Emergency Admission,Sepsis,antibiotic,13.0,monitor
+ADM0039,P039,2026-01-31 00:00,2026/02/03 08:00,2026-02-04 01:47,,Female,African-American,,,95.4,65.4,,93.4,,6.6 mmol/L,,,,ICU,Stroke,Vasopressor,,Laboratory
+ADM0039,P039,2026/01/31 00:00,03/02/2026 08:00,2026-02-04 16:53,71.0,Male,African,55.3,,,,,120.0,,116.3,,3.82,,Emergency,Stroke,Insulin,,Nurse Entry
+ADM0039,P039,31/01/2026 00:00,2026/02/03 08:00,04/02/2026 22:25,150.0,Female,African,300.0,,,,36.7 C,,13.0,114.6,1.78,8.23,303.0,Emergency Admission,Stroke,Antibiotic,0.0,Nurse entry
+ADM0040,P040,Jan 25 2026 00:00,27/01/2026 03:00,25/01/2026 16:41,,female,African,,108.3,78.9,85 mmHg,38.1 C,120.0,,60.9,,10.63,134.0,Ward,Cardiac Failure,Antibiotic,2.0,monitor
+ADM0040,P040,25/01/2026 00:00,2026/01/27 03:00,2026-01-25 23:54,80.0,F,African,,126.4,74.9,85 mmHg,,,,,,4.46,,Emergency,Pneumonia,INSULIN,1.0,Laboratory
+ADM0040,P040,2026-01-25 00:00,27/01/2026 03:00,Jan 26 2026 06:22,33.0,male,African,300.0,133.3,68.4,105.0,,96.0,,97.2,,5.81,192.0,Emergency Admission,Pneumonia,Vasopressor,,Nurse Entry
+ADM0040,P040,Jan 25 2026 00:00,2026/01/27 03:00,2026/01/26 21:05,150.0,F,African-American,,83.4,60.3,85 mmHg,,,17.2,,,7.81,,Outpatient,Trauma,Insulin,,Nurse entry
+ADM0040,P040,2026/01/25 00:00,27/01/2026 03:00,Jan 27 2026 10:06,150.0,Male,Other,81.7,,,,,,,6.6 mmol/L,0.92,15.81,,Outpatient,Pneumonia,Vasopressor,7.0,Nurse Entry
+ADM0040,P040,25/01/2026 00:00,Jan 27 2026 03:00,2026-01-28 08:42,,female,African,300.0,,77.5,,,95.0,11.1,6.6 mmol/L,,5.4,349.0,Emergency,Stroke,Vasopressor,,monitor
+ADM0040,P040,25/01/2026 00:00,27/01/2026 03:00,2026-01-28 09:20,,Male,AA,,120.7,51.4,,36.3 C,120.0,,,,4.31,375.0,Ward,Sepsis,INSULIN,,Laboratory
+ADM0040,P040,2026/01/25 00:00,2026-01-27 03:00,2026-01-28 21:08,150.0,Male,African,,112.3,,85 mmHg,,,,6.6 mmol/L,,8.72,,Outpatient,Stroke,None,,monitor
+ADM0040,P040,2026-01-25 00:00,Jan 27 2026 03:00,2026-01-28 23:31,21.0,Male,African,107.6,96.5,,85 mmHg,,,17.0,104.2,1.28,,355.0,Emergency Admission,Sepsis,Vasopressor,1.0,Monitor
+ADM0040,P040,Jan 25 2026 00:00,2026/01/27 03:00,Jan 29 2026 03:19,39.0,male,Other,84.0,144.8,,75.5,,120.0,,,1.25,12.64,,Emergency Admission,Trauma,Vasopressor,,Nurse Entry
+ADM0041,P041,06/01/2026 00:00,2026-01-09 09:00,2026-01-06 10:41,81.0,Female,African,,141.8,,,38.3 C,,15.4,6.6 mmol/L,0.77,,,Emergency Admission,Pneumonia,antibiotic,3.0,Nurse Entry
+ADM0041,P041,2026/01/06 00:00,09/01/2026 09:00,2026/01/07 07:58,42.0,M,Other,73.4,,73.2,69.1,,,14.4,114.1,0.87,,,Emergency,Trauma,INSULIN,,Laboratory
+ADM0041,P041,2026-01-06 00:00,Jan 09 2026 09:00,2026/01/07 13:07,45.0,F,Other,300.0,,66.3,,,,18.7,149.9,,,,ICU,Trauma,Antibiotic,,Nurse entry
+ADM0041,P041,2026-01-06 00:00,09/01/2026 09:00,2026-01-07 21:27,46.0,Male,African,300.0,,89.3,104.3,97.0 F,,,,,,281.0,ICU,Cardiac Failure,Insulin,6.0,Nurse Entry
+ADM0041,P041,Jan 06 2026 00:00,2026-01-09 09:00,2026-01-08 23:22,150.0,female,Other,300.0,,81.4,57.1,,120.0,,145.5,2.41,,313.0,Emergency,Trauma,Insulin,10.0,Nurse Entry
+ADM0041,P041,06/01/2026 00:00,2026-01-09 09:00,Jan 09 2026 12:16,150.0,Male,Other,61.4,,87.0,110.9,36.4 C,120.0,,131.4,1.49,3.77,128.0,Ward,Cardiac Failure,Insulin,,Nurse entry
+ADM0041,P041,Jan 06 2026 00:00,Jan 09 2026 09:00,2026/01/09 19:16,,M,AA,300.0,,71.1,,38.3 C,94.2,,97.9,1.86,,334.0,ICU,Stroke,INSULIN,,Nurse Entry
+ADM0041,P041,2026/01/06 00:00,2026-01-09 09:00,Jan 10 2026 02:47,,male,African-American,,,,,,,,118.2,1.81,,393.0,Outpatient,Trauma,antibiotic,,Monitor
+ADM0041,P041,06/01/2026 00:00,2026/01/09 09:00,10/01/2026 10:00,,male,African-American,,,,,,97.9,,125.2,2.32,,383.0,Emergency,Trauma,Vasopressor,,Laboratory
+ADM0041,P041,2026-01-06 00:00,Jan 09 2026 09:00,10/01/2026 15:42,,male,African-American,,,,85 mmHg,,,16.3,6.6 mmol/L,2.54,11.96,,ICU,Trauma,Insulin,12.0,Laboratory
+ADM0042,P042,20/01/2026 00:00,2026/01/23 15:00,20/01/2026 17:49,,Male,AA,300.0,,86.0,,,97.9,,,,,,Outpatient,Cardiac Failure,Insulin,,monitor
+ADM0042,P042,2026-01-20 00:00,2026/01/23 15:00,2026-01-20 22:29,150.0,M,African-American,300.0,,67.7,85 mmHg,,96.5,,125.6,,9.53,,Emergency,Sepsis,None,8.0,Laboratory
+ADM0042,P042,Jan 20 2026 00:00,2026/01/23 15:00,Jan 21 2026 17:38,25.0,female,African,300.0,107.8,79.4,85 mmHg,,93.2,28.1,,0.92,,,Emergency Admission,Sepsis,Insulin,6.0,Monitor
+ADM0042,P042,2026-01-20 00:00,2026-01-23 15:00,22/01/2026 07:00,44.0,F,African,300.0,,,,99.1 F,,,6.6 mmol/L,2.06,12.04,,ER,Trauma,INSULIN,,Nurse Entry
+ADM0042,P042,20/01/2026 00:00,23/01/2026 15:00,23/01/2026 00:40,150.0,female,African-American,,,,,103.1 F,120.0,,6.6 mmol/L,,,277.0,Outpatient,Trauma,Insulin,4.0,Laboratory
+ADM0042,P042,2026/01/20 00:00,2026-01-23 15:00,Jan 23 2026 02:29,150.0,female,Other,101.3,,75.3,,,,26.2,130.8,,4.28,,ER,Sepsis,Antibiotic,,Nurse entry
+ADM0042,P042,20/01/2026 00:00,Jan 23 2026 15:00,Jan 23 2026 14:21,68.0,female,Other,,,82.1,85 mmHg,,95.7,,,,,114.0,Emergency,Pneumonia,Antibiotic,3.0,monitor
+ADM0042,P042,Jan 20 2026 00:00,23/01/2026 15:00,23/01/2026 15:59,31.0,female,Other,,118.4,68.1,85 mmHg,,98.4,15.4,,1.62,,271.0,ICU,Cardiac Failure,None,,Nurse Entry
+ADM0042,P042,20/01/2026 00:00,23/01/2026 15:00,Jan 24 2026 06:40,,female,AA,101.8,,71.2,,35.5 C,96.5,26.0,,1.21,12.46,97.0,Emergency,Cardiac Failure,Insulin,,Nurse Entry
+ADM0042,P042,2026/01/20 00:00,23/01/2026 15:00,24/01/2026 16:43,,male,AA,,,86.5,,,120.0,,99.3,2.78,12.16,,Emergency,Sepsis,Insulin,7.0,Nurse entry
+ADM0043,P043,04/02/2026 00:00,Feb 07 2026 18:00,2026-02-04 02:04,150.0,Female,AA,,,70.0,85 mmHg,,,17.5,131.8,,,213.0,Ward,Sepsis,Antibiotic,,Monitor
+ADM0043,P043,2026-02-04 00:00,Feb 07 2026 18:00,2026-02-05 04:15,150.0,female,African,300.0,,77.5,,37.4 C,97.9,22.8,6.6 mmol/L,2.12,,,Ward,Pneumonia,None,1.0,Nurse Entry
+ADM0043,P043,2026/02/04 00:00,2026-02-07 18:00,2026/02/05 08:34,,F,African-American,,,67.4,92.8,,,,6.6 mmol/L,0.96,,303.0,ICU,Pneumonia,None,0.0,monitor
+ADM0043,P043,2026-02-04 00:00,2026-02-07 18:00,05/02/2026 13:47,25.0,Male,African-American,,,,84.6,,,,6.6 mmol/L,1.01,,325.0,Emergency Admission,Sepsis,None,8.0,monitor
+ADM0043,P043,Feb 04 2026 00:00,07/02/2026 18:00,2026/02/05 21:45,,male,AA,300.0,,,,38.3 C,97.2,,6.6 mmol/L,,,120.0,ICU,Stroke,Antibiotic,9.0,Monitor
+ADM0043,P043,04/02/2026 00:00,2026-02-07 18:00,06/02/2026 01:23,150.0,F,African,111.3,,77.7,,,120.0,,6.6 mmol/L,2.35,3.96,,Outpatient,Sepsis,Insulin,,Monitor
+ADM0043,P043,04/02/2026 00:00,2026/02/07 18:00,2026-02-07 18:14,57.0,male,AA,78.3,,,,96.4 F,97.5,,,,,109.0,ER,Trauma,INSULIN,,monitor
+ADM0043,P043,Feb 04 2026 00:00,07/02/2026 18:00,2026/02/08 09:36,150.0,Female,African-American,78.3,,,114.4,,120.0,,6.6 mmol/L,,8.32,,Ward,Cardiac Failure,INSULIN,8.0,Monitor
+ADM0043,P043,Feb 04 2026 00:00,Feb 07 2026 18:00,08/02/2026 10:19,,Male,Other,87.9,,77.5,,,120.0,,6.6 mmol/L,2.25,9.16,,Emergency,Trauma,Antibiotic,,Laboratory
+ADM0043,P043,04/02/2026 00:00,07/02/2026 18:00,08/02/2026 22:55,24.0,Male,African,,,,,36.8 C,96.2,,6.6 mmol/L,1.75,,356.0,ER,Pneumonia,Vasopressor,3.0,Nurse entry
+ADM0044,P044,2026/01/29 00:00,Jan 31 2026 14:00,29/01/2026 09:26,,male,AA,,,,,,,19.9,117.2,,4.25,228.0,ER,Sepsis,None,,Nurse entry
+ADM0044,P044,Jan 29 2026 00:00,31/01/2026 14:00,2026/01/30 02:45,92.0,female,African-American,,121.7,66.0,104.9,,,,,1.89,,,Ward,Cardiac Failure,Antibiotic,9.0,Laboratory
+ADM0044,P044,Jan 29 2026 00:00,31/01/2026 14:00,2026/01/30 06:15,150.0,Male,African-American,,,,83.5,,120.0,16.5,6.6 mmol/L,,14.7,,ICU,Stroke,Antibiotic,,Nurse entry
+ADM0044,P044,Jan 29 2026 00:00,Jan 31 2026 14:00,Jan 30 2026 17:42,58.0,Male,Other,,110.3,,85 mmHg,96.4 F,98.0,,129.2,0.95,16.37,,ER,Trauma,INSULIN,3.0,Monitor
+ADM0044,P044,29/01/2026 00:00,2026-01-31 14:00,30/01/2026 23:53,150.0,F,Other,,,,85 mmHg,38.5 C,120.0,,130.8,,,382.0,Emergency Admission,Sepsis,None,,monitor
+ADM0044,P044,2026/01/29 00:00,Jan 31 2026 14:00,2026/01/31 17:40,150.0,Female,African,,127.9,,85 mmHg,,,,6.6 mmol/L,2.72,,129.0,Ward,Trauma,Vasopressor,,Laboratory
+ADM0044,P044,29/01/2026 00:00,31/01/2026 14:00,2026-02-01 01:20,,male,AA,300.0,,81.9,,,94.8,13.1,6.6 mmol/L,,,304.0,ICU,Cardiac Failure,Vasopressor,3.0,Laboratory
+ADM0044,P044,29/01/2026 00:00,2026-01-31 14:00,2026-02-01 15:09,150.0,Female,African,,129.9,,,,,,,,17.17,,Emergency,Sepsis,Insulin,,Laboratory
+ADM0044,P044,Jan 29 2026 00:00,2026-01-31 14:00,Feb 02 2026 09:05,150.0,Female,African,,,,,,,19.6,,,9.08,301.0,Emergency Admission,Stroke,Vasopressor,6.0,Monitor
+ADM0044,P044,2026/01/29 00:00,31/01/2026 14:00,02/02/2026 10:15,,Female,Other,107.7,,,118.0,98.6 F,,19.4,,2.03,8.56,302.0,Outpatient,Stroke,antibiotic,6.0,Monitor
+ADM0045,P045,27/01/2026 00:00,Jan 30 2026 09:00,2026/01/28 06:11,150.0,F,AA,300.0,,,111.5,36.5 C,96.3,,6.6 mmol/L,,,,Emergency,Pneumonia,Insulin,10.0,Laboratory
+ADM0045,P045,27/01/2026 00:00,2026/01/30 09:00,2026/01/28 20:44,,female,African-American,100.5,,,85 mmHg,97.7 F,,20.5,,,,,Outpatient,Trauma,Insulin,,Laboratory
+ADM0045,P045,2026/01/27 00:00,30/01/2026 09:00,Jan 29 2026 00:58,,F,Other,73.6,124.7,87.4,85 mmHg,99.0 F,120.0,,93.4,1.49,16.01,274.0,Emergency Admission,Cardiac Failure,Vasopressor,2.0,Nurse entry
+ADM0045,P045,27/01/2026 00:00,30/01/2026 09:00,2026/01/29 13:13,,Female,AA,,,80.9,85 mmHg,99.7 F,93.0,12.4,147.9,2.34,,328.0,ICU,Cardiac Failure,Vasopressor,0.0,Nurse Entry
+ADM0045,P045,2026-01-27 00:00,2026/01/30 09:00,2026/01/29 19:02,150.0,M,African,82.1,92.8,,59.7,98.4 F,120.0,15.0,91.0,,9.17,,Ward,Trauma,antibiotic,,Laboratory
+ADM0045,P045,Jan 27 2026 00:00,2026/01/30 09:00,2026/01/30 02:29,,Male,African-American,,,,,101.7 F,,15.7,6.6 mmol/L,,,359.0,Outpatient,Pneumonia,antibiotic,,Nurse Entry
+ADM0045,P045,2026-01-27 00:00,Jan 30 2026 09:00,Jan 30 2026 06:28,150.0,Male,African,300.0,90.3,72.5,,99.3 F,93.9,12.7,6.6 mmol/L,,6.58,,Ward,Trauma,Vasopressor,10.0,Monitor
+ADM0045,P045,2026/01/27 00:00,2026-01-30 09:00,Jan 30 2026 08:20,150.0,F,Other,,100.5,,,,120.0,14.8,142.0,,7.75,272.0,Emergency,Pneumonia,antibiotic,3.0,Nurse Entry
+ADM0045,P045,2026-01-27 00:00,2026-01-30 09:00,2026/01/30 09:28,81.0,female,Other,,,,83.9,,99.0,,6.6 mmol/L,,,,ER,Pneumonia,Antibiotic,9.0,Nurse entry
+ADM0045,P045,Jan 27 2026 00:00,2026/01/30 09:00,2026/01/30 12:45,,female,African-American,88.4,,62.1,,,99.1,15.0,6.6 mmol/L,1.62,13.91,239.0,ICU,Sepsis,antibiotic,,Monitor
+ADM0046,P046,Jan 04 2026 00:00,2026/01/08 11:00,Jan 04 2026 01:59,150.0,F,AA,300.0,135.1,,85 mmHg,99.5 F,95.7,9.7,6.6 mmol/L,1.69,,368.0,ICU,Stroke,antibiotic,,Nurse entry
+ADM0046,P046,Jan 04 2026 00:00,2026/01/08 11:00,04/01/2026 08:49,39.0,Female,African-American,92.9,159.0,,80.2,,97.1,,72.5,1.28,5.73,,Outpatient,Trauma,Vasopressor,9.0,Nurse Entry
+ADM0046,P046,2026/01/04 00:00,2026/01/08 11:00,Jan 04 2026 20:35,150.0,M,African,300.0,,54.9,85 mmHg,,120.0,,6.6 mmol/L,,,,Emergency Admission,Sepsis,antibiotic,,Nurse Entry
+ADM0046,P046,2026/01/04 00:00,Jan 08 2026 11:00,2026/01/05 04:01,150.0,male,African-American,,,89.3,85 mmHg,37.2 C,101.2,,6.6 mmol/L,2.1,4.22,,Ward,Sepsis,Vasopressor,8.0,Nurse entry
+ADM0046,P046,Jan 04 2026 00:00,2026/01/08 11:00,2026/01/05 20:17,150.0,female,AA,,98.2,,,,120.0,,6.6 mmol/L,0.77,,411.0,Emergency,Cardiac Failure,None,4.0,Nurse Entry
+ADM0046,P046,2026-01-04 00:00,2026-01-08 11:00,2026/01/06 23:05,,Male,AA,92.6,106.7,,85 mmHg,,120.0,14.6,,,12.16,,Outpatient,Sepsis,None,6.0,Laboratory
+ADM0046,P046,2026-01-04 00:00,Jan 08 2026 11:00,07/01/2026 04:05,,Female,African,,,,102.6,,,13.5,,,3.37,139.0,ICU,Sepsis,Antibiotic,10.0,Nurse Entry
+ADM0046,P046,Jan 04 2026 00:00,2026/01/08 11:00,2026-01-07 08:50,,female,African-American,300.0,129.7,,76.8,,120.0,,145.4,,8.43,,Outpatient,Pneumonia,Antibiotic,8.0,Nurse Entry
+ADM0046,P046,2026/01/04 00:00,Jan 08 2026 11:00,2026-01-07 09:18,,male,AA,,,,74.1,,92.0,19.0,,,,,ICU,Cardiac Failure,INSULIN,8.0,Nurse entry
+ADM0046,P046,04/01/2026 00:00,2026/01/08 11:00,Jan 08 2026 17:49,22.0,male,African-American,,147.4,,85 mmHg,,,,,0.81,,439.0,Emergency Admission,Cardiac Failure,None,,monitor
+ADM0047,P047,2026/01/22 00:00,2026/01/25 19:00,2026/01/22 12:11,,Female,AA,300.0,,,,,,15.2,140.9,1.55,,,ER,Trauma,antibiotic,0.0,Nurse entry
+ADM0047,P047,22/01/2026 00:00,25/01/2026 19:00,22/01/2026 20:10,60.0,Male,AA,97.5,,,,,,8.3,,1.87,4.37,,Ward,Sepsis,Antibiotic,7.0,monitor
+ADM0047,P047,22/01/2026 00:00,Jan 25 2026 19:00,2026-01-22 23:05,79.0,M,African,,,69.0,,,,24.3,128.7,,8.24,242.0,Outpatient,Cardiac Failure,Vasopressor,,Nurse entry
+ADM0047,P047,2026-01-22 00:00,25/01/2026 19:00,23/01/2026 15:04,,M,AA,300.0,143.8,,102.6,96.4 F,99.3,,85.3,0.82,4.95,,Emergency,Cardiac Failure,Insulin,,Nurse Entry
+ADM0047,P047,2026/01/22 00:00,2026-01-25 19:00,Jan 23 2026 21:18,71.0,Female,Other,300.0,122.1,,94.8,,120.0,24.5,,,15.52,,ICU,Stroke,antibiotic,,Monitor
+ADM0047,P047,2026/01/22 00:00,2026/01/25 19:00,2026-01-24 11:31,,M,African,300.0,,,,,120.0,,136.6,1.09,,,Emergency Admission,Sepsis,Antibiotic,,Nurse entry
+ADM0047,P047,2026/01/22 00:00,2026/01/25 19:00,2026-01-24 21:16,,Male,African,,,,95.9,,,,6.6 mmol/L,,11.91,,ICU,Cardiac Failure,Vasopressor,13.0,monitor
+ADM0047,P047,2026-01-22 00:00,2026-01-25 19:00,Jan 25 2026 10:20,150.0,female,Other,106.2,76.6,60.7,85 mmHg,97.5 F,94.3,10.1,,,,,Outpatient,Stroke,Antibiotic,14.0,Monitor
+ADM0047,P047,22/01/2026 00:00,2026-01-25 19:00,2026/01/26 19:20,150.0,Male,AA,300.0,,,,99.7 F,99.1,,,0.73,,139.0,ER,Cardiac Failure,Vasopressor,7.0,Laboratory
+ADM0047,P047,2026/01/22 00:00,Jan 25 2026 19:00,26/01/2026 20:36,150.0,female,African,300.0,,,85 mmHg,,,15.6,6.6 mmol/L,2.14,11.06,292.0,Ward,Cardiac Failure,Insulin,10.0,Nurse Entry
+ADM0048,P048,Jan 15 2026 00:00,2026/01/17 02:00,2026/01/15 08:29,89.0,M,AA,,,,89.2,,120.0,,148.4,2.58,,,Emergency,Stroke,None,,Monitor
+ADM0048,P048,Jan 15 2026 00:00,Jan 17 2026 02:00,Jan 16 2026 04:13,,female,Other,76.8,,67.3,85 mmHg,,120.0,,6.6 mmol/L,2.08,,,ICU,Trauma,antibiotic,,Nurse entry
+ADM0048,P048,2026/01/15 00:00,17/01/2026 02:00,16/01/2026 12:54,150.0,M,African-American,81.0,,,,95.9 F,,,6.6 mmol/L,,13.82,,ER,Stroke,antibiotic,12.0,monitor
+ADM0048,P048,Jan 15 2026 00:00,2026/01/17 02:00,16/01/2026 17:31,,M,African,300.0,,,85 mmHg,37.7 C,120.0,15.3,6.6 mmol/L,,,290.0,Emergency Admission,Sepsis,antibiotic,7.0,Nurse entry
+ADM0048,P048,2026-01-15 00:00,2026/01/17 02:00,2026-01-18 05:39,150.0,Female,African-American,300.0,,68.2,,36.3 C,120.0,,,0.84,17.66,,Emergency Admission,Pneumonia,Antibiotic,15.0,Laboratory
+ADM0048,P048,2026-01-15 00:00,17/01/2026 02:00,2026/01/18 06:08,76.0,female,Other,85.5,136.2,,85 mmHg,97.7 F,120.0,,174.6,0.92,,449.0,Emergency,Sepsis,INSULIN,,monitor
+ADM0048,P048,Jan 15 2026 00:00,2026-01-17 02:00,2026-01-18 18:04,,female,African,,,63.2,,,120.0,,6.6 mmol/L,2.27,13.98,,ER,Sepsis,INSULIN,,monitor
+ADM0048,P048,15/01/2026 00:00,2026/01/17 02:00,18/01/2026 19:42,51.0,M,African,,,77.4,,,,,6.6 mmol/L,,,,ER,Sepsis,Antibiotic,,Monitor
+ADM0048,P048,Jan 15 2026 00:00,Jan 17 2026 02:00,Jan 18 2026 21:14,150.0,female,AA,,,,114.5,37.3 C,99.6,,6.6 mmol/L,,3.25,94.0,ER,Cardiac Failure,Antibiotic,,Laboratory
+ADM0048,P048,2026/01/15 00:00,2026/01/17 02:00,19/01/2026 09:46,150.0,Female,AA,,,,,36.7 C,120.0,,104.6,,,87.0,Ward,Pneumonia,Vasopressor,6.0,Nurse Entry
+ADM0049,P049,18/01/2026 00:00,20/01/2026 15:00,Jan 18 2026 01:47,,female,African,,,,,37.0 C,96.8,,,2.33,6.5,211.0,Emergency Admission,Pneumonia,Antibiotic,14.0,Monitor
+ADM0049,P049,Jan 18 2026 00:00,2026-01-20 15:00,19/01/2026 01:38,26.0,male,AA,,106.7,66.2,106.4,,,10.3,,2.67,,404.0,ICU,Trauma,None,14.0,monitor
+ADM0049,P049,18/01/2026 00:00,2026/01/20 15:00,Jan 19 2026 21:12,90.0,male,Other,46.3,,60.4,,,91.3,,6.6 mmol/L,,,403.0,Ward,Stroke,Insulin,,Laboratory
+ADM0049,P049,Jan 18 2026 00:00,Jan 20 2026 15:00,Jan 20 2026 10:55,74.0,Female,Other,114.2,,,,37.5 C,,16.8,6.6 mmol/L,,11.0,,Emergency Admission,Stroke,Antibiotic,6.0,Nurse Entry
+ADM0049,P049,Jan 18 2026 00:00,Jan 20 2026 15:00,2026/01/20 15:13,150.0,M,African-American,300.0,113.7,,93.7,99.7 F,,25.4,111.5,1.05,,,Emergency Admission,Stroke,Insulin,8.0,Laboratory
+ADM0049,P049,Jan 18 2026 00:00,Jan 20 2026 15:00,21/01/2026 00:30,,female,AA,,,,,,120.0,,6.6 mmol/L,0.77,,,Ward,Pneumonia,Insulin,8.0,Nurse Entry
+ADM0049,P049,Jan 18 2026 00:00,Jan 20 2026 15:00,Jan 21 2026 09:13,,F,Other,,136.5,63.4,85 mmHg,,,,127.5,0.7,7.96,,Emergency Admission,Stroke,Insulin,,monitor
+ADM0049,P049,2026/01/18 00:00,2026-01-20 15:00,2026-01-21 11:15,150.0,M,AA,300.0,,,,100.8 F,,10.8,,0.55,,291.0,ICU,Stroke,Vasopressor,6.0,monitor
+ADM0049,P049,Jan 18 2026 00:00,Jan 20 2026 15:00,2026-01-22 11:15,35.0,female,AA,,,81.3,87.1,,,,6.6 mmol/L,,,,Ward,Stroke,INSULIN,0.0,Monitor
+ADM0049,P049,2026/01/18 00:00,2026/01/20 15:00,2026-01-22 20:41,85.0,male,AA,68.3,,,85 mmHg,,120.0,,6.6 mmol/L,,16.46,118.0,ER,Sepsis,antibiotic,5.0,Nurse entry
+ADM0050,P050,30/01/2026 00:00,Feb 02 2026 00:00,2026-01-30 09:56,150.0,male,AA,,,,,,96.9,,155.5,2.11,3.25,,ICU,Cardiac Failure,Antibiotic,,Nurse Entry
+ADM0050,P050,Jan 30 2026 00:00,02/02/2026 00:00,31/01/2026 11:49,36.0,M,African-American,,140.1,81.2,,,96.4,,6.6 mmol/L,0.68,13.27,,ICU,Trauma,Vasopressor,7.0,Laboratory
+ADM0050,P050,2026/01/30 00:00,2026-02-02 00:00,2026/02/01 07:01,,female,African-American,,96.2,,,,97.9,19.5,6.6 mmol/L,0.89,17.44,169.0,ICU,Pneumonia,None,,Laboratory
+ADM0050,P050,2026-01-30 00:00,Feb 02 2026 00:00,2026/02/01 09:26,150.0,Male,Other,90.5,92.7,,,,98.0,,6.6 mmol/L,,14.3,,ICU,Sepsis,INSULIN,,Monitor
+ADM0050,P050,Jan 30 2026 00:00,2026-02-02 00:00,01/02/2026 11:17,49.0,male,African,73.7,102.6,76.2,85 mmHg,,96.5,16.8,,2.69,,,ICU,Trauma,Antibiotic,5.0,Nurse Entry
+ADM0050,P050,2026-01-30 00:00,02/02/2026 00:00,2026-02-02 15:23,81.0,M,Other,,,,,,98.4,11.7,6.6 mmol/L,2.28,,97.0,Outpatient,Sepsis,antibiotic,12.0,Nurse Entry
+ADM0050,P050,30/01/2026 00:00,2026-02-02 00:00,2026/02/03 00:06,26.0,F,Other,,,72.0,85 mmHg,97.2 F,,,6.6 mmol/L,,17.04,,ER,Sepsis,Insulin,15.0,Nurse Entry
+ADM0050,P050,30/01/2026 00:00,02/02/2026 00:00,2026-02-03 02:14,150.0,F,AA,,73.6,84.4,89.6,,99.4,,6.6 mmol/L,,,,Outpatient,Cardiac Failure,INSULIN,4.0,monitor
+ADM0050,P050,30/01/2026 00:00,02/02/2026 00:00,2026-02-03 08:40,150.0,Male,African-American,75.3,,,101.0,,,,114.9,,,,ER,Cardiac Failure,antibiotic,14.0,Laboratory
+ADM0050,P050,Jan 30 2026 00:00,Feb 02 2026 00:00,03/02/2026 17:41,,F,Other,300.0,117.0,,85 mmHg,,93.1,,6.6 mmol/L,1.62,17.48,128.0,Outpatient,Sepsis,None,9.0,Laboratory
+ADM0051,P051,20/01/2026 00:00,2026-01-24 09:00,20/01/2026 10:12,150.0,male,African-American,300.0,114.7,,85 mmHg,96.6 F,120.0,25.1,6.6 mmol/L,1.35,11.46,428.0,Emergency Admission,Stroke,Antibiotic,,Nurse Entry
+ADM0051,P051,2026/01/20 00:00,Jan 24 2026 09:00,2026/01/20 23:17,,F,Other,,126.1,,109.8,,,,111.6,0.82,5.68,290.0,ICU,Trauma,Antibiotic,,Nurse Entry
+ADM0051,P051,20/01/2026 00:00,24/01/2026 09:00,Jan 22 2026 02:41,27.0,M,African-American,,118.7,77.9,91.3,,98.6,,6.6 mmol/L,2.15,17.84,,ER,Sepsis,INSULIN,15.0,monitor
+ADM0051,P051,2026/01/20 00:00,24/01/2026 09:00,2026-01-22 07:19,,Male,Other,,131.8,,,,120.0,,6.6 mmol/L,1.44,14.34,,ICU,Trauma,INSULIN,,Monitor
+ADM0051,P051,Jan 20 2026 00:00,Jan 24 2026 09:00,Jan 22 2026 16:40,,F,AA,,133.7,,107.5,,98.1,,104.1,,,,ER,Stroke,antibiotic,,Monitor
+ADM0051,P051,2026-01-20 00:00,2026-01-24 09:00,2026-01-22 17:38,,male,Other,,67.5,,85 mmHg,,,23.9,6.6 mmol/L,,3.94,190.0,Emergency,Cardiac Failure,None,,Monitor
+ADM0051,P051,Jan 20 2026 00:00,Jan 24 2026 09:00,Jan 22 2026 22:46,63.0,M,Other,,,,85 mmHg,,95.3,14.6,,,,258.0,Outpatient,Sepsis,Vasopressor,11.0,Laboratory
+ADM0051,P051,2026-01-20 00:00,2026/01/24 09:00,Jan 24 2026 08:53,150.0,Female,Other,89.5,,,,,,,127.0,0.99,,88.0,ICU,Stroke,Vasopressor,9.0,monitor
+ADM0051,P051,20/01/2026 00:00,2026-01-24 09:00,2026-01-24 14:39,150.0,F,AA,96.5,,,,35.9 C,,13.7,,,15.63,245.0,Outpatient,Sepsis,Antibiotic,,Monitor
+ADM0051,P051,20/01/2026 00:00,24/01/2026 09:00,24/01/2026 17:31,150.0,Female,African-American,114.1,,82.6,77.7,,,,,1.74,,,Emergency Admission,Stroke,Insulin,,Laboratory
+ADM0052,P052,28/01/2026 00:00,31/01/2026 23:00,2026-01-28 09:08,150.0,F,AA,73.2,133.4,,85 mmHg,96.1 F,,,,2.5,,,Outpatient,Stroke,Insulin,2.0,Monitor
+ADM0052,P052,2026-01-28 00:00,Jan 31 2026 23:00,2026/01/29 06:35,36.0,female,AA,72.7,,,85 mmHg,,120.0,,6.6 mmol/L,1.89,,,Ward,Stroke,INSULIN,,Nurse Entry
+ADM0052,P052,2026/01/28 00:00,31/01/2026 23:00,Jan 29 2026 16:36,150.0,Male,AA,300.0,147.0,,,37.9 C,120.0,,,0.92,14.96,207.0,ICU,Sepsis,INSULIN,15.0,Laboratory
+ADM0052,P052,2026/01/28 00:00,2026/01/31 23:00,2026/01/29 21:05,150.0,F,African-American,,94.2,73.3,,,92.6,,6.6 mmol/L,,6.23,,Outpatient,Pneumonia,Antibiotic,11.0,Laboratory
+ADM0052,P052,Jan 28 2026 00:00,2026-01-31 23:00,2026-01-29 22:28,89.0,female,AA,108.4,139.7,58.2,,,96.6,,6.6 mmol/L,,12.79,,Emergency,Pneumonia,Antibiotic,15.0,Nurse entry
+ADM0052,P052,2026-01-28 00:00,31/01/2026 23:00,Jan 30 2026 21:13,91.0,F,African-American,300.0,112.3,,93.6,36.4 C,120.0,21.9,6.6 mmol/L,,11.53,258.0,ER,Stroke,Antibiotic,,Nurse Entry
+ADM0052,P052,Jan 28 2026 00:00,2026/01/31 23:00,2026/01/31 16:38,75.0,female,African,,119.0,,85.2,98.2 F,,,6.6 mmol/L,2.67,,,Emergency Admission,Stroke,None,,Nurse entry
+ADM0052,P052,2026/01/28 00:00,31/01/2026 23:00,Feb 01 2026 19:36,59.0,F,African-American,,,,,,99.9,,117.6,,9.65,,ER,Trauma,Vasopressor,,Monitor
+ADM0052,P052,28/01/2026 00:00,2026-01-31 23:00,Feb 01 2026 22:33,150.0,male,African-American,300.0,,76.4,85 mmHg,35.8 C,92.6,,6.6 mmol/L,1.19,,355.0,Emergency Admission,Trauma,INSULIN,,Monitor
+ADM0052,P052,2026/01/28 00:00,31/01/2026 23:00,01/02/2026 23:58,58.0,female,African-American,,115.6,75.8,92.9,,101.8,7.5,6.6 mmol/L,0.7,5.9,,ICU,Trauma,Antibiotic,,Monitor
+ADM0053,P053,Jan 10 2026 00:00,12/01/2026 18:00,Jan 11 2026 07:45,150.0,Male,Other,,,,100.7,,,22.0,,,5.85,,ICU,Pneumonia,None,3.0,Nurse Entry
+ADM0053,P053,2026-01-10 00:00,12/01/2026 18:00,Jan 11 2026 09:57,150.0,M,Other,,,,85 mmHg,,98.0,14.3,6.6 mmol/L,1.18,17.7,,ICU,Pneumonia,antibiotic,,monitor
+ADM0053,P053,2026-01-10 00:00,2026/01/12 18:00,12/01/2026 06:06,150.0,Male,African-American,,,,85 mmHg,100.9 F,,7.5,,2.86,13.1,242.0,ER,Sepsis,Antibiotic,,Nurse Entry
+ADM0053,P053,2026-01-10 00:00,2026/01/12 18:00,2026/01/13 01:22,,male,African,79.0,116.3,55.8,,,94.5,,106.8,1.76,,365.0,ICU,Stroke,Vasopressor,1.0,Monitor
+ADM0053,P053,2026-01-10 00:00,12/01/2026 18:00,Jan 13 2026 04:26,65.0,Female,African,300.0,134.6,81.5,,36.0 C,120.0,28.9,6.6 mmol/L,1.89,14.14,401.0,ER,Stroke,None,,Nurse entry
+ADM0053,P053,2026/01/10 00:00,2026/01/12 18:00,13/01/2026 07:41,150.0,M,AA,300.0,,,102.4,,120.0,,119.3,1.6,,406.0,Outpatient,Cardiac Failure,Antibiotic,11.0,monitor
+ADM0053,P053,2026-01-10 00:00,2026/01/12 18:00,2026/01/13 13:51,87.0,F,African-American,300.0,,71.7,,,,,,,,,Ward,Cardiac Failure,Vasopressor,12.0,Nurse entry
+ADM0053,P053,10/01/2026 00:00,12/01/2026 18:00,Jan 13 2026 15:13,150.0,F,AA,,,58.9,,98.2 F,,18.2,,,,,Emergency,Pneumonia,Antibiotic,10.0,monitor
+ADM0053,P053,10/01/2026 00:00,2026/01/12 18:00,2026-01-14 16:59,,male,African-American,,132.2,,85 mmHg,,97.2,,6.6 mmol/L,,11.43,,Ward,Stroke,antibiotic,1.0,Monitor
+ADM0053,P053,2026-01-10 00:00,Jan 12 2026 18:00,2026-01-14 22:05,,Female,African-American,92.0,,62.2,,,120.0,,6.6 mmol/L,,11.28,,Emergency,Stroke,Antibiotic,4.0,monitor
+ADM0054,P054,08/01/2026 00:00,2026-01-12 20:00,08/01/2026 20:44,74.0,Male,African-American,,,,,35.5 C,96.3,,6.6 mmol/L,2.87,,,Emergency Admission,Stroke,Vasopressor,10.0,Laboratory
+ADM0054,P054,Jan 08 2026 00:00,2026/01/12 20:00,09/01/2026 11:04,150.0,Female,AA,,140.6,,85 mmHg,,97.2,,126.0,,,,ER,Sepsis,Insulin,10.0,Monitor
+ADM0054,P054,Jan 08 2026 00:00,Jan 12 2026 20:00,2026/01/10 04:41,,Male,AA,300.0,,105.5,,97.0 F,,17.3,,1.56,,274.0,Outpatient,Trauma,Insulin,,monitor
+ADM0054,P054,2026/01/08 00:00,2026/01/12 20:00,Jan 10 2026 12:21,,female,AA,300.0,92.4,,,,96.9,,,1.0,,340.0,Emergency,Pneumonia,None,7.0,Nurse Entry
+ADM0054,P054,08/01/2026 00:00,2026-01-12 20:00,2026-01-10 22:23,150.0,Male,AA,300.0,123.0,76.2,85 mmHg,,120.0,,,1.77,6.49,108.0,ICU,Sepsis,Antibiotic,2.0,Monitor
+ADM0054,P054,08/01/2026 00:00,12/01/2026 20:00,2026-01-10 23:27,,M,African-American,,106.2,,,37.4 C,,,,1.89,,174.0,Emergency,Pneumonia,Antibiotic,8.0,Nurse entry
+ADM0054,P054,2026-01-08 00:00,2026-01-12 20:00,11/01/2026 07:36,,Female,African-American,,,,85 mmHg,,95.3,,6.6 mmol/L,,7.03,351.0,Emergency Admission,Cardiac Failure,Vasopressor,5.0,Monitor
+ADM0054,P054,2026-01-08 00:00,2026/01/12 20:00,2026-01-11 08:04,75.0,female,African,,,110.0,,,,,6.6 mmol/L,,,,Ward,Trauma,Vasopressor,6.0,Nurse entry
+ADM0054,P054,Jan 08 2026 00:00,2026/01/12 20:00,2026/01/11 17:10,,F,Other,,,,78.5,,,19.5,81.8,,,403.0,Outpatient,Cardiac Failure,None,13.0,Nurse Entry
+ADM0054,P054,08/01/2026 00:00,2026-01-12 20:00,2026-01-12 20:37,,Female,AA,,94.0,52.8,,,97.0,,,,7.06,,ER,Trauma,Insulin,13.0,monitor
+ADM0055,P055,2026/01/04 00:00,2026/01/07 21:00,2026-01-04 08:31,150.0,Female,AA,300.0,,,85 mmHg,37.8 C,120.0,14.8,,,,271.0,Ward,Stroke,Insulin,2.0,monitor
+ADM0055,P055,04/01/2026 00:00,Jan 07 2026 21:00,04/01/2026 13:23,150.0,F,AA,300.0,,,85 mmHg,35.5 C,98.9,,,2.8,11.72,,ER,Trauma,None,10.0,monitor
+ADM0055,P055,Jan 04 2026 00:00,2026-01-07 21:00,2026/01/04 18:48,150.0,female,AA,102.4,,,74.6,,,18.5,6.6 mmol/L,2.84,,206.0,Emergency Admission,Sepsis,Vasopressor,,Nurse entry
+ADM0055,P055,Jan 04 2026 00:00,2026/01/07 21:00,Jan 05 2026 06:09,150.0,Female,African-American,300.0,125.8,,85 mmHg,,120.0,,,,9.1,,Emergency Admission,Sepsis,Vasopressor,8.0,Nurse Entry
+ADM0055,P055,2026/01/04 00:00,2026-01-07 21:00,Jan 05 2026 13:18,77.0,F,Other,300.0,111.4,,,102.7 F,,,6.6 mmol/L,1.53,,225.0,ER,Pneumonia,Vasopressor,0.0,Monitor
+ADM0055,P055,2026/01/04 00:00,Jan 07 2026 21:00,05/01/2026 17:55,150.0,F,African,300.0,,,,99.0 F,,17.5,,,,369.0,ER,Sepsis,INSULIN,,Monitor
+ADM0055,P055,04/01/2026 00:00,2026-01-07 21:00,06/01/2026 13:59,48.0,M,AA,,,,,100.0 F,,,,1.1,,,Emergency Admission,Pneumonia,antibiotic,2.0,monitor
+ADM0055,P055,Jan 04 2026 00:00,07/01/2026 21:00,06/01/2026 18:10,150.0,female,African,73.0,,,65.6,97.3 F,101.0,24.3,96.6,2.73,,,Emergency Admission,Trauma,None,,Monitor
+ADM0055,P055,2026/01/04 00:00,2026-01-07 21:00,2026-01-07 05:42,150.0,Male,African-American,,,,,38.0 C,120.0,,,2.14,,188.0,ER,Sepsis,INSULIN,,Nurse entry
+ADM0055,P055,04/01/2026 00:00,07/01/2026 21:00,Jan 07 2026 18:23,60.0,M,AA,,90.6,,,,,,139.8,2.19,15.05,,Emergency,Pneumonia,Antibiotic,9.0,Nurse entry
+ADM0056,P056,2026-01-20 00:00,23/01/2026 22:00,20/01/2026 06:32,60.0,F,Other,,,,,100.9 F,,,,,7.54,119.0,Emergency,Sepsis,antibiotic,1.0,Laboratory
+ADM0056,P056,2026/01/20 00:00,2026/01/23 22:00,21/01/2026 03:59,30.0,M,African-American,300.0,,,85 mmHg,,97.6,,6.6 mmol/L,2.27,,97.0,Ward,Pneumonia,Vasopressor,14.0,Monitor
+ADM0056,P056,2026-01-20 00:00,2026/01/23 22:00,21/01/2026 05:58,19.0,Male,African-American,,,,78.6,,95.0,16.6,157.0,1.99,,,Emergency,Sepsis,Insulin,,monitor
+ADM0056,P056,2026-01-20 00:00,2026-01-23 22:00,Jan 21 2026 08:11,150.0,F,African-American,,,,,,120.0,,84.0,2.86,,,ICU,Sepsis,Vasopressor,11.0,Nurse entry
+ADM0056,P056,2026/01/20 00:00,23/01/2026 22:00,Jan 22 2026 11:23,150.0,male,African-American,,,,82.2,,,,6.6 mmol/L,,4.3,,Emergency Admission,Stroke,Insulin,,Monitor
+ADM0056,P056,20/01/2026 00:00,Jan 23 2026 22:00,Jan 23 2026 00:38,,male,African-American,107.9,,,85 mmHg,,120.0,,,0.78,16.05,,Emergency,Trauma,None,1.0,Nurse entry
+ADM0056,P056,20/01/2026 00:00,23/01/2026 22:00,Jan 23 2026 08:00,80.0,M,AA,300.0,,,85.1,,120.0,,,1.76,7.74,,ICU,Pneumonia,INSULIN,0.0,monitor
+ADM0056,P056,Jan 20 2026 00:00,23/01/2026 22:00,2026/01/23 10:09,56.0,male,African,95.6,123.4,88.9,81.9,,98.8,9.8,92.9,1.67,7.28,,Emergency,Trauma,Vasopressor,12.0,Nurse entry
+ADM0056,P056,Jan 20 2026 00:00,23/01/2026 22:00,Jan 24 2026 11:19,150.0,male,Other,300.0,121.2,,87.1,,,,110.9,,,276.0,Outpatient,Stroke,antibiotic,,Monitor
+ADM0056,P056,2026/01/20 00:00,2026-01-23 22:00,2026/01/24 17:24,150.0,Male,African,73.1,98.1,,,,98.5,,52.5,,,,ICU,Stroke,Insulin,3.0,Nurse Entry
+ADM0057,P057,2026-02-07 00:00,Feb 09 2026 03:00,2026-02-07 08:51,,Female,Other,,108.3,67.6,,,,22.2,,2.76,5.35,,Outpatient,Pneumonia,None,12.0,monitor
+ADM0057,P057,07/02/2026 00:00,Feb 09 2026 03:00,2026/02/07 23:02,150.0,F,African,67.3,93.4,48.9,,100.6 F,,,6.6 mmol/L,,7.91,,Emergency Admission,Stroke,None,,Monitor
+ADM0057,P057,2026/02/07 00:00,2026-02-09 03:00,2026-02-08 11:17,,female,AA,,,83.8,,35.9 C,97.6,12.1,108.1,1.95,17.37,,ER,Cardiac Failure,Insulin,2.0,Nurse entry
+ADM0057,P057,2026-02-07 00:00,09/02/2026 03:00,09/02/2026 01:26,,Female,Other,90.1,,88.8,,,99.2,,,2.42,,,ICU,Trauma,Antibiotic,,monitor
+ADM0057,P057,07/02/2026 00:00,2026/02/09 03:00,2026-02-09 08:30,150.0,Female,African-American,99.7,,51.3,85 mmHg,97.5 F,94.6,,,,16.51,,Emergency,Trauma,None,,Monitor
+ADM0057,P057,Feb 07 2026 00:00,2026/02/09 03:00,2026/02/09 11:12,95.0,female,African-American,,,74.8,78.4,,,14.6,6.6 mmol/L,0.59,,113.0,Emergency Admission,Pneumonia,INSULIN,,Laboratory
+ADM0057,P057,Feb 07 2026 00:00,Feb 09 2026 03:00,Feb 09 2026 16:25,,male,Other,,118.9,,,99.7 F,120.0,,6.6 mmol/L,1.23,,,Ward,Cardiac Failure,antibiotic,,Laboratory
+ADM0057,P057,07/02/2026 00:00,Feb 09 2026 03:00,Feb 10 2026 00:58,,male,Other,,,,,99.7 F,120.0,,,,12.74,,Emergency Admission,Stroke,antibiotic,10.0,monitor
+ADM0057,P057,2026-02-07 00:00,Feb 09 2026 03:00,10/02/2026 17:37,150.0,female,AA,111.0,,,74.5,,,,,,,,ER,Sepsis,Vasopressor,,Nurse entry
+ADM0057,P057,07/02/2026 00:00,Feb 09 2026 03:00,2026/02/11 23:25,150.0,male,AA,300.0,,78.0,,,,,,0.84,,,Ward,Sepsis,Antibiotic,5.0,Laboratory
+ADM0058,P058,2026/01/04 00:00,06/01/2026 05:00,2026-01-04 08:59,90.0,Male,African,,,,,36.9 C,99.2,27.8,,,,201.0,Emergency,Stroke,antibiotic,10.0,Nurse Entry
+ADM0058,P058,2026/01/04 00:00,06/01/2026 05:00,2026-01-04 12:51,38.0,male,AA,,,80.1,79.3,,,15.9,6.6 mmol/L,2.15,10.06,,Emergency,Sepsis,Antibiotic,,Nurse entry
+ADM0058,P058,2026/01/04 00:00,2026/01/06 05:00,04/01/2026 13:55,47.0,Male,Other,300.0,,,,,120.0,,136.0,,3.58,,Outpatient,Stroke,Vasopressor,10.0,monitor
+ADM0058,P058,2026/01/04 00:00,06/01/2026 05:00,Jan 04 2026 16:32,150.0,Male,Other,69.3,,85.1,74.2,,,,6.6 mmol/L,2.82,,,ER,Trauma,None,7.0,monitor
+ADM0058,P058,2026/01/04 00:00,Jan 06 2026 05:00,Jan 05 2026 10:45,66.0,F,Other,300.0,,,97.6,,,,74.9,,,,ICU,Pneumonia,Antibiotic,6.0,monitor
+ADM0058,P058,04/01/2026 00:00,2026-01-06 05:00,05/01/2026 11:23,150.0,female,African,,135.1,,,97.5 F,,23.6,6.6 mmol/L,,4.18,,Ward,Pneumonia,antibiotic,2.0,Monitor
+ADM0058,P058,04/01/2026 00:00,Jan 06 2026 05:00,2026/01/06 20:39,72.0,Female,African,78.8,146.3,,87.6,,102.0,12.7,6.6 mmol/L,,7.26,158.0,ICU,Sepsis,Vasopressor,,Nurse entry
+ADM0058,P058,2026-01-04 00:00,2026/01/06 05:00,06/01/2026 22:52,39.0,F,African-American,,144.5,,85 mmHg,,,28.2,6.6 mmol/L,2.46,8.92,445.0,ICU,Stroke,None,,Nurse Entry
+ADM0058,P058,2026/01/04 00:00,2026/01/06 05:00,2026/01/08 04:00,,female,AA,300.0,,,85 mmHg,,94.1,,151.5,2.82,10.26,,Ward,Sepsis,antibiotic,,monitor
+ADM0058,P058,Jan 04 2026 00:00,2026/01/06 05:00,08/01/2026 12:19,20.0,F,African-American,,107.5,,,97.2 F,,23.4,140.7,,,,Outpatient,Trauma,Vasopressor,,Nurse Entry
+ADM0059,P059,2026/01/27 00:00,2026-01-29 06:00,Jan 27 2026 06:29,150.0,male,Other,82.0,,70.5,,,93.1,,,1.76,5.74,131.0,Emergency Admission,Stroke,Vasopressor,1.0,Nurse entry
+ADM0059,P059,Jan 27 2026 00:00,2026-01-29 06:00,2026/01/27 12:13,,male,Other,,,,,38.5 C,120.0,,6.6 mmol/L,,,343.0,Emergency Admission,Stroke,INSULIN,2.0,monitor
+ADM0059,P059,2026/01/27 00:00,Jan 29 2026 06:00,27/01/2026 18:21,36.0,Male,Other,,,72.0,78.7,37.9 C,,23.6,67.7,2.59,,371.0,Outpatient,Pneumonia,Insulin,8.0,Monitor
+ADM0059,P059,2026-01-27 00:00,Jan 29 2026 06:00,2026/01/28 07:04,26.0,F,African-American,300.0,,80.5,87.2,,,,6.6 mmol/L,,,,ER,Pneumonia,INSULIN,8.0,Nurse Entry
+ADM0059,P059,2026/01/27 00:00,Jan 29 2026 06:00,Jan 28 2026 13:52,,F,Other,84.3,,,99.9,96.8 F,120.0,23.2,122.8,1.53,,158.0,Emergency Admission,Stroke,antibiotic,,monitor
+ADM0059,P059,Jan 27 2026 00:00,2026-01-29 06:00,28/01/2026 20:26,150.0,F,African,,127.8,,,,93.4,,6.6 mmol/L,1.72,,269.0,Ward,Pneumonia,Insulin,,Nurse entry
+ADM0059,P059,27/01/2026 00:00,Jan 29 2026 06:00,28/01/2026 23:13,,Female,AA,300.0,,79.4,,37.3 C,98.7,18.8,129.0,,,127.0,Emergency,Sepsis,Insulin,5.0,Nurse Entry
+ADM0059,P059,Jan 27 2026 00:00,Jan 29 2026 06:00,2026-01-30 09:18,23.0,M,AA,74.9,113.2,77.8,,38.7 C,,3.8,6.6 mmol/L,,11.71,,ER,Stroke,None,9.0,Monitor
+ADM0059,P059,Jan 27 2026 00:00,29/01/2026 06:00,2026-01-31 18:29,150.0,Female,AA,113.5,,,85 mmHg,36.5 C,120.0,,6.6 mmol/L,,,,Outpatient,Pneumonia,Vasopressor,10.0,Nurse Entry
+ADM0059,P059,27/01/2026 00:00,2026-01-29 06:00,2026-01-31 22:29,150.0,Male,African-American,89.3,,,89.2,100.0 F,,,,,9.14,,Outpatient,Trauma,None,9.0,monitor
+ADM0060,P060,2026/01/03 00:00,2026/01/06 22:00,2026/01/03 04:16,,Female,AA,300.0,,,85 mmHg,99.7 F,97.1,,6.6 mmol/L,,5.65,,ICU,Sepsis,Antibiotic,,Laboratory
+ADM0060,P060,03/01/2026 00:00,2026/01/06 22:00,2026-01-03 06:58,150.0,M,AA,300.0,,,75.7,98.8 F,,13.0,121.4,2.83,,,ER,Trauma,antibiotic,,Monitor
+ADM0060,P060,Jan 03 2026 00:00,2026/01/06 22:00,2026-01-03 08:29,,Male,Other,300.0,145.1,,,,,,6.6 mmol/L,0.87,,,Emergency Admission,Sepsis,Antibiotic,,Laboratory
+ADM0060,P060,2026-01-03 00:00,06/01/2026 22:00,2026/01/03 20:00,,Male,Other,97.9,112.0,,85 mmHg,,98.2,,,0.62,,377.0,ER,Stroke,Vasopressor,3.0,monitor
+ADM0060,P060,03/01/2026 00:00,06/01/2026 22:00,2026-01-04 00:35,72.0,M,African-American,,139.5,78.6,78.4,,100.8,,,,,,ICU,Pneumonia,Vasopressor,,Laboratory
+ADM0060,P060,2026-01-03 00:00,2026-01-06 22:00,04/01/2026 20:34,33.0,Female,African,,127.9,69.9,,,96.5,,,0.63,,,Emergency,Cardiac Failure,None,11.0,monitor
+ADM0060,P060,Jan 03 2026 00:00,2026-01-06 22:00,2026-01-05 02:51,26.0,Female,AA,,,,85 mmHg,,94.6,,6.6 mmol/L,,17.46,,ICU,Pneumonia,Antibiotic,15.0,Nurse Entry
+ADM0060,P060,2026/01/03 00:00,2026/01/06 22:00,2026/01/07 06:53,150.0,M,African-American,90.6,140.5,,,36.9 C,120.0,,162.4,,,292.0,Ward,Trauma,None,4.0,Nurse entry
+ADM0060,P060,2026-01-03 00:00,06/01/2026 22:00,2026/01/07 11:33,150.0,male,AA,75.1,,,63.5,,120.0,,6.6 mmol/L,0.77,10.39,,Emergency Admission,Pneumonia,INSULIN,,Nurse Entry
+ADM0060,P060,2026/01/03 00:00,2026-01-06 22:00,Jan 07 2026 13:17,,M,AA,,147.8,58.7,,,94.9,20.9,110.1,0.6,,138.0,Ward,Cardiac Failure,Vasopressor,3.0,Nurse entry
+ADM0061,P061,Jan 14 2026 00:00,Jan 16 2026 10:00,2026-01-14 06:54,69.0,M,Other,,,,85 mmHg,97.9 F,94.2,18.5,110.4,1.61,17.23,324.0,Outpatient,Cardiac Failure,Insulin,,Nurse Entry
+ADM0061,P061,14/01/2026 00:00,2026-01-16 10:00,Jan 15 2026 05:37,39.0,female,African,,157.8,,100.5,37.2 C,,19.5,6.6 mmol/L,1.04,,375.0,Outpatient,Stroke,Antibiotic,,Nurse Entry
+ADM0061,P061,14/01/2026 00:00,Jan 16 2026 10:00,Jan 15 2026 11:39,,male,Other,300.0,,,96.9,,120.0,,6.6 mmol/L,,10.34,,ER,Pneumonia,INSULIN,8.0,Nurse entry
+ADM0061,P061,2026-01-14 00:00,16/01/2026 10:00,15/01/2026 15:11,23.0,Female,African,300.0,87.5,,94.5,35.6 C,,16.6,,1.74,11.17,447.0,Emergency Admission,Sepsis,Insulin,,Nurse Entry
+ADM0061,P061,2026-01-14 00:00,Jan 16 2026 10:00,Jan 16 2026 21:28,,female,AA,,125.9,72.1,,,,23.9,,1.7,,,Outpatient,Sepsis,Vasopressor,,monitor
+ADM0061,P061,2026-01-14 00:00,2026/01/16 10:00,Jan 16 2026 22:10,,Male,AA,86.5,,,,,95.3,,,1.97,,,Emergency Admission,Pneumonia,Insulin,,monitor
+ADM0061,P061,2026/01/14 00:00,16/01/2026 10:00,2026/01/18 00:24,35.0,Female,Other,,120.7,,73.3,,120.0,,,,3.37,,Emergency Admission,Trauma,None,2.0,Nurse Entry
+ADM0061,P061,14/01/2026 00:00,16/01/2026 10:00,2026/01/18 01:57,85.0,Female,African,,,,73.5,,98.6,18.9,107.4,,,,ER,Pneumonia,INSULIN,,Monitor
+ADM0061,P061,14/01/2026 00:00,16/01/2026 10:00,Jan 18 2026 11:24,,M,Other,,,,,,120.0,21.6,,1.71,11.15,369.0,ICU,Trauma,None,,monitor
+ADM0061,P061,2026-01-14 00:00,2026-01-16 10:00,2026/01/18 20:34,35.0,female,African-American,81.5,,,99.2,,,,66.1,,,187.0,Ward,Pneumonia,antibiotic,3.0,Laboratory
+ADM0062,P062,2026-02-08 00:00,2026/02/12 20:00,08/02/2026 05:42,,Male,African,300.0,144.9,,85.0,,120.0,,6.6 mmol/L,,16.45,93.0,Emergency Admission,Stroke,None,8.0,Nurse Entry
+ADM0062,P062,2026-02-08 00:00,12/02/2026 20:00,08/02/2026 21:52,44.0,Female,AA,,106.9,,80.5,97.7 F,97.4,19.8,,1.35,,,Emergency Admission,Trauma,Antibiotic,2.0,monitor
+ADM0062,P062,Feb 08 2026 00:00,2026-02-12 20:00,09/02/2026 06:24,71.0,Male,African-American,95.7,103.7,78.9,,,,21.4,,2.68,,,Outpatient,Pneumonia,antibiotic,,monitor
+ADM0062,P062,2026/02/08 00:00,Feb 12 2026 20:00,Feb 09 2026 11:11,150.0,Female,African,115.1,,,,,,16.9,,1.43,8.75,197.0,ER,Trauma,Insulin,4.0,Nurse entry
+ADM0062,P062,08/02/2026 00:00,12/02/2026 20:00,10/02/2026 12:11,150.0,male,African,105.1,,,85 mmHg,37.4 C,,,6.6 mmol/L,2.17,3.19,,Outpatient,Pneumonia,Antibiotic,7.0,Nurse entry
+ADM0062,P062,2026-02-08 00:00,2026/02/12 20:00,2026-02-10 21:09,,Female,AA,,102.1,70.3,87.4,,120.0,26.4,,1.55,17.42,245.0,Emergency Admission,Stroke,None,2.0,monitor
+ADM0062,P062,Feb 08 2026 00:00,2026-02-12 20:00,2026-02-11 08:51,,M,Other,300.0,115.3,,,,93.3,21.2,,1.86,,,ER,Sepsis,Antibiotic,,Nurse entry
+ADM0062,P062,Feb 08 2026 00:00,2026/02/12 20:00,2026/02/11 16:39,150.0,F,Other,91.2,85.0,64.7,100.1,,97.3,,6.6 mmol/L,,6.59,,ER,Pneumonia,Insulin,12.0,Nurse Entry
+ADM0062,P062,Feb 08 2026 00:00,12/02/2026 20:00,Feb 11 2026 23:26,150.0,Male,AA,,153.5,,85 mmHg,,120.0,,,,6.89,288.0,ICU,Trauma,antibiotic,,Monitor
+ADM0062,P062,08/02/2026 00:00,12/02/2026 20:00,2026-02-12 01:49,,Male,African,,,85.0,85 mmHg,37.0 C,,,,0.98,,335.0,ER,Pneumonia,Insulin,6.0,monitor
+ADM0063,P063,Jan 18 2026 00:00,2026/01/21 07:00,Jan 18 2026 08:33,38.0,Female,Other,300.0,105.7,,85 mmHg,,98.7,17.4,6.6 mmol/L,,9.97,316.0,Outpatient,Cardiac Failure,INSULIN,12.0,Laboratory
+ADM0063,P063,Jan 18 2026 00:00,2026-01-21 07:00,18/01/2026 18:48,69.0,female,AA,,120.7,,,97.3 F,120.0,22.3,6.6 mmol/L,,,,Ward,Stroke,antibiotic,0.0,Monitor
+ADM0063,P063,18/01/2026 00:00,Jan 21 2026 07:00,Jan 18 2026 19:23,,male,African,300.0,,49.2,,100.0 F,,,138.7,2.79,13.58,261.0,ER,Cardiac Failure,antibiotic,10.0,monitor
+ADM0063,P063,18/01/2026 00:00,2026-01-21 07:00,2026-01-18 21:46,150.0,male,Other,300.0,,79.7,85 mmHg,,120.0,14.0,121.2,0.98,15.6,332.0,ICU,Trauma,INSULIN,10.0,Monitor
+ADM0063,P063,2026-01-18 00:00,2026-01-21 07:00,2026-01-19 13:56,,M,Other,94.6,,,85 mmHg,37.4 C,97.3,,83.5,0.97,12.37,380.0,Ward,Trauma,None,4.0,Nurse Entry
+ADM0063,P063,2026/01/18 00:00,2026/01/21 07:00,Jan 20 2026 03:44,150.0,Male,Other,80.5,101.2,,,,98.7,16.4,72.4,,14.17,,Emergency,Stroke,Vasopressor,7.0,monitor
+ADM0063,P063,2026-01-18 00:00,21/01/2026 07:00,2026/01/21 07:33,42.0,female,African-American,96.7,124.0,88.1,97.2,,,,6.6 mmol/L,,9.61,,Emergency,Cardiac Failure,Antibiotic,13.0,Laboratory
+ADM0063,P063,Jan 18 2026 00:00,21/01/2026 07:00,2026/01/21 14:40,,F,African,300.0,169.8,71.7,85 mmHg,99.0 F,,23.4,74.8,0.64,3.36,346.0,Ward,Trauma,Insulin,2.0,monitor
+ADM0063,P063,2026-01-18 00:00,Jan 21 2026 07:00,21/01/2026 17:09,30.0,Female,AA,,,69.9,,35.4 C,,10.9,6.6 mmol/L,,,367.0,ER,Pneumonia,antibiotic,,Monitor
+ADM0063,P063,2026-01-18 00:00,2026/01/21 07:00,21/01/2026 20:07,,Female,Other,300.0,,,123.0,99.9 F,96.3,,,2.44,10.51,,Outpatient,Sepsis,antibiotic,,Nurse entry
+ADM0064,P064,2026/02/07 00:00,2026/02/09 08:00,2026/02/07 02:37,150.0,female,Other,77.1,,87.2,,,120.0,,,2.71,10.92,249.0,Ward,Sepsis,antibiotic,9.0,Nurse Entry
+ADM0064,P064,07/02/2026 00:00,09/02/2026 08:00,Feb 07 2026 23:56,,F,African,,,,84.5,,120.0,18.9,6.6 mmol/L,,7.68,,ICU,Pneumonia,Vasopressor,7.0,Laboratory
+ADM0064,P064,Feb 07 2026 00:00,09/02/2026 08:00,08/02/2026 08:42,89.0,M,African,,,,92.8,,,26.5,,1.36,,,ER,Pneumonia,Insulin,8.0,Nurse entry
+ADM0064,P064,Feb 07 2026 00:00,2026/02/09 08:00,2026-02-08 12:24,45.0,male,Other,,151.0,78.8,108.3,,120.0,,110.0,,9.71,,ER,Pneumonia,Antibiotic,,Monitor
+ADM0064,P064,07/02/2026 00:00,2026/02/09 08:00,08/02/2026 13:54,18.0,female,Other,,,,87.6,99.0 F,95.3,,,1.82,5.12,121.0,ER,Cardiac Failure,None,1.0,monitor
+ADM0064,P064,Feb 07 2026 00:00,2026-02-09 08:00,Feb 09 2026 09:33,95.0,female,AA,,,,73.0,99.0 F,120.0,,,,11.99,,ICU,Cardiac Failure,Vasopressor,,monitor
+ADM0064,P064,2026/02/07 00:00,09/02/2026 08:00,2026-02-10 01:28,75.0,female,Other,,,59.8,,,120.0,,,,,276.0,ICU,Stroke,INSULIN,,Monitor
+ADM0064,P064,Feb 07 2026 00:00,2026-02-09 08:00,10/02/2026 19:25,43.0,F,African-American,84.8,117.7,,,37.4 C,97.4,,6.6 mmol/L,2.15,,358.0,Outpatient,Sepsis,Antibiotic,5.0,Monitor
+ADM0064,P064,2026/02/07 00:00,2026-02-09 08:00,11/02/2026 06:38,72.0,male,AA,68.2,,,85 mmHg,,,14.0,85.6,1.34,,,Ward,Cardiac Failure,antibiotic,1.0,Nurse entry
+ADM0064,P064,2026/02/07 00:00,Feb 09 2026 08:00,2026-02-11 23:20,,M,AA,81.4,120.9,,82.7,,96.9,,6.6 mmol/L,1.35,16.86,,Emergency Admission,Stroke,Antibiotic,5.0,Monitor
+ADM0065,P065,2026/01/11 00:00,13/01/2026 11:00,Jan 11 2026 13:16,150.0,female,Other,,,78.1,85 mmHg,37.1 C,95.2,14.1,,,,,ICU,Stroke,Insulin,,Nurse entry
+ADM0065,P065,2026/01/11 00:00,2026/01/13 11:00,2026-01-11 23:34,,female,African,,,64.0,,37.6 C,93.9,,146.1,,8.72,123.0,ICU,Pneumonia,INSULIN,,Nurse Entry
+ADM0065,P065,Jan 11 2026 00:00,2026-01-13 11:00,Jan 12 2026 00:05,,Male,AA,,142.7,73.2,85 mmHg,38.3 C,97.9,13.6,6.6 mmol/L,,,384.0,ER,Stroke,antibiotic,8.0,monitor
+ADM0065,P065,Jan 11 2026 00:00,2026-01-13 11:00,13/01/2026 14:39,34.0,M,African,300.0,116.9,,85 mmHg,,120.0,,,1.92,,,Emergency Admission,Stroke,antibiotic,2.0,Laboratory
+ADM0065,P065,2026/01/11 00:00,2026-01-13 11:00,2026/01/13 20:22,,Female,African-American,300.0,,,,,99.6,23.4,87.7,,,274.0,ER,Sepsis,INSULIN,,Nurse entry
+ADM0065,P065,11/01/2026 00:00,2026/01/13 11:00,2026/01/14 03:34,37.0,M,African-American,,91.4,,85 mmHg,34.8 C,,15.2,,1.39,,,Emergency,Cardiac Failure,Insulin,,monitor
+ADM0065,P065,2026-01-11 00:00,13/01/2026 11:00,Jan 14 2026 08:36,87.0,female,AA,,,,,,,,100.2,1.87,,,ICU,Pneumonia,INSULIN,,monitor
+ADM0065,P065,11/01/2026 00:00,2026-01-13 11:00,Jan 15 2026 09:53,69.0,M,African,300.0,,55.3,85 mmHg,,120.0,,161.1,,,165.0,Outpatient,Stroke,Antibiotic,,Nurse entry
+ADM0065,P065,Jan 11 2026 00:00,2026-01-13 11:00,15/01/2026 16:38,82.0,male,Other,,,71.1,85 mmHg,,120.0,,6.6 mmol/L,,17.88,,Outpatient,Cardiac Failure,Vasopressor,7.0,Nurse Entry
+ADM0065,P065,2026-01-11 00:00,2026-01-13 11:00,2026-01-15 18:19,150.0,F,African-American,84.5,116.3,,85 mmHg,37.2 C,,,121.6,,6.67,,Emergency,Cardiac Failure,Vasopressor,14.0,Laboratory
+ADM0066,P066,2026-01-21 00:00,24/01/2026 01:00,2026/01/21 13:46,,Male,African,,,63.7,85 mmHg,36.4 C,,15.0,134.9,,14.54,,ER,Stroke,None,15.0,Nurse entry
+ADM0066,P066,2026/01/21 00:00,2026-01-24 01:00,Jan 21 2026 22:46,64.0,Female,AA,,108.6,70.7,,,,16.1,6.6 mmol/L,,,,Ward,Cardiac Failure,Antibiotic,,Laboratory
+ADM0066,P066,Jan 21 2026 00:00,Jan 24 2026 01:00,2026/01/22 03:32,,female,AA,85.0,148.3,,,97.2 F,97.6,,6.6 mmol/L,2.73,10.95,83.0,Emergency,Pneumonia,Vasopressor,11.0,Nurse entry
+ADM0066,P066,2026-01-21 00:00,24/01/2026 01:00,22/01/2026 22:41,,M,African,97.4,,,,,94.8,16.0,,,3.49,429.0,Ward,Cardiac Failure,Vasopressor,,Nurse entry
+ADM0066,P066,2026/01/21 00:00,24/01/2026 01:00,2026/01/23 05:39,,F,Other,300.0,,,,37.7 C,97.4,,,1.0,,227.0,Emergency,Stroke,Antibiotic,5.0,Nurse Entry
+ADM0066,P066,21/01/2026 00:00,24/01/2026 01:00,23/01/2026 12:12,150.0,M,African,100.5,,71.2,86.4,,,,6.6 mmol/L,2.14,6.43,,Ward,Sepsis,antibiotic,,monitor
+ADM0066,P066,2026/01/21 00:00,24/01/2026 01:00,24/01/2026 07:33,,F,AA,,,,,36.3 C,,22.8,,0.74,,152.0,ER,Trauma,Insulin,7.0,monitor
+ADM0066,P066,21/01/2026 00:00,2026/01/24 01:00,2026-01-24 21:03,78.0,Male,Other,300.0,103.8,,,35.4 C,120.0,,156.4,,6.32,168.0,ER,Stroke,antibiotic,,Nurse Entry
+ADM0066,P066,Jan 21 2026 00:00,2026-01-24 01:00,Jan 25 2026 08:06,150.0,male,African-American,100.7,166.5,,,,120.0,24.2,,2.5,,,Ward,Trauma,None,,monitor
+ADM0066,P066,2026/01/21 00:00,Jan 24 2026 01:00,25/01/2026 17:14,150.0,M,AA,,,82.4,110.9,,120.0,,79.3,1.11,4.64,305.0,ICU,Sepsis,Vasopressor,,Nurse entry
+ADM0067,P067,01/02/2026 00:00,2026-02-03 14:00,2026-02-01 17:33,,F,African,300.0,133.8,69.7,,98.4 F,,,,,,258.0,Emergency Admission,Cardiac Failure,INSULIN,11.0,Nurse Entry
+ADM0067,P067,2026-02-01 00:00,2026-02-03 14:00,02/02/2026 03:40,,M,African-American,,120.6,,83.5,,99.5,,98.4,1.7,11.28,91.0,Emergency Admission,Stroke,Antibiotic,11.0,Monitor
+ADM0067,P067,Feb 01 2026 00:00,03/02/2026 14:00,2026-02-02 17:19,43.0,male,Other,,78.5,72.2,85 mmHg,,93.9,8.1,75.0,,13.29,404.0,Emergency Admission,Pneumonia,None,6.0,Monitor
+ADM0067,P067,2026/02/01 00:00,2026/02/03 14:00,2026/02/03 14:55,35.0,Male,African,100.2,147.8,,,,92.4,13.9,107.2,1.03,4.58,308.0,Emergency Admission,Cardiac Failure,INSULIN,14.0,Nurse Entry
+ADM0067,P067,01/02/2026 00:00,2026-02-03 14:00,Feb 03 2026 23:59,91.0,F,Other,,116.6,88.2,85 mmHg,37.9 C,,,,0.71,5.87,224.0,Emergency,Sepsis,Vasopressor,,Nurse entry
+ADM0067,P067,2026-02-01 00:00,Feb 03 2026 14:00,04/02/2026 02:08,150.0,M,Other,68.4,109.7,73.5,85 mmHg,,,,77.3,2.36,14.56,,ICU,Stroke,Insulin,0.0,Nurse Entry
+ADM0067,P067,Feb 01 2026 00:00,03/02/2026 14:00,2026/02/04 18:29,150.0,M,AA,,,67.0,76.5,95.7 F,,18.6,,1.22,12.43,,Emergency,Trauma,None,11.0,monitor
+ADM0067,P067,Feb 01 2026 00:00,2026-02-03 14:00,05/02/2026 08:14,150.0,Male,Other,300.0,112.7,,,37.3 C,,17.6,129.2,2.2,,351.0,Ward,Cardiac Failure,Vasopressor,5.0,Nurse Entry
+ADM0067,P067,Feb 01 2026 00:00,2026-02-03 14:00,05/02/2026 18:44,25.0,Male,AA,,,,,,,11.6,6.6 mmol/L,,,,Outpatient,Pneumonia,Antibiotic,,Monitor
+ADM0067,P067,Feb 01 2026 00:00,2026/02/03 14:00,2026/02/05 21:08,18.0,Male,African,86.6,97.3,65.1,,37.4 C,120.0,,,2.28,8.77,,Ward,Sepsis,Insulin,,Nurse entry
+ADM0068,P068,2026-01-03 00:00,Jan 07 2026 21:00,2026-01-03 01:37,77.0,Female,African,,,43.6,67.8,100.6 F,,18.7,6.6 mmol/L,1.59,5.92,,ER,Cardiac Failure,Insulin,9.0,monitor
+ADM0068,P068,03/01/2026 00:00,2026-01-07 21:00,2026-01-03 12:11,,Female,AA,300.0,,,,,120.0,,6.6 mmol/L,0.6,4.42,141.0,Ward,Pneumonia,INSULIN,,Nurse Entry
+ADM0068,P068,2026/01/03 00:00,Jan 07 2026 21:00,2026/01/03 13:52,,Female,African,,74.9,79.0,85.9,,98.9,12.5,101.4,,,,Emergency,Cardiac Failure,Vasopressor,0.0,Monitor
+ADM0068,P068,2026/01/03 00:00,2026/01/07 21:00,2026-01-03 18:03,50.0,Male,AA,300.0,106.0,76.5,85 mmHg,,120.0,17.2,6.6 mmol/L,2.16,6.83,242.0,Emergency,Cardiac Failure,antibiotic,,Nurse entry
+ADM0068,P068,2026/01/03 00:00,2026/01/07 21:00,04/01/2026 22:52,26.0,F,Other,300.0,130.6,,,,96.4,,6.6 mmol/L,1.91,7.7,,Ward,Sepsis,Insulin,,Nurse Entry
+ADM0068,P068,Jan 03 2026 00:00,2026/01/07 21:00,05/01/2026 09:14,150.0,female,AA,300.0,115.1,,,37.8 C,120.0,,110.0,,10.88,93.0,Outpatient,Sepsis,antibiotic,14.0,Monitor
+ADM0068,P068,03/01/2026 00:00,2026-01-07 21:00,Jan 05 2026 18:05,150.0,Male,African-American,,,90.9,91.6,36.8 C,,22.8,,,5.29,,Ward,Cardiac Failure,antibiotic,4.0,Monitor
+ADM0068,P068,Jan 03 2026 00:00,07/01/2026 21:00,2026/01/06 13:28,,F,African,300.0,118.7,,108.4,,120.0,20.2,6.6 mmol/L,,,322.0,ICU,Pneumonia,Insulin,,Nurse entry
+ADM0068,P068,2026-01-03 00:00,07/01/2026 21:00,2026/01/06 21:25,,Female,Other,,145.4,,85 mmHg,,120.0,,,1.36,,,ICU,Sepsis,Vasopressor,,Monitor
+ADM0068,P068,2026/01/03 00:00,07/01/2026 21:00,07/01/2026 07:22,,female,African-American,,,,49.4,,120.0,,117.8,,17.64,,Emergency Admission,Cardiac Failure,antibiotic,,Nurse entry
+ADM0069,P069,Jan 16 2026 00:00,2026-01-19 09:00,2026/01/16 03:28,36.0,M,African-American,300.0,,,85 mmHg,98.1 F,96.9,18.1,6.6 mmol/L,,13.4,394.0,Outpatient,Pneumonia,Vasopressor,,Nurse Entry
+ADM0069,P069,2026-01-16 00:00,2026/01/19 09:00,2026-01-16 08:48,26.0,M,African,96.9,,90.1,,37.5 C,,,140.9,0.6,6.02,,Emergency,Cardiac Failure,Antibiotic,7.0,Laboratory
+ADM0069,P069,2026-01-16 00:00,2026/01/19 09:00,Jan 16 2026 19:20,20.0,M,AA,,,42.9,,36.6 C,120.0,18.4,6.6 mmol/L,,7.48,,Ward,Sepsis,antibiotic,,Monitor
+ADM0069,P069,2026/01/16 00:00,2026-01-19 09:00,17/01/2026 10:30,150.0,male,African,300.0,119.7,,,37.3 C,95.5,,77.9,,,291.0,ICU,Cardiac Failure,antibiotic,,monitor
+ADM0069,P069,16/01/2026 00:00,2026/01/19 09:00,2026/01/17 15:16,150.0,F,AA,300.0,133.7,,,,,17.0,164.1,2.85,10.3,449.0,Emergency,Trauma,Vasopressor,,Monitor
+ADM0069,P069,2026/01/16 00:00,2026-01-19 09:00,2026/01/18 06:22,25.0,male,Other,87.1,,,88.0,,120.0,28.7,105.9,,,270.0,Outpatient,Trauma,None,1.0,Nurse entry
+ADM0069,P069,Jan 16 2026 00:00,19/01/2026 09:00,Jan 18 2026 09:41,150.0,M,African-American,107.3,,,,,120.0,,6.6 mmol/L,,,,Outpatient,Cardiac Failure,Antibiotic,,Laboratory
+ADM0069,P069,2026/01/16 00:00,2026/01/19 09:00,Jan 18 2026 17:27,86.0,male,Other,,,,76.8,,,,84.7,,,,ICU,Pneumonia,Insulin,,Monitor
+ADM0069,P069,Jan 16 2026 00:00,Jan 19 2026 09:00,19/01/2026 06:06,24.0,female,Other,109.9,109.9,67.7,,95.9 F,,11.6,6.6 mmol/L,,,,Ward,Trauma,Antibiotic,10.0,monitor
+ADM0069,P069,16/01/2026 00:00,Jan 19 2026 09:00,2026-01-20 23:01,,male,AA,300.0,,77.3,78.2,98.6 F,97.4,,,,,,ER,Pneumonia,Antibiotic,2.0,Nurse entry
+ADM0070,P070,08/02/2026 00:00,2026/02/11 21:00,2026-02-08 01:26,150.0,Male,African-American,,141.8,,68.4,,,6.1,6.6 mmol/L,,,352.0,Outpatient,Stroke,Vasopressor,,Laboratory
+ADM0070,P070,08/02/2026 00:00,2026-02-11 21:00,08/02/2026 17:32,,M,AA,,127.5,92.5,85 mmHg,,,,,,,,Ward,Pneumonia,Antibiotic,2.0,Nurse Entry
+ADM0070,P070,2026/02/08 00:00,Feb 11 2026 21:00,2026/02/09 10:12,,F,Other,78.6,104.8,,85 mmHg,98.1 F,,16.0,118.8,2.1,,430.0,Emergency,Trauma,Vasopressor,0.0,Monitor
+ADM0070,P070,08/02/2026 00:00,2026-02-11 21:00,Feb 10 2026 08:38,150.0,female,African-American,80.0,,96.6,,36.3 C,,23.5,6.6 mmol/L,0.79,,86.0,Emergency Admission,Sepsis,antibiotic,,monitor
+ADM0070,P070,2026-02-08 00:00,2026/02/11 21:00,Feb 10 2026 09:30,,M,AA,,,,,,100.1,17.4,,,16.52,323.0,Outpatient,Stroke,None,,Nurse Entry
+ADM0070,P070,08/02/2026 00:00,2026/02/11 21:00,Feb 11 2026 19:41,150.0,F,Other,300.0,,42.5,,,,11.7,6.6 mmol/L,2.68,,310.0,Ward,Trauma,Antibiotic,1.0,Nurse entry
+ADM0070,P070,2026/02/08 00:00,Feb 11 2026 21:00,12/02/2026 04:34,52.0,Female,African-American,300.0,,,85 mmHg,37.2 C,98.6,,93.1,1.08,,,ICU,Stroke,Antibiotic,5.0,Nurse entry
+ADM0070,P070,08/02/2026 00:00,11/02/2026 21:00,2026-02-12 06:35,23.0,Male,African-American,94.0,,74.4,90.2,36.7 C,120.0,,6.6 mmol/L,,,138.0,Emergency,Stroke,INSULIN,,Monitor
+ADM0070,P070,Feb 08 2026 00:00,11/02/2026 21:00,Feb 12 2026 18:00,67.0,M,African,300.0,,,,37.4 C,120.0,23.0,,1.3,,,ER,Pneumonia,Antibiotic,,monitor
+ADM0070,P070,Feb 08 2026 00:00,2026-02-11 21:00,2026-02-12 23:55,18.0,female,African,,,58.2,86.3,,,,,,,,Emergency,Sepsis,Insulin,,monitor
+ADM0071,P071,18/01/2026 00:00,Jan 20 2026 11:00,2026-01-18 01:45,150.0,M,African,,,,60.6,100.2 F,,,6.6 mmol/L,,13.11,230.0,Outpatient,Stroke,INSULIN,12.0,monitor
+ADM0071,P071,2026-01-18 00:00,20/01/2026 11:00,2026/01/18 09:38,150.0,male,African,,,45.1,,,,,113.3,,,,Outpatient,Sepsis,INSULIN,7.0,Monitor
+ADM0071,P071,Jan 18 2026 00:00,2026/01/20 11:00,18/01/2026 11:05,66.0,M,African,300.0,,,92.2,,,,6.6 mmol/L,,16.46,,Outpatient,Cardiac Failure,INSULIN,2.0,monitor
+ADM0071,P071,18/01/2026 00:00,2026-01-20 11:00,2026-01-19 14:18,150.0,female,African-American,,,,,,,10.2,75.2,1.22,,251.0,Outpatient,Sepsis,INSULIN,,Laboratory
+ADM0071,P071,Jan 18 2026 00:00,Jan 20 2026 11:00,Jan 19 2026 23:58,80.0,M,Other,300.0,,72.8,85 mmHg,97.2 F,95.5,,6.6 mmol/L,1.66,10.05,105.0,Emergency Admission,Trauma,Antibiotic,,Laboratory
+ADM0071,P071,18/01/2026 00:00,20/01/2026 11:00,Jan 20 2026 02:03,78.0,male,African-American,300.0,,,102.3,37.3 C,96.6,,,1.82,8.22,,Emergency Admission,Trauma,Antibiotic,2.0,monitor
+ADM0071,P071,Jan 18 2026 00:00,2026-01-20 11:00,2026/01/21 10:04,26.0,M,African,94.2,,,,,,6.9,,2.22,,,Emergency,Sepsis,INSULIN,11.0,monitor
+ADM0071,P071,18/01/2026 00:00,20/01/2026 11:00,2026-01-22 15:03,,Male,Other,,,73.0,108.0,,,,,,,,ICU,Pneumonia,antibiotic,,Nurse entry
+ADM0071,P071,2026/01/18 00:00,Jan 20 2026 11:00,22/01/2026 19:35,,M,Other,73.0,,83.2,85 mmHg,37.8 C,,22.5,6.6 mmol/L,2.5,9.86,116.0,Ward,Cardiac Failure,None,,Nurse entry
+ADM0071,P071,18/01/2026 00:00,20/01/2026 11:00,2026-01-22 21:42,,Female,AA,,,89.8,,38.2 C,,6.2,6.6 mmol/L,,,,Outpatient,Pneumonia,antibiotic,,Laboratory
+ADM0072,P072,Feb 04 2026 00:00,2026/02/08 16:00,04/02/2026 22:40,87.0,M,AA,100.4,,,,36.3 C,,,6.6 mmol/L,,,,Outpatient,Pneumonia,Antibiotic,5.0,Nurse entry
+ADM0072,P072,Feb 04 2026 00:00,Feb 08 2026 16:00,2026-02-05 00:02,,female,AA,300.0,120.0,68.5,119.9,35.4 C,100.7,13.7,6.6 mmol/L,,15.16,387.0,ICU,Cardiac Failure,Vasopressor,,Monitor
+ADM0072,P072,04/02/2026 00:00,2026-02-08 16:00,2026/02/05 05:43,65.0,M,AA,,116.5,69.8,96.6,35.8 C,,,123.3,,,,Emergency,Sepsis,Antibiotic,13.0,Monitor
+ADM0072,P072,04/02/2026 00:00,08/02/2026 16:00,Feb 05 2026 14:20,,F,AA,72.4,,,81.3,,96.5,,,1.57,12.87,317.0,Ward,Stroke,INSULIN,11.0,Nurse Entry
+ADM0072,P072,2026-02-04 00:00,2026-02-08 16:00,2026-02-05 16:42,,female,African-American,,121.8,,,39.0 C,95.0,,6.6 mmol/L,1.16,10.57,,Emergency,Stroke,antibiotic,9.0,Monitor
+ADM0072,P072,2026-02-04 00:00,08/02/2026 16:00,Feb 06 2026 00:34,150.0,M,AA,115.4,,,80.7,98.6 F,,,175.4,2.72,15.68,,ER,Stroke,None,,Nurse entry
+ADM0072,P072,2026-02-04 00:00,2026-02-08 16:00,2026/02/06 22:27,,M,African,300.0,119.8,,85 mmHg,,120.0,15.4,,2.66,13.87,,Ward,Stroke,INSULIN,11.0,Monitor
+ADM0072,P072,2026/02/04 00:00,2026/02/08 16:00,08/02/2026 06:00,,Male,African-American,,,64.2,98.3,,95.5,,6.6 mmol/L,,17.73,280.0,Ward,Sepsis,Insulin,8.0,Nurse entry
+ADM0072,P072,04/02/2026 00:00,08/02/2026 16:00,08/02/2026 20:03,,Male,African,87.2,123.6,,85 mmHg,,120.0,14.8,6.6 mmol/L,1.79,10.57,,ER,Cardiac Failure,Antibiotic,0.0,Monitor
+ADM0072,P072,2026/02/04 00:00,08/02/2026 16:00,08/02/2026 21:05,,female,AA,,,,,96.8 F,94.7,,,,,,Emergency,Pneumonia,Antibiotic,13.0,Monitor
+ADM0073,P073,2026/01/10 00:00,2026-01-14 10:00,2026-01-10 03:38,62.0,Female,African,90.8,,,85 mmHg,100.0 F,,12.2,109.3,,6.95,,Emergency Admission,Sepsis,INSULIN,11.0,monitor
+ADM0073,P073,2026/01/10 00:00,14/01/2026 10:00,Jan 10 2026 09:06,150.0,male,African,300.0,,,85 mmHg,,94.4,12.6,6.6 mmol/L,1.74,13.98,253.0,Outpatient,Stroke,INSULIN,6.0,Nurse entry
+ADM0073,P073,10/01/2026 00:00,2026/01/14 10:00,10/01/2026 23:24,,M,AA,,128.6,,59.5,,94.4,18.1,86.1,0.82,10.15,,ER,Pneumonia,INSULIN,7.0,Nurse Entry
+ADM0073,P073,Jan 10 2026 00:00,Jan 14 2026 10:00,2026/01/11 08:03,150.0,Female,African-American,300.0,,74.9,,,120.0,25.2,,0.6,4.84,401.0,ICU,Sepsis,INSULIN,6.0,Laboratory
+ADM0073,P073,10/01/2026 00:00,14/01/2026 10:00,11/01/2026 21:59,150.0,F,Other,,111.4,86.6,109.5,,120.0,9.0,152.5,1.94,8.13,,Emergency,Trauma,Vasopressor,12.0,Monitor
+ADM0073,P073,2026-01-10 00:00,Jan 14 2026 10:00,11/01/2026 23:43,,F,AA,,93.4,89.1,68.0,36.7 C,120.0,13.0,,2.3,10.67,292.0,Outpatient,Cardiac Failure,Insulin,1.0,Nurse entry
+ADM0073,P073,10/01/2026 00:00,2026-01-14 10:00,2026-01-12 11:47,51.0,female,AA,91.5,,,97.5,39.1 C,,19.0,136.1,1.6,,329.0,ER,Sepsis,Vasopressor,,monitor
+ADM0073,P073,2026/01/10 00:00,2026/01/14 10:00,2026-01-12 18:53,67.0,female,Other,102.4,98.7,,,,99.3,,,,,233.0,Outpatient,Trauma,Insulin,,Nurse entry
+ADM0073,P073,10/01/2026 00:00,2026/01/14 10:00,Jan 13 2026 16:49,,female,Other,60.7,,90.7,,100.8 F,,11.7,6.6 mmol/L,1.96,9.64,231.0,Ward,Pneumonia,Insulin,,Nurse entry
+ADM0073,P073,10/01/2026 00:00,2026-01-14 10:00,2026-01-14 17:44,150.0,F,African,300.0,,86.5,85 mmHg,98.6 F,120.0,,,1.18,,214.0,ICU,Stroke,Vasopressor,7.0,Laboratory
+ADM0074,P074,30/01/2026 00:00,2026-02-01 23:00,2026-01-30 07:52,150.0,male,Other,,,,85 mmHg,,,,,,,,Outpatient,Trauma,antibiotic,,Nurse Entry
+ADM0074,P074,2026/01/30 00:00,Feb 01 2026 23:00,2026/01/31 01:23,,F,Other,111.7,,75.4,,,98.5,16.5,6.6 mmol/L,,,91.0,ER,Cardiac Failure,antibiotic,9.0,Laboratory
+ADM0074,P074,30/01/2026 00:00,Feb 01 2026 23:00,Jan 31 2026 04:11,,F,AA,,161.0,55.5,81.6,38.0 C,,,132.0,0.89,,447.0,Ward,Pneumonia,Insulin,,Monitor
+ADM0074,P074,30/01/2026 00:00,01/02/2026 23:00,31/01/2026 06:42,71.0,M,AA,,92.7,,,,95.0,,156.7,0.72,16.4,95.0,Outpatient,Stroke,Vasopressor,5.0,Monitor
+ADM0074,P074,2026/01/30 00:00,2026-02-01 23:00,Jan 31 2026 07:05,58.0,Female,AA,300.0,,65.6,,,,,,,15.36,,ICU,Pneumonia,INSULIN,,Laboratory
+ADM0074,P074,30/01/2026 00:00,01/02/2026 23:00,2026/01/31 09:56,,Female,Other,,,,104.5,37.0 C,,23.3,129.7,,10.79,410.0,Emergency Admission,Cardiac Failure,Antibiotic,14.0,Monitor
+ADM0074,P074,Jan 30 2026 00:00,2026-02-01 23:00,2026-01-31 22:59,21.0,F,African-American,300.0,159.1,,,36.8 C,,,,0.79,11.95,297.0,ER,Cardiac Failure,Antibiotic,3.0,monitor
+ADM0074,P074,2026-01-30 00:00,2026/02/01 23:00,01/02/2026 20:33,22.0,Male,African-American,,,,85 mmHg,36.7 C,120.0,,155.4,2.39,12.73,,ICU,Cardiac Failure,Antibiotic,,Nurse Entry
+ADM0074,P074,30/01/2026 00:00,01/02/2026 23:00,2026/02/02 13:58,150.0,male,African-American,300.0,,73.1,,,,14.1,6.6 mmol/L,1.35,10.15,,Outpatient,Sepsis,antibiotic,11.0,monitor
+ADM0074,P074,2026-01-30 00:00,2026/02/01 23:00,2026-02-03 17:25,83.0,F,Other,61.7,121.1,85.4,,98.8 F,100.4,10.7,6.6 mmol/L,1.25,11.67,282.0,Ward,Stroke,Antibiotic,5.0,monitor
+ADM0075,P075,Feb 10 2026 00:00,14/02/2026 07:00,11/02/2026 01:20,44.0,female,African-American,89.0,,58.1,85 mmHg,39.2 C,120.0,,6.6 mmol/L,1.18,,366.0,Emergency Admission,Pneumonia,Antibiotic,,Monitor
+ADM0075,P075,Feb 10 2026 00:00,14/02/2026 07:00,Feb 11 2026 09:24,,Female,Other,87.8,72.7,79.2,,95.9 F,,,,,,133.0,Emergency,Trauma,INSULIN,10.0,Nurse entry
+ADM0075,P075,Feb 10 2026 00:00,14/02/2026 07:00,2026-02-12 03:19,27.0,F,African-American,,103.2,,85 mmHg,,95.3,,,,,,Emergency Admission,Cardiac Failure,Insulin,,Laboratory
+ADM0075,P075,10/02/2026 00:00,2026-02-14 07:00,Feb 12 2026 13:16,,female,AA,99.4,123.9,,,,,21.0,,2.65,,383.0,ER,Cardiac Failure,Insulin,,Nurse Entry
+ADM0075,P075,2026-02-10 00:00,14/02/2026 07:00,2026-02-12 20:03,50.0,F,African-American,300.0,,91.2,85 mmHg,,97.8,18.2,,0.58,4.98,237.0,ICU,Stroke,Antibiotic,,monitor
+ADM0075,P075,2026/02/10 00:00,2026/02/14 07:00,2026-02-13 18:34,150.0,F,African-American,97.1,131.8,,,,95.5,21.4,,2.31,6.07,,Emergency Admission,Sepsis,Insulin,,Nurse entry
+ADM0075,P075,10/02/2026 00:00,Feb 14 2026 07:00,14/02/2026 01:26,150.0,Male,Other,,,65.7,77.2,,96.2,19.4,118.3,1.06,12.18,161.0,ER,Sepsis,Vasopressor,,monitor
+ADM0075,P075,Feb 10 2026 00:00,2026/02/14 07:00,Feb 14 2026 03:51,79.0,female,African,88.3,158.0,,85 mmHg,,,,6.6 mmol/L,,,,ER,Trauma,antibiotic,,Monitor
+ADM0075,P075,2026/02/10 00:00,Feb 14 2026 07:00,2026/02/14 14:26,,M,African,95.4,,63.4,,,120.0,19.6,6.6 mmol/L,1.06,13.76,,Ward,Stroke,Insulin,,monitor
+ADM0075,P075,Feb 10 2026 00:00,14/02/2026 07:00,2026/02/14 22:05,,Female,African,300.0,,,85 mmHg,98.6 F,92.9,,6.6 mmol/L,2.84,15.93,350.0,Outpatient,Trauma,INSULIN,,Laboratory
+ADM0076,P076,2026/01/16 00:00,Jan 18 2026 10:00,Jan 17 2026 13:36,150.0,F,African-American,,,,,36.9 C,,,75.6,,17.26,282.0,ER,Pneumonia,INSULIN,,Nurse entry
+ADM0076,P076,Jan 16 2026 00:00,2026/01/18 10:00,Jan 17 2026 16:28,150.0,female,African-American,77.3,85.1,76.9,85 mmHg,,120.0,,154.6,,12.26,,Emergency,Pneumonia,Antibiotic,3.0,Nurse entry
+ADM0076,P076,16/01/2026 00:00,2026-01-18 10:00,2026/01/18 19:28,,M,AA,300.0,,,,,,,6.6 mmol/L,1.52,11.16,99.0,Emergency,Sepsis,Vasopressor,,Laboratory
+ADM0076,P076,16/01/2026 00:00,18/01/2026 10:00,2026-01-18 23:24,21.0,female,AA,136.8,119.8,61.6,89.1,,,,6.6 mmol/L,,9.03,,Emergency Admission,Trauma,None,13.0,Nurse entry
+ADM0076,P076,2026-01-16 00:00,Jan 18 2026 10:00,Jan 19 2026 06:39,,Female,AA,300.0,,,,99.0 F,,13.3,90.1,,15.83,,ICU,Pneumonia,Insulin,5.0,Monitor
+ADM0076,P076,Jan 16 2026 00:00,2026/01/18 10:00,Jan 19 2026 07:54,,F,African-American,300.0,,67.5,,,120.0,,,,,356.0,Emergency,Stroke,INSULIN,10.0,Nurse entry
+ADM0076,P076,2026-01-16 00:00,18/01/2026 10:00,2026-01-20 11:55,,M,African,,,,88.8,,98.3,,193.6,2.83,4.14,,Emergency,Pneumonia,Antibiotic,,monitor
+ADM0076,P076,Jan 16 2026 00:00,18/01/2026 10:00,20/01/2026 12:21,43.0,male,African-American,300.0,127.7,91.3,,101.5 F,95.7,,6.6 mmol/L,2.62,4.91,184.0,ICU,Sepsis,Antibiotic,,monitor
+ADM0076,P076,2026-01-16 00:00,2026/01/18 10:00,2026/01/20 13:29,64.0,F,Other,77.5,,,,37.1 C,120.0,25.2,98.9,,,187.0,Emergency,Pneumonia,Antibiotic,,Nurse Entry
+ADM0076,P076,Jan 16 2026 00:00,18/01/2026 10:00,2026-01-20 21:15,150.0,M,Other,101.5,104.5,,,,96.9,24.2,6.6 mmol/L,2.25,,,Emergency Admission,Trauma,Vasopressor,14.0,monitor
+ADM0077,P077,Feb 10 2026 00:00,2026-02-14 15:00,2026/02/10 13:55,150.0,male,African-American,,,67.3,,,120.0,18.6,6.6 mmol/L,1.12,7.56,,ER,Sepsis,antibiotic,,monitor
+ADM0077,P077,Feb 10 2026 00:00,14/02/2026 15:00,11/02/2026 09:48,80.0,female,African-American,,106.8,,83.1,,97.7,,28.7,2.22,,342.0,ICU,Cardiac Failure,INSULIN,13.0,Monitor
+ADM0077,P077,2026/02/10 00:00,Feb 14 2026 15:00,2026-02-11 17:29,150.0,Female,AA,,,,93.4,,120.0,12.4,6.6 mmol/L,2.3,8.04,169.0,Outpatient,Trauma,INSULIN,8.0,Nurse Entry
+ADM0077,P077,10/02/2026 00:00,2026-02-14 15:00,Feb 12 2026 04:35,55.0,Female,African,,132.7,,85 mmHg,,,,,,15.3,179.0,Emergency Admission,Stroke,Antibiotic,,Laboratory
+ADM0077,P077,2026-02-10 00:00,Feb 14 2026 15:00,2026/02/13 04:19,150.0,male,AA,82.9,,,125.5,35.9 C,99.8,,,,,,ICU,Trauma,Insulin,8.0,monitor
+ADM0077,P077,10/02/2026 00:00,14/02/2026 15:00,Feb 13 2026 07:27,71.0,M,African-American,,,,,,97.8,,,0.91,8.27,294.0,Outpatient,Cardiac Failure,antibiotic,2.0,Nurse entry
+ADM0077,P077,Feb 10 2026 00:00,14/02/2026 15:00,14/02/2026 04:08,,Male,African,,,92.0,76.3,97.3 F,,,6.6 mmol/L,,13.88,303.0,Outpatient,Pneumonia,INSULIN,13.0,Nurse entry
+ADM0077,P077,10/02/2026 00:00,2026-02-14 15:00,2026/02/14 09:46,66.0,M,AA,300.0,96.2,,78.6,,,23.3,103.3,2.24,14.49,219.0,Emergency Admission,Pneumonia,None,2.0,Nurse Entry
+ADM0077,P077,10/02/2026 00:00,2026-02-14 15:00,Feb 14 2026 10:06,150.0,female,African,300.0,,68.9,,,120.0,,6.6 mmol/L,,11.12,133.0,ER,Cardiac Failure,Vasopressor,,Laboratory
+ADM0077,P077,2026-02-10 00:00,2026-02-14 15:00,2026/02/14 23:19,150.0,male,Other,,,,,,120.0,,,,,,Emergency Admission,Sepsis,antibiotic,13.0,Nurse Entry
+ADM0078,P078,2026-01-19 00:00,2026-01-21 23:00,Jan 19 2026 09:11,150.0,M,African-American,,,,85 mmHg,98.1 F,97.2,,,,10.58,,ER,Stroke,None,5.0,Monitor
+ADM0078,P078,2026-01-19 00:00,21/01/2026 23:00,2026/01/19 14:47,,Male,African-American,300.0,127.6,91.4,80.5,,,17.5,,,9.14,,ICU,Sepsis,None,10.0,Laboratory
+ADM0078,P078,19/01/2026 00:00,21/01/2026 23:00,2026-01-19 18:51,150.0,female,African-American,,,89.2,105.8,,,,132.0,,,204.0,ICU,Stroke,Antibiotic,12.0,Nurse Entry
+ADM0078,P078,2026-01-19 00:00,Jan 21 2026 23:00,2026-01-19 22:52,,Female,Other,,119.6,72.0,,,97.0,12.3,150.9,1.9,7.51,419.0,ICU,Pneumonia,INSULIN,4.0,Nurse entry
+ADM0078,P078,19/01/2026 00:00,Jan 21 2026 23:00,20/01/2026 00:54,150.0,male,African,300.0,,,85 mmHg,36.7 C,,,6.6 mmol/L,,4.66,413.0,Outpatient,Cardiac Failure,antibiotic,5.0,Nurse entry
+ADM0078,P078,Jan 19 2026 00:00,21/01/2026 23:00,2026-01-21 07:33,,male,Other,,89.7,,85 mmHg,,,,,1.96,,,ICU,Sepsis,INSULIN,,monitor
+ADM0078,P078,2026/01/19 00:00,2026/01/21 23:00,22/01/2026 06:23,150.0,Male,African-American,,,71.9,,37.6 C,,,150.6,,,401.0,Outpatient,Cardiac Failure,Antibiotic,,Laboratory
+ADM0078,P078,2026/01/19 00:00,2026/01/21 23:00,Jan 22 2026 19:40,,male,Other,,107.7,58.8,85 mmHg,,,,6.6 mmol/L,,,,Emergency,Stroke,Antibiotic,9.0,monitor
+ADM0078,P078,2026/01/19 00:00,Jan 21 2026 23:00,23/01/2026 07:29,150.0,male,African,,,82.5,,,,11.8,,2.21,,,ICU,Sepsis,None,,Nurse Entry
+ADM0078,P078,2026/01/19 00:00,Jan 21 2026 23:00,2026-01-23 23:29,150.0,Female,AA,300.0,,,85 mmHg,,,,,2.8,15.23,,Ward,Stroke,antibiotic,,Laboratory
+ADM0079,P079,2026-01-07 00:00,11/01/2026 22:00,2026-01-07 01:58,150.0,F,Other,85.3,,67.5,108.4,,,,144.3,,5.79,,Outpatient,Trauma,antibiotic,,Monitor
+ADM0079,P079,2026/01/07 00:00,11/01/2026 22:00,2026/01/07 19:41,22.0,Male,African-American,,,75.0,74.1,98.2 F,,,6.6 mmol/L,,9.42,387.0,Outpatient,Trauma,Vasopressor,,Nurse entry
+ADM0079,P079,Jan 07 2026 00:00,11/01/2026 22:00,Jan 08 2026 06:57,,Female,African-American,91.8,,,85 mmHg,,,19.0,6.6 mmol/L,,5.4,174.0,Emergency,Stroke,None,10.0,Nurse Entry
+ADM0079,P079,Jan 07 2026 00:00,2026/01/11 22:00,2026-01-08 20:59,,M,Other,,,,85 mmHg,,,26.9,,,,167.0,ICU,Stroke,Antibiotic,10.0,monitor
+ADM0079,P079,07/01/2026 00:00,Jan 11 2026 22:00,Jan 08 2026 23:53,62.0,Male,African-American,,123.5,,85 mmHg,100.0 F,,,,1.55,9.61,,ICU,Pneumonia,INSULIN,,Nurse Entry
+ADM0079,P079,07/01/2026 00:00,Jan 11 2026 22:00,Jan 09 2026 05:27,150.0,M,African-American,99.2,,69.7,85 mmHg,,94.8,,56.4,,4.61,,Outpatient,Cardiac Failure,antibiotic,,Monitor
+ADM0079,P079,2026-01-07 00:00,2026-01-11 22:00,Jan 09 2026 09:03,150.0,Male,AA,,,,,,97.9,,,2.24,,,Outpatient,Stroke,INSULIN,9.0,monitor
+ADM0079,P079,Jan 07 2026 00:00,2026/01/11 22:00,11/01/2026 04:07,,male,African-American,118.8,,61.2,,99.1 F,97.5,24.6,119.5,1.51,,122.0,Emergency Admission,Pneumonia,Antibiotic,,Monitor
+ADM0079,P079,07/01/2026 00:00,2026-01-11 22:00,Jan 11 2026 14:32,,male,Other,73.1,139.4,,,,93.6,,,1.39,,172.0,Outpatient,Cardiac Failure,Insulin,10.0,Laboratory
+ADM0079,P079,2026-01-07 00:00,2026-01-11 22:00,2026-01-11 22:46,,female,Other,90.4,,,,,94.2,,6.6 mmol/L,,8.98,,ER,Sepsis,Vasopressor,7.0,monitor
+ADM0080,P080,2026-01-09 00:00,2026-01-12 08:00,2026-01-09 06:37,150.0,male,AA,,119.4,91.4,85 mmHg,38.0 C,120.0,,144.5,2.76,4.57,,Emergency Admission,Stroke,Vasopressor,9.0,Laboratory
+ADM0080,P080,Jan 09 2026 00:00,2026/01/12 08:00,Jan 10 2026 09:24,74.0,male,AA,,,,85 mmHg,99.1 F,120.0,25.2,,1.47,7.95,153.0,Outpatient,Stroke,Insulin,2.0,Laboratory
+ADM0080,P080,2026/01/09 00:00,2026-01-12 08:00,2026/01/10 19:33,,male,AA,,,68.9,,37.8 C,,,98.1,,5.98,122.0,Emergency Admission,Pneumonia,INSULIN,0.0,Nurse entry
+ADM0080,P080,2026/01/09 00:00,2026-01-12 08:00,2026-01-11 00:32,91.0,male,Other,300.0,124.7,,,98.1 F,96.2,25.5,87.6,,,375.0,Ward,Cardiac Failure,Antibiotic,,Nurse entry
+ADM0080,P080,Jan 09 2026 00:00,2026-01-12 08:00,Jan 11 2026 07:13,150.0,Male,Other,300.0,104.0,,,96.6 F,120.0,,145.3,2.86,5.93,374.0,ER,Sepsis,None,7.0,Nurse entry
+ADM0080,P080,Jan 09 2026 00:00,Jan 12 2026 08:00,2026-01-12 06:30,150.0,F,African,300.0,87.9,,85 mmHg,100.2 F,120.0,22.8,141.1,,,111.0,Ward,Pneumonia,INSULIN,14.0,monitor
+ADM0080,P080,2026/01/09 00:00,12/01/2026 08:00,2026/01/12 08:04,69.0,F,African,84.6,,,85 mmHg,36.1 C,97.2,,120.2,1.28,15.3,,ER,Cardiac Failure,Insulin,,Laboratory
+ADM0080,P080,2026-01-09 00:00,Jan 12 2026 08:00,2026/01/13 05:28,66.0,male,Other,300.0,100.1,,,35.5 C,96.2,,6.6 mmol/L,1.48,,427.0,Emergency Admission,Pneumonia,antibiotic,,monitor
+ADM0080,P080,09/01/2026 00:00,2026/01/12 08:00,2026/01/13 17:11,70.0,M,African-American,,135.2,,,,,,,,15.0,97.0,ER,Trauma,Vasopressor,,Nurse entry
+ADM0080,P080,Jan 09 2026 00:00,2026/01/12 08:00,Jan 13 2026 19:55,,Male,African,82.7,119.9,,,36.2 C,,,111.3,,,,ICU,Stroke,None,,Laboratory
+ADM0081,P081,2026-01-30 00:00,2026/02/01 14:00,2026/01/30 02:36,,female,African,300.0,106.0,,85 mmHg,,,,6.6 mmol/L,,,137.0,Ward,Stroke,INSULIN,14.0,monitor
+ADM0081,P081,30/01/2026 00:00,2026-02-01 14:00,2026/01/31 03:07,150.0,Male,African,,,72.6,96.1,,95.8,25.5,,,12.07,,Outpatient,Cardiac Failure,antibiotic,7.0,Nurse Entry
+ADM0081,P081,2026/01/30 00:00,2026/02/01 14:00,2026-01-31 05:25,50.0,Female,African,300.0,128.9,85.2,,100.0 F,120.0,,149.8,0.59,16.99,282.0,Ward,Cardiac Failure,Antibiotic,,Monitor
+ADM0081,P081,30/01/2026 00:00,2026-02-01 14:00,2026-01-31 16:41,,F,African-American,85.5,,,79.1,36.4 C,95.2,,,,5.2,369.0,ICU,Cardiac Failure,Vasopressor,7.0,Monitor
+ADM0081,P081,Jan 30 2026 00:00,2026-02-01 14:00,01/02/2026 19:39,,male,Other,,,83.0,85 mmHg,,,,82.9,2.48,9.97,271.0,Outpatient,Cardiac Failure,Antibiotic,,Monitor
+ADM0081,P081,30/01/2026 00:00,01/02/2026 14:00,2026/02/02 02:16,30.0,male,African,90.2,152.7,,,,,,125.0,1.86,,86.0,ER,Trauma,Insulin,5.0,Nurse Entry
+ADM0081,P081,Jan 30 2026 00:00,01/02/2026 14:00,2026/02/02 03:49,150.0,Female,African,300.0,,,,98.1 F,98.0,,6.6 mmol/L,,,95.0,Emergency,Trauma,Antibiotic,,Nurse entry
+ADM0081,P081,2026/01/30 00:00,01/02/2026 14:00,2026/02/03 00:00,29.0,Male,Other,99.0,127.7,65.3,111.3,97.7 F,120.0,,,2.97,,,Outpatient,Pneumonia,Antibiotic,3.0,Laboratory
+ADM0081,P081,Jan 30 2026 00:00,2026/02/01 14:00,2026-02-03 05:20,81.0,male,African-American,300.0,121.1,,75.7,,,,81.1,,14.27,154.0,Ward,Cardiac Failure,Antibiotic,,Nurse Entry
+ADM0081,P081,2026-01-30 00:00,01/02/2026 14:00,Feb 03 2026 22:05,41.0,male,AA,99.1,149.4,,85 mmHg,,,,6.6 mmol/L,1.52,,395.0,ICU,Pneumonia,Insulin,,Monitor
+ADM0082,P082,15/01/2026 00:00,Jan 17 2026 16:00,Jan 15 2026 10:01,150.0,male,AA,,,,105.6,36.8 C,95.0,16.9,6.6 mmol/L,2.62,8.51,,Emergency Admission,Cardiac Failure,INSULIN,,monitor
+ADM0082,P082,2026/01/15 00:00,17/01/2026 16:00,16/01/2026 14:35,,Male,African,300.0,,,,,95.7,17.7,6.6 mmol/L,0.7,11.41,372.0,Outpatient,Cardiac Failure,antibiotic,4.0,monitor
+ADM0082,P082,2026/01/15 00:00,17/01/2026 16:00,2026/01/17 04:19,150.0,female,African-American,83.2,,89.3,,,120.0,,6.6 mmol/L,,6.15,338.0,Emergency,Pneumonia,antibiotic,,Laboratory
+ADM0082,P082,2026-01-15 00:00,17/01/2026 16:00,2026-01-17 11:27,39.0,female,Other,300.0,116.8,68.3,,,100.4,26.2,62.3,1.41,17.04,90.0,ER,Stroke,Insulin,,monitor
+ADM0082,P082,2026-01-15 00:00,2026-01-17 16:00,2026-01-17 12:29,150.0,male,African,84.0,,,,98.8 F,95.2,15.8,6.6 mmol/L,2.53,13.78,,ICU,Trauma,INSULIN,14.0,monitor
+ADM0082,P082,Jan 15 2026 00:00,Jan 17 2026 16:00,2026-01-17 23:00,,F,AA,,139.3,89.0,89.1,36.6 C,120.0,,,2.79,8.87,302.0,Emergency,Pneumonia,Insulin,2.0,Nurse entry
+ADM0082,P082,2026-01-15 00:00,Jan 17 2026 16:00,Jan 18 2026 05:56,150.0,Female,AA,,124.4,65.1,85 mmHg,,120.0,16.6,109.1,,9.51,245.0,Ward,Trauma,Insulin,,Laboratory
+ADM0082,P082,Jan 15 2026 00:00,Jan 17 2026 16:00,Jan 18 2026 11:24,,F,African-American,300.0,,92.6,76.6,,,14.7,110.2,1.68,13.16,150.0,ER,Trauma,antibiotic,9.0,Nurse Entry
+ADM0082,P082,2026-01-15 00:00,Jan 17 2026 16:00,2026-01-18 20:57,,female,AA,98.1,,64.7,,99.1 F,,,136.3,1.78,,312.0,Emergency,Cardiac Failure,None,5.0,Nurse entry
+ADM0082,P082,Jan 15 2026 00:00,2026-01-17 16:00,2026-01-19 08:08,71.0,female,African-American,300.0,,,85 mmHg,35.9 C,,,141.8,1.97,11.56,317.0,ICU,Sepsis,Vasopressor,,Monitor
+ADM0083,P083,04/01/2026 00:00,06/01/2026 10:00,2026/01/04 03:47,,Male,African-American,,,,,,120.0,,6.6 mmol/L,,17.64,,Outpatient,Sepsis,Vasopressor,5.0,monitor
+ADM0083,P083,Jan 04 2026 00:00,2026/01/06 10:00,2026-01-04 11:26,150.0,Male,AA,86.4,145.7,,,35.9 C,120.0,,6.6 mmol/L,1.28,,,ER,Trauma,None,,Nurse entry
+ADM0083,P083,Jan 04 2026 00:00,2026-01-06 10:00,04/01/2026 16:10,150.0,Female,Other,,96.1,,,,,,116.4,0.81,,,Outpatient,Stroke,Insulin,,monitor
+ADM0083,P083,04/01/2026 00:00,2026-01-06 10:00,04/01/2026 18:29,64.0,Male,Other,82.7,,,,,94.7,,6.6 mmol/L,,12.66,237.0,Ward,Trauma,INSULIN,12.0,Monitor
+ADM0083,P083,2026/01/04 00:00,Jan 06 2026 10:00,Jan 05 2026 07:09,,M,African-American,101.7,,,,,98.1,16.3,,,6.6,359.0,ER,Pneumonia,Insulin,7.0,monitor
+ADM0083,P083,Jan 04 2026 00:00,Jan 06 2026 10:00,06/01/2026 10:14,150.0,male,AA,300.0,,80.6,,,,11.7,6.6 mmol/L,2.73,7.37,102.0,Emergency,Pneumonia,Vasopressor,9.0,Laboratory
+ADM0083,P083,04/01/2026 00:00,06/01/2026 10:00,2026-01-06 18:05,150.0,F,African,,,57.2,,,99.7,17.1,,,9.15,109.0,ICU,Sepsis,INSULIN,6.0,Nurse entry
+ADM0083,P083,2026-01-04 00:00,2026-01-06 10:00,2026-01-06 23:28,53.0,Male,African-American,,,71.6,60.4,35.2 C,120.0,,,0.87,,,Emergency,Sepsis,INSULIN,12.0,Laboratory
+ADM0083,P083,2026-01-04 00:00,Jan 06 2026 10:00,2026-01-07 20:43,150.0,M,Other,,,,68.8,37.9 C,99.0,16.6,6.6 mmol/L,,17.68,252.0,Emergency Admission,Sepsis,None,15.0,Nurse entry
+ADM0083,P083,2026/01/04 00:00,2026-01-06 10:00,2026/01/08 16:33,,male,African,300.0,119.2,,91.4,,96.2,,169.1,2.39,,159.0,ICU,Stroke,antibiotic,,monitor
+ADM0084,P084,2026-02-01 00:00,03/02/2026 15:00,Feb 01 2026 05:35,88.0,female,AA,,,,,,120.0,,,,5.52,149.0,Outpatient,Pneumonia,Antibiotic,,Nurse entry
+ADM0084,P084,2026/02/01 00:00,2026/02/03 15:00,Feb 02 2026 01:02,,F,Other,94.8,,,85 mmHg,,93.6,,,1.16,3.54,,Emergency Admission,Pneumonia,None,10.0,Monitor
+ADM0084,P084,Feb 01 2026 00:00,03/02/2026 15:00,2026/02/02 05:53,27.0,F,African,118.3,124.8,,93.3,,96.3,,137.4,0.68,15.32,375.0,Ward,Stroke,Vasopressor,2.0,Monitor
+ADM0084,P084,2026-02-01 00:00,2026/02/03 15:00,2026-02-02 19:00,,Female,African,89.6,,,79.4,,,,,,,286.0,ICU,Stroke,Vasopressor,,Nurse entry
+ADM0084,P084,Feb 01 2026 00:00,2026-02-03 15:00,2026-02-03 05:05,,F,AA,82.4,,,109.2,,,18.5,,,,136.0,ER,Sepsis,Insulin,,Monitor
+ADM0084,P084,Feb 01 2026 00:00,2026/02/03 15:00,2026-02-03 09:08,,M,African-American,,117.7,,84.3,98.2 F,120.0,,97.8,2.75,,,Emergency Admission,Cardiac Failure,Vasopressor,,monitor
+ADM0084,P084,2026-02-01 00:00,2026/02/03 15:00,2026-02-03 14:09,,Female,African,300.0,,,,,,,,1.8,,420.0,ICU,Sepsis,Insulin,,Nurse Entry
+ADM0084,P084,01/02/2026 00:00,2026/02/03 15:00,Feb 03 2026 20:33,,male,AA,,,,,96.3 F,98.6,16.4,6.6 mmol/L,,,,ICU,Trauma,Antibiotic,9.0,monitor
+ADM0084,P084,01/02/2026 00:00,2026-02-03 15:00,2026/02/05 11:26,150.0,Female,African-American,,116.0,72.8,,36.9 C,120.0,,6.6 mmol/L,,6.51,263.0,ICU,Stroke,Insulin,15.0,monitor
+ADM0084,P084,2026-02-01 00:00,Feb 03 2026 15:00,2026/02/05 16:57,150.0,Female,African-American,91.3,,,,,96.0,,134.0,0.57,,,Emergency Admission,Sepsis,Vasopressor,,Laboratory
+ADM0085,P085,2026/01/01 00:00,Jan 04 2026 16:00,Jan 01 2026 07:38,50.0,F,African,300.0,122.1,76.8,85 mmHg,,99.0,13.6,6.6 mmol/L,2.2,,,Emergency Admission,Pneumonia,Antibiotic,1.0,Nurse Entry
+ADM0085,P085,2026-01-01 00:00,2026-01-04 16:00,2026-01-02 00:41,,female,Other,,139.0,,80.7,,95.4,7.6,6.6 mmol/L,2.65,,,Ward,Stroke,Insulin,7.0,Laboratory
+ADM0085,P085,2026/01/01 00:00,2026-01-04 16:00,02/01/2026 17:11,92.0,Female,African,110.0,,88.7,82.1,,98.6,,6.6 mmol/L,,7.77,,ER,Sepsis,None,,Monitor
+ADM0085,P085,2026-01-01 00:00,2026/01/04 16:00,03/01/2026 04:58,75.0,M,African,,,85.2,88.4,99.3 F,,,199.1,,,272.0,Emergency,Trauma,Antibiotic,,monitor
+ADM0085,P085,2026-01-01 00:00,04/01/2026 16:00,2026-01-03 09:15,,M,African,107.4,,,54.1,37.9 C,120.0,15.6,63.8,,9.49,332.0,ER,Sepsis,Antibiotic,,Nurse Entry
+ADM0085,P085,Jan 01 2026 00:00,2026/01/04 16:00,2026-01-03 12:22,,female,Other,,,,75.5,,93.1,,6.6 mmol/L,2.81,,,Emergency,Trauma,INSULIN,,Laboratory
+ADM0085,P085,2026/01/01 00:00,Jan 04 2026 16:00,2026/01/03 16:52,20.0,Male,African,300.0,99.7,79.1,85 mmHg,,,23.7,84.6,,,201.0,Ward,Cardiac Failure,antibiotic,1.0,Nurse Entry
+ADM0085,P085,01/01/2026 00:00,04/01/2026 16:00,04/01/2026 11:57,40.0,Female,African-American,,137.6,,87.3,,120.0,,6.6 mmol/L,2.94,7.22,396.0,Ward,Cardiac Failure,Vasopressor,1.0,monitor
+ADM0085,P085,Jan 01 2026 00:00,04/01/2026 16:00,04/01/2026 15:37,49.0,Female,AA,117.5,,73.5,85 mmHg,,98.2,9.9,,2.89,,368.0,Emergency,Pneumonia,Vasopressor,8.0,Nurse Entry
+ADM0085,P085,2026/01/01 00:00,Jan 04 2026 16:00,2026/01/04 22:56,150.0,male,African-American,79.0,91.1,69.4,,,,21.1,169.9,,,,Ward,Pneumonia,None,,Nurse Entry
+ADM0086,P086,2026/02/08 00:00,2026/02/11 10:00,2026-02-08 11:37,47.0,F,AA,81.8,,56.8,,,,,88.9,,,276.0,ICU,Sepsis,antibiotic,13.0,monitor
+ADM0086,P086,2026-02-08 00:00,2026-02-11 10:00,08/02/2026 12:51,,M,African-American,,135.8,74.7,63.5,36.9 C,103.0,,,0.77,,261.0,Ward,Sepsis,Vasopressor,6.0,Monitor
+ADM0086,P086,Feb 08 2026 00:00,11/02/2026 10:00,2026-02-09 02:37,,F,Other,300.0,109.1,,,36.4 C,,,153.6,2.0,12.09,336.0,Emergency Admission,Cardiac Failure,INSULIN,10.0,Nurse entry
+ADM0086,P086,2026-02-08 00:00,Feb 11 2026 10:00,2026/02/09 19:11,81.0,F,Other,300.0,,78.6,90.0,37.6 C,97.3,,6.6 mmol/L,2.54,,396.0,ICU,Cardiac Failure,Insulin,,Laboratory
+ADM0086,P086,Feb 08 2026 00:00,Feb 11 2026 10:00,10/02/2026 09:03,87.0,M,Other,300.0,,70.1,,37.5 C,97.2,,6.6 mmol/L,,11.18,417.0,Ward,Cardiac Failure,Antibiotic,,Monitor
+ADM0086,P086,08/02/2026 00:00,11/02/2026 10:00,11/02/2026 00:50,,Male,African,300.0,,,85 mmHg,,95.4,,6.6 mmol/L,2.93,,,ICU,Sepsis,None,5.0,Nurse Entry
+ADM0086,P086,Feb 08 2026 00:00,11/02/2026 10:00,2026-02-11 07:59,150.0,female,Other,,98.4,,99.3,99.5 F,,,90.7,,,,Outpatient,Pneumonia,Antibiotic,,Laboratory
+ADM0086,P086,08/02/2026 00:00,2026-02-11 10:00,2026-02-11 10:41,150.0,Female,African-American,,149.7,50.4,86.7,97.9 F,,,149.0,2.45,15.61,275.0,Emergency Admission,Sepsis,Insulin,0.0,monitor
+ADM0086,P086,Feb 08 2026 00:00,2026/02/11 10:00,Feb 12 2026 05:31,69.0,female,Other,82.8,,,86.3,,,18.0,,,8.17,,ICU,Trauma,Antibiotic,,monitor
+ADM0086,P086,2026/02/08 00:00,11/02/2026 10:00,12/02/2026 19:05,32.0,Female,Other,,138.3,,,37.8 C,,,119.7,2.32,17.29,,Ward,Cardiac Failure,None,,Nurse Entry
+ADM0087,P087,30/01/2026 00:00,Feb 03 2026 12:00,Jan 30 2026 04:27,150.0,Male,AA,,,,,,96.2,,140.3,2.94,,397.0,ICU,Cardiac Failure,INSULIN,5.0,Nurse Entry
+ADM0087,P087,2026/01/30 00:00,Feb 03 2026 12:00,Jan 31 2026 22:18,52.0,F,African-American,74.2,,,,,99.9,,,,,371.0,ICU,Cardiac Failure,Vasopressor,11.0,monitor
+ADM0087,P087,2026/01/30 00:00,2026-02-03 12:00,Feb 01 2026 01:53,77.0,Female,Other,,,74.0,85 mmHg,36.6 C,96.6,,88.0,,,,ICU,Sepsis,Insulin,8.0,Laboratory
+ADM0087,P087,2026-01-30 00:00,2026-02-03 12:00,01/02/2026 05:49,150.0,Male,AA,300.0,,,,,120.0,,,1.25,,,ER,Stroke,Vasopressor,8.0,monitor
+ADM0087,P087,2026/01/30 00:00,2026-02-03 12:00,2026/02/01 13:03,,M,Other,,,,,,120.0,13.0,6.6 mmol/L,,11.34,,ER,Stroke,antibiotic,1.0,Nurse Entry
+ADM0087,P087,30/01/2026 00:00,2026-02-03 12:00,2026-02-01 18:28,,M,African,300.0,,,102.1,,101.4,,6.6 mmol/L,,13.18,252.0,ICU,Pneumonia,Insulin,,Nurse entry
+ADM0087,P087,2026-01-30 00:00,2026/02/03 12:00,2026/02/02 12:32,150.0,Female,African,,,,85 mmHg,98.4 F,97.3,22.2,6.6 mmol/L,,,,Emergency,Stroke,None,,Laboratory
+ADM0087,P087,Jan 30 2026 00:00,2026-02-03 12:00,2026/02/03 00:13,78.0,male,Other,118.7,,,85 mmHg,,,19.2,,,,,ER,Pneumonia,Antibiotic,,Monitor
+ADM0087,P087,2026/01/30 00:00,2026-02-03 12:00,2026/02/03 18:16,74.0,F,Other,102.6,103.5,69.1,59.8,,94.4,27.0,6.6 mmol/L,2.37,10.65,340.0,Emergency Admission,Stroke,antibiotic,,Monitor
+ADM0087,P087,Jan 30 2026 00:00,03/02/2026 12:00,03/02/2026 21:35,77.0,F,African,300.0,,,85 mmHg,,99.3,,,,15.68,95.0,Emergency Admission,Stroke,antibiotic,7.0,Nurse Entry
+ADM0088,P088,2026/01/21 00:00,2026-01-24 14:00,2026/01/21 02:39,94.0,Male,AA,300.0,,72.9,91.3,,,,6.6 mmol/L,1.82,,417.0,Emergency,Pneumonia,INSULIN,,Nurse entry
+ADM0088,P088,2026-01-21 00:00,2026/01/24 14:00,2026/01/21 14:07,150.0,Female,African,,131.7,90.4,,,120.0,20.1,,1.87,,80.0,Outpatient,Sepsis,None,15.0,Nurse entry
+ADM0088,P088,Jan 21 2026 00:00,2026-01-24 14:00,2026/01/22 12:09,24.0,Male,African,300.0,108.7,,99.8,,97.5,11.4,,,16.07,,Ward,Stroke,Vasopressor,0.0,monitor
+ADM0088,P088,Jan 21 2026 00:00,24/01/2026 14:00,2026/01/22 21:09,53.0,Male,Other,300.0,152.5,,85 mmHg,37.5 C,120.0,,46.8,2.82,,,ICU,Sepsis,antibiotic,1.0,Monitor
+ADM0088,P088,2026/01/21 00:00,2026-01-24 14:00,24/01/2026 00:15,71.0,female,AA,,,63.9,,,120.0,,,,,,Emergency,Sepsis,Antibiotic,,Nurse Entry
+ADM0088,P088,Jan 21 2026 00:00,24/01/2026 14:00,2026/01/24 04:19,94.0,male,African,68.1,152.6,,,98.8 F,94.5,,,,,287.0,ICU,Stroke,Insulin,14.0,Nurse Entry
+ADM0088,P088,21/01/2026 00:00,2026/01/24 14:00,Jan 24 2026 09:58,150.0,M,African,,,77.0,85 mmHg,,,19.2,,,,222.0,ICU,Trauma,INSULIN,8.0,Monitor
+ADM0088,P088,2026/01/21 00:00,2026/01/24 14:00,24/01/2026 15:22,,M,Other,,161.0,54.5,80.6,38.1 C,,,6.6 mmol/L,,,,Ward,Stroke,None,,Nurse entry
+ADM0088,P088,2026/01/21 00:00,24/01/2026 14:00,24/01/2026 16:19,,Female,Other,94.4,,,85 mmHg,36.5 C,96.0,,6.6 mmol/L,,7.28,,ICU,Pneumonia,Vasopressor,12.0,Nurse entry
+ADM0088,P088,21/01/2026 00:00,24/01/2026 14:00,Jan 25 2026 03:58,150.0,F,Other,300.0,,,,37.5 C,,,117.6,,6.65,,ER,Pneumonia,None,8.0,Monitor
+ADM0089,P089,2026-01-21 00:00,Jan 24 2026 01:00,Jan 21 2026 10:00,150.0,female,Other,,123.2,77.3,,98.2 F,98.0,,,0.96,9.65,233.0,Emergency,Pneumonia,antibiotic,,Nurse Entry
+ADM0089,P089,2026/01/21 00:00,24/01/2026 01:00,2026-01-21 16:57,150.0,male,Other,,,,,,120.0,9.2,6.6 mmol/L,2.85,,397.0,Emergency,Stroke,Antibiotic,,Nurse Entry
+ADM0089,P089,2026/01/21 00:00,2026/01/24 01:00,2026/01/21 19:01,95.0,male,AA,,,83.8,,36.3 C,120.0,,6.6 mmol/L,1.43,9.84,,Emergency Admission,Cardiac Failure,Antibiotic,,Nurse entry
+ADM0089,P089,2026/01/21 00:00,Jan 24 2026 01:00,2026/01/22 00:26,150.0,female,AA,73.4,,70.4,,,,,,2.44,,195.0,Emergency Admission,Pneumonia,Insulin,,Monitor
+ADM0089,P089,2026/01/21 00:00,2026/01/24 01:00,23/01/2026 03:00,39.0,F,AA,81.1,129.6,,92.3,97.7 F,,,,,16.02,382.0,ER,Trauma,Antibiotic,,Monitor
+ADM0089,P089,21/01/2026 00:00,Jan 24 2026 01:00,Jan 23 2026 19:12,,M,African,,,,119.8,,120.0,,90.5,0.96,,113.0,Emergency Admission,Trauma,Insulin,10.0,Nurse entry
+ADM0089,P089,2026-01-21 00:00,Jan 24 2026 01:00,2026-01-24 04:04,150.0,Female,African-American,300.0,,68.3,,,,20.7,6.6 mmol/L,1.97,8.3,,ER,Sepsis,Vasopressor,11.0,Monitor
+ADM0089,P089,2026/01/21 00:00,Jan 24 2026 01:00,Jan 24 2026 05:20,150.0,M,African-American,300.0,157.9,,69.4,,,23.2,94.9,,6.04,380.0,Emergency,Cardiac Failure,Vasopressor,9.0,Nurse entry
+ADM0089,P089,21/01/2026 00:00,24/01/2026 01:00,24/01/2026 23:17,150.0,Male,African-American,300.0,,,83.5,37.0 C,97.5,,,,,401.0,Emergency Admission,Trauma,antibiotic,0.0,monitor
+ADM0089,P089,Jan 21 2026 00:00,2026-01-24 01:00,2026/01/25 01:20,150.0,F,African-American,93.0,,,85 mmHg,,,16.4,126.4,1.38,,,Emergency,Stroke,antibiotic,,monitor
+ADM0090,P090,2026-01-03 00:00,Jan 07 2026 16:00,03/01/2026 05:38,28.0,Female,African-American,,,91.6,109.0,,120.0,,,,13.5,255.0,Outpatient,Pneumonia,Antibiotic,3.0,Nurse entry
+ADM0090,P090,Jan 03 2026 00:00,2026/01/07 16:00,03/01/2026 15:41,36.0,M,African-American,300.0,,74.9,,,,,,,,325.0,ER,Pneumonia,INSULIN,6.0,monitor
+ADM0090,P090,2026/01/03 00:00,2026-01-07 16:00,Jan 03 2026 21:48,150.0,M,Other,,,,104.1,,97.4,16.2,6.6 mmol/L,,10.07,266.0,Emergency,Pneumonia,INSULIN,12.0,Nurse entry
+ADM0090,P090,Jan 03 2026 00:00,2026/01/07 16:00,2026/01/05 13:19,18.0,F,Other,100.6,,77.5,,98.1 F,97.0,,6.6 mmol/L,1.2,,,Emergency,Pneumonia,INSULIN,,Laboratory
+ADM0090,P090,2026-01-03 00:00,2026-01-07 16:00,05/01/2026 23:53,93.0,male,African,96.2,128.2,89.6,85 mmHg,,97.8,,90.4,0.71,,253.0,Emergency Admission,Pneumonia,Insulin,,Nurse entry
+ADM0090,P090,2026-01-03 00:00,07/01/2026 16:00,2026/01/06 04:23,23.0,male,Other,96.5,123.5,,,,,,6.6 mmol/L,,11.16,,Ward,Stroke,antibiotic,,Laboratory
+ADM0090,P090,2026-01-03 00:00,2026-01-07 16:00,2026-01-06 05:14,150.0,F,AA,300.0,,55.4,,,,,6.6 mmol/L,2.55,4.2,,ICU,Sepsis,Insulin,15.0,Laboratory
+ADM0090,P090,2026-01-03 00:00,07/01/2026 16:00,2026/01/06 14:44,,Female,AA,300.0,,79.1,,36.7 C,,,,2.47,,287.0,ICU,Pneumonia,Vasopressor,,Nurse entry
+ADM0090,P090,Jan 03 2026 00:00,07/01/2026 16:00,2026-01-06 19:23,,Female,African,,,65.8,,,98.2,,,,4.15,271.0,ICU,Cardiac Failure,Vasopressor,2.0,Nurse Entry
+ADM0090,P090,2026/01/03 00:00,Jan 07 2026 16:00,2026-01-06 20:37,,female,AA,,90.1,,85 mmHg,,120.0,,6.6 mmol/L,,9.3,373.0,Emergency Admission,Stroke,INSULIN,,Laboratory
+ADM0091,P091,Jan 26 2026 00:00,2026/01/29 03:00,2026/01/26 15:45,88.0,M,Other,93.2,113.2,86.5,85 mmHg,,,11.4,,,5.97,83.0,ER,Pneumonia,Antibiotic,,monitor
+ADM0091,P091,26/01/2026 00:00,29/01/2026 03:00,2026/01/27 00:31,150.0,Female,African-American,,,,,100.8 F,94.7,,6.6 mmol/L,1.06,4.21,,Outpatient,Stroke,antibiotic,,Nurse Entry
+ADM0091,P091,26/01/2026 00:00,29/01/2026 03:00,27/01/2026 06:28,,female,African-American,78.4,142.9,77.2,85 mmHg,38.3 C,93.1,,6.6 mmol/L,2.73,5.49,296.0,ICU,Pneumonia,antibiotic,,Nurse Entry
+ADM0091,P091,2026/01/26 00:00,2026-01-29 03:00,27/01/2026 17:13,95.0,female,Other,,,81.7,,,120.0,,84.8,,9.72,,Outpatient,Stroke,INSULIN,2.0,Nurse entry
+ADM0091,P091,2026-01-26 00:00,2026/01/29 03:00,Jan 27 2026 18:14,49.0,female,African-American,91.9,,58.2,101.9,,,,6.6 mmol/L,1.25,6.21,,Emergency Admission,Stroke,INSULIN,,monitor
+ADM0091,P091,2026/01/26 00:00,2026-01-29 03:00,2026/01/28 01:59,18.0,male,AA,102.0,142.4,,,,120.0,,147.1,,13.48,,Emergency,Sepsis,INSULIN,,Monitor
+ADM0091,P091,Jan 26 2026 00:00,2026-01-29 03:00,2026/01/28 06:08,,male,African-American,,,,64.7,,120.0,22.4,6.6 mmol/L,2.19,8.35,100.0,Emergency Admission,Trauma,Antibiotic,,Laboratory
+ADM0091,P091,Jan 26 2026 00:00,2026/01/29 03:00,Jan 28 2026 22:26,150.0,F,African-American,92.2,130.2,,85 mmHg,,120.0,17.8,6.6 mmol/L,,11.5,,Ward,Sepsis,Vasopressor,6.0,monitor
+ADM0091,P091,Jan 26 2026 00:00,29/01/2026 03:00,30/01/2026 16:49,150.0,Female,AA,,151.8,67.9,68.4,36.9 C,120.0,,,2.81,,,ER,Cardiac Failure,Antibiotic,8.0,Monitor
+ADM0091,P091,2026/01/26 00:00,2026/01/29 03:00,30/01/2026 17:44,35.0,male,AA,,,69.6,85 mmHg,100.6 F,,,,,,112.0,ICU,Pneumonia,Insulin,15.0,Laboratory
+ADM0092,P092,2026/02/04 00:00,Feb 07 2026 13:00,2026/02/04 06:36,150.0,male,AA,,130.5,,85 mmHg,,120.0,,,,,178.0,Emergency,Stroke,Insulin,4.0,monitor
+ADM0092,P092,2026-02-04 00:00,07/02/2026 13:00,2026/02/04 08:51,,F,African-American,84.3,183.2,,,,,,,,,,Emergency Admission,Stroke,Insulin,,Laboratory
+ADM0092,P092,2026-02-04 00:00,07/02/2026 13:00,Feb 04 2026 09:56,,M,African,80.4,124.1,,85 mmHg,,,,,2.76,,429.0,Ward,Sepsis,Insulin,,Laboratory
+ADM0092,P092,04/02/2026 00:00,Feb 07 2026 13:00,Feb 05 2026 01:20,51.0,male,Other,,,,60.7,,120.0,,,,17.84,342.0,Ward,Trauma,None,,Monitor
+ADM0092,P092,2026-02-04 00:00,Feb 07 2026 13:00,Feb 05 2026 08:15,37.0,male,Other,84.4,106.9,90.2,85 mmHg,,120.0,18.8,,1.23,12.84,,Emergency Admission,Sepsis,Antibiotic,8.0,Nurse entry
+ADM0092,P092,2026-02-04 00:00,2026/02/07 13:00,2026/02/06 01:49,,Female,AA,,118.7,,105.2,36.0 C,,,,,9.59,,Emergency,Trauma,Antibiotic,,monitor
+ADM0092,P092,2026-02-04 00:00,Feb 07 2026 13:00,2026/02/06 18:19,150.0,M,African,,148.7,58.5,,,99.3,23.8,,,,155.0,ICU,Sepsis,Vasopressor,,Nurse entry
+ADM0092,P092,2026-02-04 00:00,2026/02/07 13:00,07/02/2026 17:17,57.0,Male,African-American,72.5,,,,,120.0,,6.6 mmol/L,,,,Emergency,Stroke,Insulin,8.0,Nurse Entry
+ADM0092,P092,04/02/2026 00:00,Feb 07 2026 13:00,2026/02/07 20:00,,Male,Other,83.6,,71.7,72.6,,93.4,,,,,,Outpatient,Trauma,Vasopressor,6.0,monitor
+ADM0092,P092,2026/02/04 00:00,2026/02/07 13:00,07/02/2026 21:12,93.0,female,African,,103.7,,,38.0 C,,20.0,6.6 mmol/L,,,,Outpatient,Stroke,antibiotic,,Nurse Entry
+ADM0093,P093,16/01/2026 00:00,18/01/2026 17:00,16/01/2026 15:37,150.0,male,African,89.6,,,,,97.7,,6.6 mmol/L,,,,Emergency,Trauma,Insulin,,Laboratory
+ADM0093,P093,2026-01-16 00:00,2026-01-18 17:00,2026/01/16 18:12,,male,African,,129.7,,,36.8 C,120.0,,6.6 mmol/L,,12.6,287.0,ER,Cardiac Failure,antibiotic,,Nurse Entry
+ADM0093,P093,16/01/2026 00:00,2026-01-18 17:00,2026/01/17 04:33,69.0,Female,African-American,300.0,,,84.3,97.0 F,120.0,15.6,,,17.12,360.0,ICU,Stroke,INSULIN,12.0,Nurse entry
+ADM0093,P093,2026-01-16 00:00,2026/01/18 17:00,2026-01-18 09:49,,female,African,69.8,148.4,,85 mmHg,97.9 F,98.4,,111.4,0.85,,363.0,ICU,Cardiac Failure,INSULIN,,Nurse entry
+ADM0093,P093,2026-01-16 00:00,18/01/2026 17:00,Jan 18 2026 10:57,,F,AA,,,83.0,118.0,,,,59.9,,,200.0,ICU,Pneumonia,None,,Laboratory
+ADM0093,P093,Jan 16 2026 00:00,2026/01/18 17:00,2026-01-18 12:40,63.0,female,African,300.0,,53.2,85 mmHg,,120.0,,6.6 mmol/L,2.49,,268.0,Emergency,Sepsis,Vasopressor,,monitor
+ADM0093,P093,2026-01-16 00:00,18/01/2026 17:00,18/01/2026 16:03,59.0,Female,Other,300.0,,58.6,,,,9.2,,1.08,,,ER,Sepsis,Antibiotic,,Laboratory
+ADM0093,P093,Jan 16 2026 00:00,Jan 18 2026 17:00,2026/01/19 07:22,150.0,M,African,,,,,36.8 C,,,108.4,1.88,,325.0,Outpatient,Stroke,INSULIN,6.0,Laboratory
+ADM0093,P093,Jan 16 2026 00:00,2026/01/18 17:00,19/01/2026 11:37,150.0,female,African-American,300.0,,71.8,85.5,,120.0,,,2.03,9.57,369.0,Ward,Stroke,Vasopressor,9.0,Nurse Entry
+ADM0093,P093,2026-01-16 00:00,2026/01/18 17:00,Jan 19 2026 20:14,150.0,M,AA,300.0,,,,99.3 F,,13.1,6.6 mmol/L,,,,Outpatient,Pneumonia,INSULIN,,Nurse entry
+ADM0094,P094,2026/01/23 00:00,2026-01-27 21:00,2026/01/23 10:59,,Male,African-American,66.9,131.3,,,37.6 C,120.0,,128.5,2.87,,,Outpatient,Sepsis,INSULIN,8.0,monitor
+ADM0094,P094,2026-01-23 00:00,27/01/2026 21:00,24/01/2026 10:51,,M,African-American,,,84.9,,,120.0,12.6,,,6.21,139.0,Outpatient,Trauma,Insulin,14.0,Nurse entry
+ADM0094,P094,2026/01/23 00:00,2026/01/27 21:00,2026/01/24 12:47,27.0,Female,AA,300.0,,76.5,,96.6 F,97.4,18.1,90.4,1.66,17.27,217.0,Emergency,Pneumonia,INSULIN,,Nurse entry
+ADM0094,P094,2026/01/23 00:00,Jan 27 2026 21:00,2026-01-25 14:14,,F,African,,129.5,,,,100.7,,6.6 mmol/L,1.61,4.72,188.0,Ward,Sepsis,Insulin,,Laboratory
+ADM0094,P094,23/01/2026 00:00,2026/01/27 21:00,2026-01-26 08:27,150.0,F,African-American,,126.7,,93.6,36.8 C,120.0,,,,,262.0,Emergency Admission,Pneumonia,Insulin,,Laboratory
+ADM0094,P094,2026-01-23 00:00,2026-01-27 21:00,26/01/2026 11:51,,Male,African-American,300.0,,,96.9,97.0 F,,,,,,326.0,ICU,Stroke,antibiotic,7.0,Laboratory
+ADM0094,P094,23/01/2026 00:00,2026-01-27 21:00,Jan 26 2026 22:30,,F,African,,,,85 mmHg,,100.0,,164.4,2.4,,,ER,Stroke,Insulin,10.0,Monitor
+ADM0094,P094,2026-01-23 00:00,Jan 27 2026 21:00,2026-01-27 21:08,,M,African-American,,,,,37.7 C,120.0,16.5,161.1,,9.75,110.0,Emergency Admission,Stroke,Insulin,7.0,Laboratory
+ADM0094,P094,Jan 23 2026 00:00,2026-01-27 21:00,2026-01-27 22:13,50.0,F,Other,,,67.6,85 mmHg,36.8 C,96.1,,,1.21,,129.0,ER,Trauma,INSULIN,,Laboratory
+ADM0094,P094,2026/01/23 00:00,2026-01-27 21:00,2026/01/27 23:08,150.0,Male,African-American,,143.3,94.1,,98.6 F,,,152.2,1.31,11.18,286.0,Emergency,Pneumonia,Antibiotic,1.0,Nurse entry
+ADM0095,P095,2026-01-28 00:00,2026-01-31 18:00,Jan 28 2026 02:08,37.0,F,Other,,115.9,86.8,,98.4 F,,,,1.76,8.98,,Outpatient,Pneumonia,Antibiotic,4.0,Nurse Entry
+ADM0095,P095,2026-01-28 00:00,2026-01-31 18:00,Jan 29 2026 17:54,150.0,Female,African-American,300.0,86.0,66.2,,,98.3,18.9,168.2,2.26,6.9,138.0,Ward,Stroke,Vasopressor,6.0,Nurse entry
+ADM0095,P095,28/01/2026 00:00,Jan 31 2026 18:00,29/01/2026 18:06,,Male,African-American,100.4,111.3,,,,120.0,,6.6 mmol/L,0.98,12.41,235.0,ER,Trauma,Vasopressor,,monitor
+ADM0095,P095,Jan 28 2026 00:00,2026/01/31 18:00,2026/01/31 10:50,,Female,African,300.0,,91.2,,,120.0,,,1.24,,,ICU,Stroke,Insulin,,monitor
+ADM0095,P095,Jan 28 2026 00:00,31/01/2026 18:00,2026/01/31 14:53,,M,African,,,,87.1,,98.8,20.1,,,,233.0,Ward,Trauma,Vasopressor,7.0,monitor
+ADM0095,P095,Jan 28 2026 00:00,31/01/2026 18:00,Jan 31 2026 16:54,,F,Other,300.0,,,,35.6 C,120.0,,121.1,,13.3,,ICU,Trauma,Insulin,,Monitor
+ADM0095,P095,28/01/2026 00:00,2026/01/31 18:00,2026/01/31 17:21,150.0,female,African-American,,,81.9,85 mmHg,,,,,,8.84,422.0,Outpatient,Sepsis,Insulin,,Nurse entry
+ADM0095,P095,28/01/2026 00:00,2026-01-31 18:00,2026/02/01 10:30,,Female,African,113.1,,,85 mmHg,,93.6,,168.2,2.85,,,ICU,Trauma,None,15.0,Monitor
+ADM0095,P095,2026/01/28 00:00,2026/01/31 18:00,2026-02-01 20:06,89.0,F,AA,300.0,160.7,98.9,88.0,100.6 F,,,109.6,,,283.0,Ward,Cardiac Failure,Antibiotic,,Laboratory
+ADM0095,P095,28/01/2026 00:00,31/01/2026 18:00,2026-02-01 21:22,76.0,female,AA,92.3,94.7,,85 mmHg,,120.0,16.3,,2.35,12.42,,Emergency Admission,Trauma,INSULIN,,Monitor
+ADM0096,P096,2026-02-09 00:00,2026-02-13 04:00,2026/02/09 03:14,31.0,M,African,84.9,,80.4,85 mmHg,,120.0,27.2,136.2,2.93,4.26,,Ward,Pneumonia,Insulin,,Nurse Entry
+ADM0096,P096,2026-02-09 00:00,Feb 13 2026 04:00,2026-02-10 03:43,150.0,female,AA,85.1,,85.9,,,120.0,17.6,161.3,1.63,,358.0,Emergency,Trauma,None,9.0,Monitor
+ADM0096,P096,09/02/2026 00:00,2026-02-13 04:00,10/02/2026 04:03,150.0,F,Other,90.2,,75.8,85 mmHg,37.5 C,120.0,20.9,149.8,,11.47,142.0,Ward,Stroke,INSULIN,,Nurse entry
+ADM0096,P096,2026-02-09 00:00,13/02/2026 04:00,Feb 10 2026 18:16,43.0,F,African,300.0,,68.6,,,99.1,,143.9,0.51,,326.0,Emergency Admission,Sepsis,Insulin,3.0,Nurse Entry
+ADM0096,P096,Feb 09 2026 00:00,2026-02-13 04:00,11/02/2026 04:50,,female,African,84.1,111.4,,86.3,,,,,,,,Emergency Admission,Sepsis,antibiotic,,monitor
+ADM0096,P096,2026/02/09 00:00,2026/02/13 04:00,Feb 11 2026 09:54,72.0,male,African,98.6,114.1,,85 mmHg,,,25.0,,,3.67,,ICU,Pneumonia,INSULIN,4.0,Laboratory
+ADM0096,P096,2026-02-09 00:00,13/02/2026 04:00,2026-02-11 22:18,60.0,M,African,,,,,37.5 C,,,6.6 mmol/L,,4.96,245.0,Emergency Admission,Trauma,INSULIN,9.0,Monitor
+ADM0096,P096,Feb 09 2026 00:00,2026/02/13 04:00,2026-02-12 14:08,150.0,male,AA,300.0,,,,,120.0,12.9,106.3,0.58,,,Outpatient,Trauma,Vasopressor,12.0,Laboratory
+ADM0096,P096,Feb 09 2026 00:00,13/02/2026 04:00,12/02/2026 15:23,150.0,female,African,,116.6,,,36.8 C,120.0,,6.6 mmol/L,,9.28,,Emergency,Trauma,None,1.0,Laboratory
+ADM0096,P096,Feb 09 2026 00:00,2026-02-13 04:00,13/02/2026 17:54,,male,Other,95.2,,,85 mmHg,,99.8,5.6,106.3,,,357.0,Emergency Admission,Cardiac Failure,None,15.0,Nurse entry
+ADM0097,P097,10/01/2026 00:00,12/01/2026 00:00,10/01/2026 14:50,88.0,Female,African-American,300.0,110.2,,73.2,,,,64.7,0.68,,,Emergency,Sepsis,Vasopressor,2.0,Nurse entry
+ADM0097,P097,2026-01-10 00:00,12/01/2026 00:00,Jan 10 2026 15:17,150.0,Male,African-American,,91.0,,108.2,,,14.9,156.1,1.94,15.5,,Emergency,Cardiac Failure,Insulin,,Nurse entry
+ADM0097,P097,2026-01-10 00:00,2026-01-12 00:00,2026-01-10 21:15,56.0,male,AA,300.0,,72.7,,97.3 F,120.0,,125.4,0.91,,,ER,Trauma,Insulin,9.0,Nurse entry
+ADM0097,P097,10/01/2026 00:00,2026-01-12 00:00,2026/01/11 00:02,,F,African,300.0,118.9,,85 mmHg,96.1 F,120.0,23.9,80.6,1.2,,208.0,Emergency Admission,Trauma,antibiotic,,Laboratory
+ADM0097,P097,Jan 10 2026 00:00,2026/01/12 00:00,Jan 11 2026 20:35,150.0,M,African,300.0,,74.2,85 mmHg,97.3 F,,,,0.87,,263.0,ER,Stroke,antibiotic,13.0,monitor
+ADM0097,P097,2026/01/10 00:00,Jan 12 2026 00:00,2026/01/12 04:04,76.0,Female,Other,,,,83.5,38.1 C,,,105.7,,,127.0,Outpatient,Stroke,None,9.0,Nurse Entry
+ADM0097,P097,2026-01-10 00:00,Jan 12 2026 00:00,12/01/2026 12:22,150.0,F,African-American,300.0,,,,,,,140.2,,10.13,,Emergency Admission,Pneumonia,Antibiotic,,Nurse Entry
+ADM0097,P097,2026-01-10 00:00,2026-01-12 00:00,Jan 12 2026 16:13,,female,African-American,,,,,,,14.7,6.6 mmol/L,,,,ER,Sepsis,Insulin,,Nurse entry
+ADM0097,P097,10/01/2026 00:00,Jan 12 2026 00:00,13/01/2026 20:51,,Male,African-American,96.0,,,85 mmHg,,120.0,,6.6 mmol/L,1.5,10.62,,Emergency Admission,Stroke,Antibiotic,12.0,Monitor
+ADM0097,P097,10/01/2026 00:00,2026/01/12 00:00,2026/01/14 15:17,150.0,male,African,,120.4,85.7,,,97.7,,132.2,1.58,,,Outpatient,Stroke,Antibiotic,,Nurse Entry
+ADM0098,P098,Feb 07 2026 00:00,2026-02-09 22:00,07/02/2026 00:14,33.0,male,African-American,300.0,122.6,,85 mmHg,,98.7,20.7,66.9,2.29,,128.0,Emergency,Stroke,Antibiotic,7.0,Laboratory
+ADM0098,P098,2026/02/07 00:00,2026-02-09 22:00,2026-02-08 02:39,18.0,female,African,95.6,,,118.9,,95.1,,6.6 mmol/L,,,,Emergency,Stroke,INSULIN,,Nurse entry
+ADM0098,P098,2026/02/07 00:00,09/02/2026 22:00,09/02/2026 00:19,,M,African-American,,110.7,,,,,18.5,6.6 mmol/L,,,,Emergency Admission,Cardiac Failure,Antibiotic,14.0,Monitor
+ADM0098,P098,Feb 07 2026 00:00,09/02/2026 22:00,2026-02-09 02:39,150.0,F,Other,,,,,97.5 F,,15.1,,,,114.0,Emergency,Stroke,Antibiotic,,monitor
+ADM0098,P098,2026-02-07 00:00,2026-02-09 22:00,09/02/2026 03:35,34.0,Male,African,,,,76.0,,,,,,5.59,251.0,ICU,Pneumonia,Antibiotic,15.0,Nurse entry
+ADM0098,P098,2026-02-07 00:00,09/02/2026 22:00,2026/02/09 12:22,150.0,M,AA,,126.6,,99.1,37.0 C,,,,,4.8,91.0,Emergency,Pneumonia,Insulin,10.0,Nurse entry
+ADM0098,P098,07/02/2026 00:00,09/02/2026 22:00,2026-02-10 05:48,44.0,M,Other,,,,85 mmHg,35.3 C,97.6,,,,8.97,331.0,Emergency Admission,Trauma,Insulin,10.0,Laboratory
+ADM0098,P098,07/02/2026 00:00,2026-02-09 22:00,2026-02-11 10:57,,female,African,,,91.0,85 mmHg,,,,118.5,,,,Emergency,Pneumonia,Insulin,,Laboratory
+ADM0098,P098,07/02/2026 00:00,2026/02/09 22:00,Feb 11 2026 13:22,,F,Other,,,,85 mmHg,,120.0,,124.7,0.81,,,Emergency Admission,Cardiac Failure,None,,monitor
+ADM0098,P098,2026-02-07 00:00,2026/02/09 22:00,11/02/2026 19:40,,M,Other,300.0,,79.4,78.1,96.8 F,,,6.6 mmol/L,,,171.0,Emergency Admission,Cardiac Failure,INSULIN,,Nurse entry
+ADM0099,P099,Jan 14 2026 00:00,2026-01-17 08:00,14/01/2026 09:27,36.0,M,Other,,,,,,120.0,,139.2,,17.69,,Emergency Admission,Sepsis,Insulin,0.0,Nurse Entry
+ADM0099,P099,14/01/2026 00:00,2026-01-17 08:00,Jan 14 2026 14:41,150.0,female,African-American,,88.3,,,,120.0,12.0,,,,,Outpatient,Trauma,INSULIN,14.0,monitor
+ADM0099,P099,14/01/2026 00:00,17/01/2026 08:00,2026/01/14 16:12,43.0,Male,African,76.4,,70.1,71.6,,120.0,,131.5,,,358.0,ICU,Pneumonia,Insulin,,Monitor
+ADM0099,P099,2026/01/14 00:00,2026/01/17 08:00,2026-01-14 17:50,,Male,AA,300.0,,,,37.1 C,97.2,,6.6 mmol/L,,15.71,138.0,ICU,Cardiac Failure,antibiotic,11.0,Nurse entry
+ADM0099,P099,2026-01-14 00:00,2026-01-17 08:00,2026-01-15 10:59,,M,Other,80.8,,,85 mmHg,97.2 F,,16.6,100.9,1.47,,210.0,Emergency,Cardiac Failure,None,8.0,Monitor
+ADM0099,P099,Jan 14 2026 00:00,2026-01-17 08:00,15/01/2026 14:22,60.0,male,African,,136.5,,,,,,,1.48,11.84,101.0,Emergency,Trauma,antibiotic,,Laboratory
+ADM0099,P099,2026/01/14 00:00,Jan 17 2026 08:00,2026-01-17 01:28,150.0,Male,African-American,,112.4,,85 mmHg,97.5 F,,,6.6 mmol/L,1.11,14.61,,Outpatient,Stroke,Insulin,3.0,Nurse entry
+ADM0099,P099,2026/01/14 00:00,2026/01/17 08:00,Jan 17 2026 15:36,150.0,female,African-American,300.0,140.9,72.6,,37.6 C,,17.5,,,15.71,250.0,Ward,Pneumonia,Vasopressor,11.0,Nurse entry
+ADM0099,P099,2026/01/14 00:00,17/01/2026 08:00,Jan 18 2026 14:22,,Female,African-American,300.0,,,,,,20.1,167.3,,,251.0,Emergency,Cardiac Failure,antibiotic,,monitor
+ADM0099,P099,14/01/2026 00:00,2026-01-17 08:00,18/01/2026 16:35,18.0,male,AA,90.5,125.4,,91.8,,,,,1.89,,242.0,Emergency Admission,Cardiac Failure,INSULIN,1.0,Laboratory
+ADM0100,P100,2026-01-09 00:00,2026/01/13 18:00,09/01/2026 00:12,150.0,F,African-American,300.0,116.8,,,,,,118.6,,5.4,243.0,Emergency Admission,Trauma,INSULIN,12.0,Monitor
+ADM0100,P100,2026-01-09 00:00,2026/01/13 18:00,2026-01-09 13:49,36.0,Male,African-American,,,83.7,91.0,,120.0,,6.6 mmol/L,0.81,11.47,,Emergency Admission,Trauma,Insulin,,Monitor
+ADM0100,P100,2026/01/09 00:00,2026-01-13 18:00,2026/01/10 06:43,150.0,male,Other,,,,,,,6.0,,,17.37,,Ward,Sepsis,None,11.0,Nurse Entry
+ADM0100,P100,Jan 09 2026 00:00,13/01/2026 18:00,2026/01/10 14:59,64.0,F,African-American,300.0,124.2,58.8,117.7,37.8 C,,17.0,,2.07,,,Emergency Admission,Cardiac Failure,Insulin,,Monitor
+ADM0100,P100,2026/01/09 00:00,2026-01-13 18:00,2026-01-10 23:48,60.0,female,African,122.6,101.6,,85 mmHg,100.0 F,,18.9,115.4,2.36,12.89,,ER,Stroke,INSULIN,,monitor
+ADM0100,P100,2026/01/09 00:00,13/01/2026 18:00,11/01/2026 06:58,,male,African-American,,,69.4,85 mmHg,96.4 F,99.0,,,,,371.0,Ward,Trauma,Antibiotic,,Laboratory
+ADM0100,P100,09/01/2026 00:00,2026-01-13 18:00,11/01/2026 11:43,,female,African-American,300.0,,,,37.6 C,120.0,14.9,6.6 mmol/L,,,215.0,Emergency Admission,Trauma,INSULIN,,Monitor
+ADM0100,P100,09/01/2026 00:00,2026-01-13 18:00,2026/01/11 21:02,24.0,M,Other,86.6,,99.1,85 mmHg,37.4 C,120.0,,6.6 mmol/L,0.79,8.22,333.0,Outpatient,Pneumonia,INSULIN,1.0,Nurse Entry
+ADM0100,P100,09/01/2026 00:00,2026/01/13 18:00,13/01/2026 06:20,19.0,Male,African,300.0,129.4,76.2,85 mmHg,37.5 C,98.0,,,0.57,3.22,238.0,ICU,Stroke,INSULIN,,Laboratory
+ADM0100,P100,09/01/2026 00:00,2026-01-13 18:00,13/01/2026 08:04,,female,African-American,300.0,,,,98.1 F,95.3,,6.6 mmol/L,0.53,4.16,342.0,ICU,Pneumonia,INSULIN,13.0,Laboratory
