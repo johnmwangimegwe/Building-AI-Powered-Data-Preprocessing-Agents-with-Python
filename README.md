@@ -295,4 +295,4 @@ report records the Python, pandas and NumPy versions, the platform and the seed.
 
 ---
 
-*PyCon Kenya 2026 — "Building the Future with Python"*
+*PyCon Kenya 2026 - "Building the Future with Python"*

@@ -54,7 +54,7 @@
       "reason": "Profile reports 100 exactly duplicated rows (10.0% of the table); each inflates its patient-hour's weight in any downstream model.",
       "rows_before": 1000,
       "rows_after": 900,
-      "duration_seconds": 0.125,
+      "duration_seconds": 0.091,
       "checks": [
         {
           "name": "no_exact_duplicates_remain",
@@ -182,7 +182,7 @@
       "reason": "4 distinct datetime spellings detected across the timestamp columns; day-first values are ambiguous under default parsing and must be resolved by surface form.",
       "rows_before": 900,
       "rows_after": 900,
-      "duration_seconds": 1.091,
+      "duration_seconds": 0.76,
       "checks": [
         {
           "name": "intime_is_datetime",
@@ -272,7 +272,7 @@
       "reason": "Mixed unit tokens found (sbp: <bare number>, mmHg; mbp: <bare number>, mmHg; temperature: C, F; glucose: <bare number>, mmol/L). Range validation cannot run correctly until units agree.",
       "rows_before": 900,
       "rows_after": 900,
-      "duration_seconds": 0.207,
+      "duration_seconds": 0.266,
       "checks": [
         {
           "name": "temperature_is_numeric",
@@ -577,7 +577,7 @@
       "reason": "Categorical fields carry spelling variants (worst: diagnosis with 13 raw values); unmerged variants split cohort statistics.",
       "rows_before": 900,
       "rows_after": 900,
-      "duration_seconds": 0.107,
+      "duration_seconds": 0.09,
       "checks": [
         {
           "name": "all_categories_mapped",
@@ -739,7 +739,7 @@
       "reason": "811 cells fall outside physiological bounds or cannot be parsed; these are sensor or transcription faults and must become missing, not outliers.",
       "rows_before": 900,
       "rows_after": 900,
-      "duration_seconds": 0.169,
+      "duration_seconds": 0.121,
       "checks": [
         {
           "name": "all_values_within_physiological_range",
@@ -2514,7 +2514,7 @@
       "reason": "Observations are event-based and irregularly spaced; modelling requires a regular hourly grid spanning each admission window.",
       "rows_before": 900,
       "rows_after": 4715,
-      "duration_seconds": 2.129,
+      "duration_seconds": 2.712,
       "checks": [
         {
           "name": "hourly_grid_is_contiguous",
@@ -2575,7 +2575,7 @@
       "reason": "Hourly alignment exposes the true extent of missingness; Value-Mask-Decay preserves which cells were measured and how much confidence a carried-forward value deserves.",
       "rows_before": 4715,
       "rows_after": 4715,
-      "duration_seconds": 1.154,
+      "duration_seconds": 1.376,
       "checks": [
         {
           "name": "no_missing_values_remain",
@@ -2730,7 +2730,7 @@
       "reason": "Imputed cells with long gaps carry little confidence and can be improved using the simultaneous state of physiologically coupled channels.",
       "rows_before": 4715,
       "rows_after": 4715,
-      "duration_seconds": 1.528,
+      "duration_seconds": 1.56,
       "checks": [
         {
           "name": "observed_cells_never_modified",

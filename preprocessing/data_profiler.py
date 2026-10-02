@@ -3,7 +3,7 @@ Module purpose:
 
 Profile a raw clinical table *before* any transformation is attempted.
 
-An agent cannot plan a cleaning strategy it cannot describe. This module is the
+An agent cannot plan a  cleaning strategy it cannot describe. This module is the
 agent's perception step: it converts an opaque CSV into a compact, machine-readable
 dictionary that fits comfortably inside an LLM context window - typically under two
 kilobytes for a thousand-row table - which is precisely the property that makes
